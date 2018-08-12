@@ -28,4 +28,13 @@ play with data reduction:
 - only keep n items for each bit patterns
 - only keep a sumamry for each bit pattern
 
+do reverseNN. keep only the protypes. use FFT to report deltas
+beteen the prototypes
+
+
+list the baseline
+
+- staochasit needed to see change
+     - detect stability
+     - need an update method, need minimal updates
 
