@@ -1,4 +1,5 @@
-go:
+
+build:
 	mkdocs build
 	cp -r site/* ../docs
 	- git add  ../docs/* 
@@ -6,3 +7,6 @@ go:
 	- git add ../docs/*/*/*
 	git commit -am as
 	git push
+
+serve:
+	mkdocs serve

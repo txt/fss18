@@ -7,21 +7,21 @@
         
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>found/soft/sci/18</title>
-        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Better Baselines - found/soft/sci/18</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <link href="css/extra.css" rel="stylesheet">
+        <link href="../../css/extra.css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -40,7 +40,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href=".">found/soft/sci/18</a>
+                    <a class="navbar-brand" href="../..">found/soft/sci/18</a>
                 </div>
 
                 <!-- Expanded navigation -->
@@ -48,21 +48,21 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li >
-                                <a href=".">Home</a>
+                                <a href="../..">Home</a>
                             </li>
                             <li >
-                                <a href="about/">Syllabus</a>
+                                <a href="../../about/">Syllabus</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lectures <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="lectures/w2.md">Bye</a>
+    <a href="../w2.md">Bye</a>
 </li>
                                     
-<li >
-    <a href="lectures/baselines/">Better Baselines</a>
+<li class="active">
+    <a href="./">Better Baselines</a>
 </li>
                                 </ul>
                             </li>
@@ -71,11 +71,11 @@
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="review/w2.md">Week1</a>
+    <a href="../../review/w2.md">Week1</a>
 </li>
                                     
 <li >
-    <a href="review/w1.md">Week1</a>
+    <a href="../../review/w1.md">Week1</a>
 </li>
                                 </ul>
                             </li>
@@ -88,7 +88,7 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="gloss/effectsize.md">Effect size</a>
+    <a href="../../gloss/effectsize.md">Effect size</a>
 </li>
     </ul>
   </li>
@@ -98,7 +98,7 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="gloss/bootstrap.md">Bootstrap</a>
+    <a href="../../gloss/bootstrap.md">Bootstrap</a>
 </li>
     </ul>
   </li>
@@ -108,11 +108,11 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="gloss/significance.md">Significance test</a>
+    <a href="../../gloss/significance.md">Significance test</a>
 </li>
             
 <li >
-    <a href="gloss/sk.md">Scott-Knot</a>
+    <a href="../../gloss/sk.md">Scott-Knot</a>
 </li>
     </ul>
   </li>
@@ -126,8 +126,18 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li >
+                                <a rel="next" href="../../about/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="disabled">
+                                <a rel="prev" >
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                             <li>
-                                <a href="https://github.com/txt/fss18/"><i class="fa fa-github"></i> GitHub</a>
+                                <a href="https://github.com/txt/fss18/edit/master/docs/lectures/baselines.md"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -135,15 +145,87 @@
         </div>
 
         <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#better-baselines">Better Baselines</a></li>
+            <li><a href="#baseline-tools">Baseline Tools</a></li>
+            <li><a href="#other-requirements">Other Requirements</a></li>
+            <li><a href="#no-stats-tests">No stats tests</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
 
-    <div class="row-fluid">
-      <div id="main-content" class="span12">
-        <h1 id="404-page-not-found" style="text-align: center">404</h1>
-        <p style="text-align: center"><strong>Page not found</strong></p>
-      </div>
-    </div>
-
-
+<p><img src="../../img/ncstate.png" align=right width=300><br clear=right>
+<img src="http://ai4se.net/img/ncsu-logo.png" align=right width=100></p>
+<h1 id="better-baselines">Better Baselines</h1>
+<p>What software engineering principles should we apply
+to AI?</p>
+<ul>
+<li>Pressing question;</li>
+<li>As society uses more AI, SE folks will be required</li>
+<li>When do we change that software?</li>
+<li>What are the <em>bad smells</em> that would
+  movitate reorganizing that code?</li>
+</ul>
+<h2 id="baseline-tools">Baseline Tools</h2>
+<p>No </p>
+<h2 id="other-requirements">Other Requirements</h2>
+<h3 id="no-eval-tools">No eval tools</h3>
+<p>Tests conclusion stability</p>
+<ul>
+<li>across mulitple data sets (if
+  avaialable) </li>
+<li>or across multiple subsets of know scenarios</li>
+</ul>
+<h4 id="eg-cross-val">e.g. cross-val</h4>
+<ul>
+<li>Divide into "<em>x</em> bins</li>
+<li>Test on one bin, train on the others</li>
+<li>Runs the risk of using future data
+  to train for testing on the past</li>
+</ul>
+<h4 id="eg-round-robin">e.g. round robin</h4>
+<ul>
+<li>Given N projects</li>
+<li>Train on N-1, test on the nth.</li>
+<li>e.g <a href="https://arxiv.org/pdf/1702.07735.pdf">Github issue close time, Table4</a></li>
+</ul>
+<h4 id="eg-incremental-validation">e.g. incremental validation.</h4>
+<ul>
+<li>Divide into "<em>x</em>" buckets, </li>
+<li>Train on buckets 1..i, test on i+1</li>
+</ul>
+<h4 id="eg-moving-validation">e.g. moving validation.</h4>
+<ul>
+<li>Divide into "<em>x</em>"
+        buckets, </li>
+<li>learn on buckets i..i+n, test
+    on i+n+1. eg. Krishna's K-test.</li>
+</ul>
+<h4 id="eg-rrs-repeated-random-streaming">e.g. RRS (repeated random streaming)</h4>
+<ul>
+<li>e.g. repeatedly stream over the data, </li>
+<li>each time using n% of the data selected at random</li>
+<li>Q: What "n"? </li>
+<li>A: Engineering judgement </li>
+</ul>
+<h2 id="no-stats-tests">No stats tests</h2>
+<ul>
+<li>Check if <em>this</em> treatment has
+   same effect as <em>that</em> treatment.</li>
+<li>Need at least two tests: 
+         <a href="../gloss/significance">significance</a>  and <a href="../gloss/effectsize">effect size</a></li>
+<li>I also think you need a third test;<ul>
+<li>Something
+   that clusters the treatments before the other
+   tests are applied </li>
+<li>Reduces
+  the number of other statistical tests. </li>
+</ul>
+</li>
+<li>E.g
+       the <a href="../gloss/sk.md">Scott-Knot</a> test.</li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">
@@ -151,11 +233,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "",
+            var base_url = "../..",
                 shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">

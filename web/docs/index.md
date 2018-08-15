@@ -1,4 +1,7 @@
-# Welcome to MkDocs
+<img src="img/ncstate.png" align=right width=300><br clear=right>
+<img src="http://ai4se.net/img/ncsu-logo.png" align=right width=100>
+# Foundations of Software Science
+## Fall 2018
 
 For full documentation visit [mkdocs.org](https://mkdocs.org).
 

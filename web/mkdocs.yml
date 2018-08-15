@@ -3,5 +3,20 @@ repo_url: https://github.com/txt/fss18/
 nav:
     - Home: index.md
     - Syllabus: about.md
-    - License: license.md
+    - Lectures: 
+         - Bye: lectures/w2.md
+         - Better Baselines: lectures/baselines.md
+    - Review: 
+         - Week1: review/w2.md
+         - Week1: review/w1.md
+    - Glossary: 
+         - E: 
+              - Effect size: gloss/effectsize.md
+         - B: 
+              - Bootstrap: gloss/bootstrap.md
+         - S:
+              - Significance test: gloss/significance.md 
+              - Scott-Knot: gloss/sk.md
 theme: united
+extra_css:
+    - css/extra.css
