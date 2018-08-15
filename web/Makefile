@@ -1,8 +1,6 @@
 
 build:
 	mkdocs build
-	cp docs/404.html site/
-	cp docs/img/404.jpeg site/
 	cp -r site/* ../docs
 	- git add  ../docs/* 
 	- git add ../docs/*/*
