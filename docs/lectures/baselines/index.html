@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Better Baselines - found/soft/sci/18</title>
+        <title>Bad Smells for AI - found/soft/sci/18</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -62,7 +62,7 @@
 </li>
                                     
 <li class="active">
-    <a href="./">Better Baselines</a>
+    <a href="./">Bad Smells for AI</a>
 </li>
                                 </ul>
                             </li>
@@ -136,9 +136,6 @@
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
-                            <li>
-                                <a href="https://github.com/txt/fss18/edit/master/docs/lectures/baselines.md"><i class="fa fa-github"></i> Edit on GitHub</a>
-                            </li>
                     </ul>
                 </div>
             </div>
@@ -147,7 +144,8 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#better-baselines">Better Baselines</a></li>
+        <li class="main active"><a href="#bad-smells-for-ai-software">Bad Smells for AI Software</a></li>
+            <li><a href="#a-little-history">A Little History</a></li>
             <li><a href="#baseline-tools">Baseline Tools</a></li>
             <li><a href="#other-requirements">Other Requirements</a></li>
             <li><a href="#no-stats-tests">No stats tests</a></li>
@@ -157,15 +155,23 @@
 
 <p><img src="../../img/ncstate.png" align=right width=300><br clear=right>
 <img src="http://ai4se.net/img/ncsu-logo.png" align=right width=100></p>
-<h1 id="better-baselines">Better Baselines</h1>
+<h1 id="bad-smells-for-ai-software">Bad Smells for AI Software</h1>
 <p>What software engineering principles should we apply
 to AI?</p>
 <ul>
-<li>Pressing question;</li>
-<li>As society uses more AI, SE folks will be required</li>
-<li>When do we change that software?</li>
-<li>What are the <em>bad smells</em> that would
+<li>Pressing question;<ul>
+<li>As society uses more AI, SE folks will be required to us and maintain and extend that software</li>
+<li>What are the <em>bad smells</em> of an AI system that would
   movitate reorganizing that code?</li>
+</ul>
+</li>
+</ul>
+<h2 id="a-little-history">A Little History</h2>
+<p>SE's past is full of cases where</p>
+<ul>
+<li>someone said "X" is not part of AI</li>
+<li>then we ignored them and added "X" to SE</li>
+<li>and lots of things got lots better</li>
 </ul>
 <h2 id="baseline-tools">Baseline Tools</h2>
 <p>No </p>
@@ -176,6 +182,11 @@ to AI?</p>
 <li>across mulitple data sets (if
   avaialable) </li>
 <li>or across multiple subsets of know scenarios</li>
+</ul>
+<p>Some examples of that kind of evaluation follow. </p>
+<ul>
+<li>Note that these can significantly increase the computational cost of using learners. </li>
+<li>Hence, the need to <a href="faster">faster</a>, <a href="lighter">lighter</a> AI algorithms. </li>
 </ul>
 <h4 id="eg-cross-val">e.g. cross-val</h4>
 <ul>

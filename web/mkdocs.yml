@@ -1,11 +1,10 @@
 site_name: found/soft/sci/18
-repo_url: https://github.com/txt/fss18/
 nav:
     - Home: index.md
     - Syllabus: about.md
     - Lectures: 
          - Bye: lectures/w2.md
-         - Better Baselines: lectures/baselines.md
+         - Bad Smells for AI : lectures/baselines.md
     - Review: 
          - Week1: review/w2.md
          - Week1: review/w1.md
