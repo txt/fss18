@@ -1,0 +1,7 @@
+site_name: found/soft/sci/18
+repo_url: https://github.com/txt/fss18/
+nav:
+    - Home: index.md
+    - Syllabus: about.md
+    - License: license.md
+theme: united
