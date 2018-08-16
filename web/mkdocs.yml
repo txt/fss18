@@ -22,5 +22,8 @@ nav:
          - S:
               - Significance test: gloss/significance.md 
               - Scott-Knot: gloss/sk.md
+    - License: license.md
 extra_css:
     - css/extra.css
+edit_uri: tree/master/web/docs
+repo_url: http://github.com/txt/fss18

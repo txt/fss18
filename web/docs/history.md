@@ -2,7 +2,8 @@
 
 #  SE + AI: then and now
 
-![](https://pbs.twimg.com/media/DMxOpvFWsAMR8Fp.jpg)
+
+<img src="https://i.pinimg.com/originals/2f/47/ba/2f47ba12ad4d7d8282fe68e67911a830.png" width=700">
 
 SE's past is full of cases where
 
@@ -10,7 +11,17 @@ SE's past is full of cases where
 - then we ignored them and added "X" to SE
 - and lots of things got lots better
 
-### e.g. "SE is not about requirements engineering" <font color="#CC0000" <i class="fa fa-thumbs-o-down fa-lg"></i> </font>
+So the question I pose to you is this:
+
+Q: What is currently "not" SE, but soon must be?    
+A: AI
+
+Enter this subject
+
+
+## SE: the past
+
+### e.g. "SE is not about requirements engineering" (which is wrong)
 
 e.g.  From [Boehm, Keynote, 2004](http://ase-conferences.org/ase/past/ase2004/download/KeynoteBoehm.pdf), slide 8:
 
@@ -19,7 +30,7 @@ e.g.  From [Boehm, Keynote, 2004](http://ase-conferences.org/ase/past/ase2004/do
 - "Analysis and allocation of the system requirements is not the responsibility of the SE group but is a prerequisite for their work." 
        - Mark Paulk at al., SEI Software CMM\* v.1.1, 1993
 
-### e.g. "Programmning  is not about testng" <font color="#CC0000" <i class="fa fa-thumbs-o-down fa-lg"></i> </font>
+### e.g. "Programmning  is not about testing" (wrong again)
 
 e.g. [Harlin Mills, 1984](https://pdfs.semanticscholar.org/9141/281be67750c291d12f4ddf92417aaa6625f6.pdf)
 : software engineers should write, but not run or test, their own software
@@ -29,19 +40,54 @@ e.g. [Harlin Mills, 1984](https://pdfs.semanticscholar.org/9141/281be67750c291d1
      - so before we run anything, we write perfect code
 - And there is a seperate testing team to the programming team
 
-### e.g. "Programming  is not about deploying software"  <font color="#CC0000" <i class="fa fa-thumbs-o-down fa-lg"></i> </font>
+### e.g. "Programming  is not about deploying software"  (so very, very wrong)
 
 - Before devops, the coding team used to hand off the system to the production team
 - Now we do much less of that.. achieving must faster change cycles
 
-### So the question is....
+### Q: So What's next?
 
-Q: What is currently "not" SE, but soon must be?    
 A: AI
 
-Enter this subject
+## SE: the present
+
+Software, matters
+
+- In London or New York,
+     - The time for ambulance to reach patient
+[is controlled by models](http://goo.gl/8SMd1p)
+- If you cross the border Arizona to Mexico,
+     - Models determine if you are taken
+away for extra security measures
+- If you default on a car loans,
+     - Models determine when (or if)
+someone repossesses your car
+- Autonomous cars
+
+
+Software now mediates what we see and how we act
+
+- Chemists win  Nobel Prize for  [software sims](http://goo.gl/Lwensc)
+- Engineers use software to design [optical tweezers, radiation therapy, remote sensing,  chip design](http://goo.gl/qBMyIZ)
+- Web analysts use software  to analyze clickstreams to [improve sales and marketing strategies](http://goo.gl/b26CfY)
+- Stock traders write software to [simulate trading strategies](http://www.quantopian.com)
+- Analysts write software  to mine   labor statistics data to [review proposed gov policies](http://goo.gl/X4kgnc)
+- Journalists use software   to analyze economic data, [make visualizations of their news stories](http://fivethirtyeight.com)
+- Etc etc etc
+
 
 ## SE: the future
+
+Software enginenering isn't just about software any more
+
+-  Olde SE: just polish up the lens of the telescope
+-  New SE (with AI): use the telescope to look and understand and change "things"
+
+
+After "continuous integration" (where we automated everything)
+
+- Comes "AI everywhere" (where we automate automation).
+
 
 From [Software
 Analytics:

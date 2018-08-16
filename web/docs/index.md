@@ -1,6 +1,5 @@
 # Foundations of Software Science
 
-<img align=right width=400 src="img/iot.jpg">
 
 
 Fall 2018    
@@ -9,14 +8,16 @@ Computer Science
 Tuesdays, Thursdays, 4:30pm   
 Prof. [Tim Menzies](http://menzies.us)
 
+![](img/girlrobot.jpg)
+
 ## Why?
 
 
 Here is a pressing question;
 
-- The future of SE is [more and more AI](future).
-- AI software is still software;
-- As society uses more AI, SE folks will be required to us and maintain and extend that software;
+- The future of SE is [more and more AI](history).
+- But AI software is still software;
+- So as society uses more AI, SE folks will be required to use and maintain and extend that software;
 - So how should SE people look at AI software? 
       - What should they expect from that software?
       - What would be an AI software  "bad smells" that prompts a code reorganization?
@@ -34,7 +35,7 @@ How to build and modify and refactor and remix and repurpose:
 - Software for data miners;
 - Software for optimizers;
 - Software for theorem provers.
-- To help your customers achieve their dreams, better, faster, cheaper.
+- To help society, and our customers, achieve their dreams better, faster, and cheaper.
 
 
 How to achieve maximum AI benefits at minimal AI costs:
