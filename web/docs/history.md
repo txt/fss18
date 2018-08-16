@@ -61,7 +61,7 @@ Software now mediates what we see and how we act
 - Journalists use software   to analyze economic data, [make visualizations of their news stories](http://fivethirtyeight.com)
 - Etc etc etc
 
-Software, matters
+In short, now more than ever, software really really matters
 
 - In London or New York,
      - The time for ambulance to reach patient
@@ -73,6 +73,12 @@ away for extra security measures
      - Models determine when (or if)
 someone repossesses your car
 - Autonomous cars
+- Software is essential to international financial and transport systems; our energy generation and distribution systems; and even the pacemakers that control the beat of our hearts.
+- Looking forward,  to the forthcoming age of autonomous cars and
+flying drones, it is clear that software models (written in traditional
+programming languages or in some next-generation interpretation)
+will be key in determining what we can do, when, where, and how.
+
 
 So how can we help our AI systems reason better about our data, and our models?
 
