@@ -15,7 +15,7 @@ Prof. [Tim Menzies](http://menzies.us)
 
 Here is a pressing question;
 
-- The future of SE is [more and more AI](history).
+- The future of SE is [more and more AI](history.md).
 - But AI software is still software;
 - So as society uses more AI, SE folks will be required to use and maintain and extend that software;
 - So how should SE people look at AI software? 

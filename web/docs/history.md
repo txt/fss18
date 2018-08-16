@@ -51,6 +51,16 @@ A: AI
 
 ## SE: the present
 
+Software now mediates what we see and how we act
+
+- Chemists win  Nobel Prize for  [software sims](http://goo.gl/Lwensc)
+- Engineers use software to design [optical tweezers, radiation therapy, remote sensing,  chip design](http://goo.gl/qBMyIZ)
+- Web analysts use software  to analyze clickstreams to [improve sales and marketing strategies](http://goo.gl/b26CfY)
+- Stock traders write software to [simulate trading strategies](http://www.quantopian.com)
+- Analysts write software  to mine   labor statistics data to [review proposed gov policies](http://goo.gl/X4kgnc)
+- Journalists use software   to analyze economic data, [make visualizations of their news stories](http://fivethirtyeight.com)
+- Etc etc etc
+
 Software, matters
 
 - In London or New York,
@@ -64,16 +74,14 @@ away for extra security measures
 someone repossesses your car
 - Autonomous cars
 
+So how can we help our AI systems reason better about our data, and our models?
 
-Software now mediates what we see and how we act
-
-- Chemists win  Nobel Prize for  [software sims](http://goo.gl/Lwensc)
-- Engineers use software to design [optical tweezers, radiation therapy, remote sensing,  chip design](http://goo.gl/qBMyIZ)
-- Web analysts use software  to analyze clickstreams to [improve sales and marketing strategies](http://goo.gl/b26CfY)
-- Stock traders write software to [simulate trading strategies](http://www.quantopian.com)
-- Analysts write software  to mine   labor statistics data to [review proposed gov policies](http://goo.gl/X4kgnc)
-- Journalists use software   to analyze economic data, [make visualizations of their news stories](http://fivethirtyeight.com)
-- Etc etc etc
+- Using data mining,
+we might learn a model from data that predicts for (say) a single target class;
+- Using optionzers, we might  a multi-objective optimizer to find what solutions score best on multiple target variables.
+- Also, data miners can be used to
+to summarize the data, after which optimizers can [leap to better solutions, faster](http://menzies.us/pdf/15gale.pdf);
+- Also, optimizers can be used to [select intelligent settings for data mining algorithms](https://arxiv.org/pdf/1609.01759.pdf) e.g. such as how many trees should be included in a random forest.
 
 
 ## SE: the future

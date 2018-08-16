@@ -1,26 +1,40 @@
-<img src="../../img/ncstate.png" align=right width=300><br clear=right>
-<img src="http://ai4se.net/img/ncsu-logo.png" align=right width=100>
-# Bad Smells for AI Software
+# Baseline for an "Adequate" AI
 
-What software engineering principles should we apply
-to AI?
+## What do uou want?
 
-- Pressing question;
-     - As society uses more AI, SE folks will be required to us and maintain and extend that software
-     - What are the _bad smells_ of an AI system that would
-  movitate reorganizing that code?
+Requirements of a Baseline Estimation Model. Extended from [Sarro, TOSEM'18](http://www0.cs.ucl.ac.uk/staff/F.Sarro/resource/papers/SarroTOSEM18.pdf):
 
-## A Little History
+- Be simple to describe, implement, and interpret.
+- Be deterministic in its outcomes.
+- Be applicable to mixed qualitative and quantitative data.
+- Offer some explanatory information regarding the prediction
+  by representing generalised properties of the underlying data.
+- Have no parameters within the modelling process that require tuning. Be publicly available via a reference implementation and associated environment for execution.
+- Generally be more accurate than a random guess or an estimate based purely on the distribution of the response variable.
+- Be robust to different data splits and validation methods.
+- Do not be expensive to apply.
+-  Offer comparable performance to standard methods.
 
-SE's past is full of cases where
 
-- someone said "X" is not part of AI
-- then we ignored them and added "X" to SE
-- and lots of things got lots better
+re stochasthic. Disagree
+stochastic = scalability, stability (shout stochastic you won't know
+if your re living in some some tiny  island surrounded by forces of
+chaos)
 
-## Baseline Tools
+- In some software engineering applications, solution robustness may
+be as im- portant as solution functionality. For example, it may be
+better to locate an area of the search space that is rich in fit
+solutions, rather than identifying an even better solution that is
+surrounded by a set of far less fit solutions.
 
-No 
+- Hitherto, research on SBSE has tended to focus on the production of
+the fittest possible results. However, many application areas require
+solutions in a search space that may be subject to change. This makes
+robustness a natural second order property to which the research
+community could and should turn its at- tention [30].
+
+M. Harman and B. Jones. Search-based software engineering. Journal of
+Information and Software Technology, 43:833–839, December 2001.
 
 ## Other Requirements
 
@@ -32,42 +46,10 @@ Tests conclusion stability
   avaialable) 
 - or across multiple subsets of know scenarios
 
-Some examples of that kind of evaluation follow. 
+See [Evalaution](eval) for many examples of that kind of evaluation.
 
 - Note that these can significantly increase the computational cost of using learners. 
 - Hence, the need to [faster](faster), [lighter](lighter) AI algorithms. 
-
-####  e.g. cross-val
-
-- Divide into "_x_ bins
-- Test on one bin, train on the others
-- Runs the risk of using future data
-  to train for testing on the past
-
-#### e.g. round robin
-
-- Given N projects
-- Train on N-1, test on the nth.
-- e.g [Github issue close time, Table4](https://arxiv.org/pdf/1702.07735.pdf)
-
-####  e.g. incremental validation. 
-
-- Divide into "_x_" buckets, 
-- Train on buckets 1..i, test on i+1
-
-####  e.g. moving validation. 
-
-- Divide into "_x_"
-        buckets, 
-- learn on buckets i..i+n, test
-	on i+n+1. eg. Krishna's K-test.
-
-#### e.g. RRS (repeated random streaming)
-
-- e.g. repeatedly stream over the data, 
-- each time using n% of the data selected at random
-- Q: What "n"? 
-- A: Engineering judgement 
 
 ## No stats tests
 
@@ -83,3 +65,4 @@ Some examples of that kind of evaluation follow.
       the number of other statistical tests. 
    - E.g
        the [Scott-Knot](../gloss/sk.md) test.
+
