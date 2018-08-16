@@ -15,6 +15,9 @@ Requirements of a Baseline Estimation Model. Extended from [Sarro, TOSEM'18](htt
 - Do not be expensive to apply.
 -  Offer comparable performance to standard methods.
 
+XXX streaming
+
+XXX revising
 
 re stochasthic. Disagree
 stochastic = scalability, stability (shout stochastic you won't know
