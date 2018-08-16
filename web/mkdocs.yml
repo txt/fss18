@@ -5,6 +5,12 @@ nav:
     - Lectures: 
          - Bye: lectures/w2.md
          - Bad Smells for AI : lectures/baselines.md
+         - Starting:
+             - Hello : index.md
+             - Inspiration : inspiration.md
+             - Syllabus : syllabus.md
+             - SE+AI,  then and now: history.md
+
     - Review: 
          - Week1: review/w2.md
          - Week1: review/w1.md
@@ -16,6 +22,5 @@ nav:
          - S:
               - Significance test: gloss/significance.md 
               - Scott-Knot: gloss/sk.md
-theme: united
 extra_css:
     - css/extra.css
