@@ -18,7 +18,7 @@ w2.txt) to a sub-directory in your repo called `w12`.
 
 Paste  a link to that directory in the commit sheet.
 
-## A Simple Unit Test (in Python)
+## A Simple Unit Test Rig (in Python)
 
 """
 import re,traceback
