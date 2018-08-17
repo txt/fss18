@@ -25,6 +25,19 @@ nav:
               - Significance test: gloss/significance.md 
               - Simplicity: lectures/simple.md
               - Scott-Knot: gloss/sk.md
+         - T:
+              - Tables : lectures/tables.md
+              - Things : lectures/things.md
+              - Tools:
+                 - Data mining:
+                      - Matlab : aa
+                      - R : bb
+                      - Weka : cc
+                      - scikit-learn : dd
+                 - Optimizers:
+                      - JMetal: dd
+                      - Deep: dd
+                      - EvoSuite: ee
     - License: license.md
 extra_css:
     - css/extra.css
