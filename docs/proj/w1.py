@@ -1,4 +1,4 @@
-# Homework Week1
+# Homework Week1, Week2
 
 """
 
@@ -9,9 +9,14 @@
      - go the repo's organization's settings
      - on left-hand-side menu go to Collaberators and teams
      - then Enter "timm" under "Collaborators".
-3. Start a file with the following header.
-4. Change the code for the `csv` function such that
-   you remove all but one error.
+3. Start a file with the following header (containing `class O`).
+4. For Week1, address the _Python101_ task.
+5. For Week2, address the _Table reader_ task.
+
+Commit the code (w1.py, w2.py) and a transcript of the output (called w1.txt,
+w2.txt) to a sub-directory in your repo called `w12`. 
+
+Paste  a link to that directory in the commit sheet.
 
 ## A Simple Test Rig
 
@@ -88,7 +93,15 @@ you will see
 
 Note the last line (number of passes and failes in the code).
 
-## Sample Table Data (that we want to read)
+## Task1: Python101
+
+- Read [Basic Python](../pdf/python201.pdf) 
+- Write 27 functions like `testingSuccess` (above)
+that demonstrate you understand that the code on pages 5 to 33, skipping p21 (so one function
+for one thing on each page).
+
+
+## Task2: Sample Table Data (that we want to read)
 
 Suppose we need to read in a table.
 
@@ -170,7 +183,7 @@ Regardless of those details, when we read both these strings, we see as output
      ['overcast', 81.0, 'FALSE', 'yes']
      ['rainy', 71.0, 'TRUE', 'no']
 
-## Functions
+### Functions
 
 The following functions implement the table reader.
 
@@ -220,7 +233,7 @@ def prep(src,  nums=None):
 
 """
 
-## Test cases
+### Test cases
 
 """
 
