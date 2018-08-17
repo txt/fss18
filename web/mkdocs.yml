@@ -2,19 +2,19 @@ site_name: ncsu/cs/fss/2018
 nav:
     - Home: index.md
     - Notes: 
-         - Syllabus : syllabus.md
-         - Bye: lectures/w2.md
-         - Bad Smells for AI : lectures/baselines.md
+         - Admin:
+              - Syllabus : syllabus.md
+              - Submit site: http://tiny.cc/fss18give
+              - Chat: http://found18.slack
+         - Baselines for Adequate AI: lectures/baselines.md
          - Starting:
-             - Hello : index.md
              - Inspiration : inspiration.md
              - SE+AI,  then and now: history.md
+         - Review: 
+             - Week2: review/w2.md
+             - Week1: review/w1.md
     - H/W: 
          - One: proj/w1.md 
-
-    - Review: 
-         - Week1: review/w2.md
-         - Week1: review/w1.md
     - A-Z: 
          - E: 
               - Effect size: gloss/effectsize.md

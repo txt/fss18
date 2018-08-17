@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+        <meta name="description" content="None">
         
         
         <link rel="shortcut icon" href="img/favicon.ico">
-        <title>Hello - ncsu/cs/fss/2018</title>
+        <title>ncsu/cs/fss/2018</title>
         <link href="css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/base.css" rel="stylesheet">
@@ -26,7 +26,7 @@
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body>
+    <body class="homepage">
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -47,32 +47,38 @@
                 <div class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li >
+                            <li class="active">
                                 <a href=".">Home</a>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notes <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
+  <li class="dropdown-submenu">
+    <a href="#">Admin</a>
+    <ul class="dropdown-menu">
+            
 <li >
     <a href="syllabus/">Syllabus</a>
 </li>
-                                    
+            
 <li >
-    <a href="lectures/w2.md">Bye</a>
+    <a href="http://tiny.cc/fss18give">Submit site</a>
 </li>
+            
+<li >
+    <a href="http://found18.slack">Chat</a>
+</li>
+    </ul>
+  </li>
                                     
 <li >
-    <a href="lectures/baselines/">Bad Smells for AI</a>
+    <a href="lectures/baselines/">Baselines for Adequate AI</a>
 </li>
                                     
   <li class="dropdown-submenu">
     <a href="#">Starting</a>
     <ul class="dropdown-menu">
-            
-<li class="active">
-    <a href=".">Hello</a>
-</li>
             
 <li >
     <a href="inspiration/">Inspiration</a>
@@ -80,6 +86,20 @@
             
 <li >
     <a href="history/">SE+AI,  then and now</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Review</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="review/w2.md">Week2</a>
+</li>
+            
+<li >
+    <a href="review/w1.md">Week1</a>
 </li>
     </ul>
   </li>
@@ -91,19 +111,6 @@
                                     
 <li >
     <a href="proj/w1/">One</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Review <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li >
-    <a href="review/w2.md">Week1</a>
-</li>
-                                    
-<li >
-    <a href="review/w1.md">Week1</a>
 </li>
                                 </ul>
                             </li>
@@ -165,13 +172,13 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li >
-                                <a rel="next" href="lectures/baselines/">
+                            <li class="disabled">
+                                <a rel="next" >
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="inspiration/">
+                                <a rel="prev" href="syllabus/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -201,6 +208,9 @@ Computer Science<br />
 Tuesdays, Thursdays, 4:30pm <br />
 Prof. <a href="http://menzies.us">Tim Menzies</a></p>
 <p><img alt="" src="img/girlrobot.jpg" /></p>
+<p>Most software companies now learn their policies via data-driven methods. Modern practitioners treat every planned feature as an experiment, of which only a few are expected to survive. Key performance metrics are carefully monitored and analyzed to judge the progress of a feature. Even simple design decisions such as the color of a link are chosen by the outcome of software experiments.</p>
+<p>This subject will explore methods for generating and using models built from data (i.e. how to  collectthat data; exploring that data; then presenting that data in such a way to support business-level decision making for software projects).</p>
+<p>For more admin details, see the <a href="syllabus/">syllabus</a>.</p>
 <h2 id="why">Why?</h2>
 <p>Here is a pressing question;</p>
 <ul>
@@ -325,3 +335,8 @@ Prof. <a href="http://menzies.us">Tim Menzies</a></p>
 
     </body>
 </html>
+
+<!--
+MkDocs version : 1.0.1
+Build Date UTC : 2018-08-17 05:12:59
+-->

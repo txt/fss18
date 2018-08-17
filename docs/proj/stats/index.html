@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Stats.py - ncsu/cs/fss/2018</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="../../css/extra.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">ncsu/cs/fss/2018</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Admin</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../syllabus/">Syllabus</a>
+</li>
+            
+<li >
+    <a href="http://tiny.cc/fss18give">Submit site</a>
+</li>
+            
+<li >
+    <a href="http://found18.slack">Chat</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li >
+    <a href="../../lectures/baselines/">Baselines for Adequate AI</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Starting</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../inspiration/">Inspiration</a>
+</li>
+            
+<li >
+    <a href="../../history/">SE+AI,  then and now</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Review</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../review/w2.md">Week2</a>
+</li>
+            
+<li >
+    <a href="../../review/w1.md">Week1</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">H/W <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../w1/">One</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">A-Z <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">E</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../gloss/effectsize.md">Effect size</a>
+</li>
+            
+<li >
+    <a href="../../lectures/explain/">Explanation</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">B</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../gloss/bootstrap.md">Bootstrap</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">S</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../gloss/significance.md">Significance test</a>
+</li>
+            
+<li >
+    <a href="../../lectures/simple/">Simplicity</a>
+</li>
+            
+<li >
+    <a href="../../gloss/sk.md">Scott-Knot</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../license/">License</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li>
+                                <a href="http://github.com/txt/fss18/tree/master/web/docs/proj/stats.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#analysis-of-experimental-data">Analysis of Experimental Data</a></li>
+            <li><a href="#before-we-begin">Before we begin...</a></li>
+            <li><a href="#rank-name-med-iqr">rank ,         name ,    med   ,  iqr</a></li>
+            <li><a href="#rank-name-med-iqr_1">rank ,         name ,    med   ,  iqr</a></li>
+            <li><a href="#rank-name-med-iqr_2">rank ,         name ,    med   ,  iqr</a></li>
+            <li><a href="#rank-name-med-iqr_3">rank ,         name ,    med   ,  iqr</a></li>
+            <li><a href="#rank-name-med-iqr_4">rank ,         name ,    med   ,  iqr</a></li>
+            <li><a href="#rank-name-med-iqr_5">rank ,         name ,    med   ,  iqr</a></li>
+            <li><a href="#rank-name-med-iqr_6">rank ,         name ,    med   ,  iqr</a></li>
+            <li><a href="#so-how-to-rank">So, How to Rank?</a></li>
+            <li><a href="#significance-tests">Significance Tests</a></li>
+            <li><a href="#non-parametric-hypothesis-testing">Non-Parametric Hypothesis Testing</a></li>
+            <li><a href="#saner-hypothesis-testing">Saner Hypothesis Testing</a></li>
+            <li><a href="#putting-it-all-together">Putting it All Together</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p># Stats.py</p>
+<p>from <strong>future</strong> import division,print_function
+import sys,random, argparse
+sys.dont_write_bytecode=True</p>
+<p>class o():
+  "Anonymous container"
+  def <strong>init</strong>(i,**fields) : 
+    i.override(fields)
+  def override(i,d): i.<strong>dict</strong>.update(d); return i
+  def <strong>repr</strong>(i):
+    d = i.<strong>dict</strong>
+    name = i.<strong>class</strong>.<strong>name</strong>
+    return name+'{'+' '.join([':%s %s' % (k,d[k]) 
+                     for k in i.show()])+ '}'
+  def show(i):
+    return [k for k in sorted(i.<strong>dict</strong>.keys()) 
+            if not "_" in k]</p>
+<p>The=o(cohen=0.3, small=3, epsilon=0.01,
+      width=50,lo=0,hi=100,conf=0.01,b=1000,a12=0.56)</p>
+<p>parser = argparse.ArgumentParser(
+  description="Apply Scott-Knot test to data read from standard input")</p>
+<p>p=parser.add_argument</p>
+<p>p("--demo",default=False, action="store_true")
+p("--cohen",   type=float, 
+  default=0.3, metavar='N',
+  help="too small if delta less than N*std of the data)")
+p("--small",type=int, metavar="N",default=3,
+  help="too small if hold less than N items")
+p("--epsilon", type=float, default=0.01,metavar="N",
+  help="a range is too small of its hi - lo &lt; N")
+p("--width",type=int,default=50,metavar="N",
+  help="width of quintile display")
+p("--text",type=int,default=12,metavar="N",
+  help="width of text display")
+p("--conf", type=float, default=0.01,metavar="N",
+  help="bootstrap tests with confidence 1-n")
+p("--a12",type=float, default=0.56, metavar="N",
+  help="threshold for a12 test: disable,small,med,large=0,0.56,0.64,0.71")
+p("--useA12",default=False, metavar="N",
+  help="True if you want to use A12 instead of cliff's delta")
+p("--latex",default=False,metavar="N",
+  help="default is false and True for getting a latex table for the data")
+p("--cdelta",default=0.147,metavar="N",
+  help="value for cliff's delta to be considered not a small effect")   </p>
+<p>args = parser.parse_args()
+The.cohen = args.cohen
+The.small = args.small
+The.epsilon = args.epsilon
+The.conf = args.conf
+The.width = args.width + 0
+The.a12  = args.a12 + 0
+The.text = args.text + 0
+The.latex = args.latex
+The.useA12 = args.useA12
+The.cdelta = args.cdelta</p>
+<p>TODO
+try:                              <br />
+        opts, args = getopt.getopt(argv, "hg:d", ["help", "grammar="]) 2
+    except getopt.GetoptError:           3
+        usage()                          4
+        sys.exit(2)                     </p>
+<h1 id="analysis-of-experimental-data">Analysis of Experimental Data</h1>
+<p>This page is about the non-parametric statistical tests. It is also a chance for us to discuss a little
+statistical theory.</p>
+<h2 id="before-we-begin">Before we begin...</h2>
+<p>Imagine the following example contain objective scores gained from different optimizers
+<em>x1,x2,x3,x4,...etc</em>. Which results are ranked one, two, three etc...</p>
+<h3 id="lesson-zero">Lesson Zero</h3>
+<p>Some differences are obvious</p>
+<pre><code class="python">
+def rdiv0():
+  rdivDemo([
+        [&quot;x1&quot;,0.34, 0.49, 0.51, 0.6],
+        [&quot;x2&quot;,6,  7,  8,  9] ])
+
+</code></pre>
+
+<h2 id="rank-name-med-iqr">rank ,         name ,    med   ,  iqr</h2>
+<p>1 ,           x1 ,      51  ,    11 (<em>              |              ), 0.34,  0.49,  0.51,  0.51,  0.60
+   2 ,           x2 ,     800  ,   200 (               |   ----   </em>-- ), 6.00,  7.00,  8.00,  8.00,  9.00</p>
+<h3 id="lesson-one">Lesson One</h3>
+<p>Some similarities are obvious...</p>
+<pre><code class="python">
+def rdiv1():
+  rdivDemo([
+        [&quot;x1&quot;,0.1,  0.2,  0.3,  0.4],
+        [&quot;x2&quot;,0.1,  0.2,  0.3,  0.4],
+        [&quot;x3&quot;,6,  7,  8,  9] ])
+</code></pre>
+
+<h2 id="rank-name-med-iqr_1">rank ,         name ,    med   ,  iqr</h2>
+<p>1 ,           x1 ,      30  ,    20 (<em>              |              ), 0.10,  0.20,  0.30,  0.30,  0.40
+   1 ,           x2 ,      30  ,    20 (</em>              |              ), 0.10,  0.20,  0.30,  0.30,  0.40
+   2 ,           x3 ,     800  ,   200 (               |   ----   *-- ), 6.00,  7.00,  8.00,  8.00,  9.00</p>
+<h3 id="lesson-two">Lesson Two</h3>
+<p>Many results often clump into less-than-many ranks.</p>
+<pre><code class="python">
+def rdiv2():
+  rdivDemo([
+        [&quot;x1&quot;,0.34, 0.49, 0.51, 0.6],
+        [&quot;x2&quot;,0.6,  0.7,  0.8,  0.9],
+        [&quot;x3&quot;,0.15, 0.25, 0.4,  0.35],
+        [&quot;x4&quot;,0.6,  0.7,  0.8,  0.9],
+        [&quot;x5&quot;,0.1,  0.2,  0.3,  0.4] ])
+
+</code></pre>
+
+<h2 id="rank-name-med-iqr_2">rank ,         name ,    med   ,  iqr</h2>
+<p>1 ,           x5 ,      30  ,    20 (---    <em>---    |              ), 0.10,  0.20,  0.30,  0.30,  0.40
+   1 ,           x3 ,      35  ,    15 ( ----    </em>-    |              ), 0.15,  0.25,  0.35,  0.35,  0.40
+   2 ,           x1 ,      51  ,    11 (        ------ <em>--            ), 0.34,  0.49,  0.51,  0.51,  0.60
+   3 ,           x2 ,      80  ,    20 (               |  ----    </em>-- ), 0.60,  0.70,  0.80,  0.80,  0.90
+   3 ,           x4 ,      80  ,    20 (               |  ----    *-- ), 0.60,  0.70,  0.80,  0.80,  0.90</p>
+<h3 id="lesson-three">Lesson Three</h3>
+<p>Some results even clump into one rank (the great null result).</p>
+<pre><code class="python">
+def rdiv3():
+  rdivDemo([
+      [&quot;x1&quot;,101, 100, 99,   101,  99.5],
+      [&quot;x2&quot;,101, 100, 99,   101, 100],
+      [&quot;x3&quot;,101, 100, 99.5, 101,  99],
+      [&quot;x4&quot;,101, 100, 99,   101, 100] ])
+
+</code></pre>
+
+<h2 id="rank-name-med-iqr_3">rank ,         name ,    med   ,  iqr</h2>
+<p>1 ,           x1 ,    10000  ,   150 (-------       <em>|              ),99.00, 99.50, 100.00, 101.00, 101.00
+   1 ,           x2 ,    10000  ,   100 (--------------</em>|              ),99.00, 100.00, 100.00, 101.00, 101.00
+   1 ,           x3 ,    10000  ,   150 (-------       <em>|              ),99.00, 99.50, 100.00, 101.00, 101.00
+   1 ,           x4 ,    10000  ,   100 (--------------</em>|              ),99.00, 100.00, 100.00, 101.00, 101.00</p>
+<h4 id="lesson-four">Lesson Four</h4>
+<p>Heh? Where's  lesson four?</p>
+<h3 id="lesson-five">Lesson Five</h3>
+<p>Some things had better clump to one thing (sanity check for the ranker).</p>
+<pre><code class="python">
+def rdiv5():
+  rdivDemo([
+      [&quot;x1&quot;,11,11,11],
+      [&quot;x2&quot;,11,11,11],
+      [&quot;x3&quot;,11,11,11]])
+
+</code></pre>
+
+<h2 id="rank-name-med-iqr_4">rank ,         name ,    med   ,  iqr</h2>
+<p>1 ,           x1 ,    1100  ,     0 (<em>              |              ),11.00, 11.00, 11.00, 11.00, 11.00
+   1 ,           x2 ,    1100  ,     0 (</em>              |              ),11.00, 11.00, 11.00, 11.00, 11.00
+   1 ,           x3 ,    1100  ,     0 (*              |              ),11.00, 11.00, 11.00, 11.00, 11.00</p>
+<h3 id="lesson-six">Lesson Six</h3>
+<p>Some things had better clump to one thing (sanity check for the ranker).</p>
+<pre><code class="python">
+def rdiv6():
+  rdivDemo([
+      [&quot;x1&quot;,11,11,11],
+      [&quot;x2&quot;,11,11,11],
+      [&quot;x4&quot;,32,33,34,35]])
+
+</code></pre>
+
+<h2 id="rank-name-med-iqr_5">rank ,         name ,    med   ,  iqr</h2>
+<p>1 ,           x1 ,    1100  ,     0 (<em>              |              ),11.00, 11.00, 11.00, 11.00, 11.00
+   1 ,           x2 ,    1100  ,     0 (</em>              |              ),11.00, 11.00, 11.00, 11.00, 11.00
+   2 ,           x4 ,    3400  ,   200 (               |          - * ),32.00, 33.00, 34.00, 34.00, 35.00</p>
+<h3 id="lesson-seven">Lesson Seven</h3>
+<p>All the above scales to succinct summaries of hundreds, thousands, millions of numbers</p>
+<pre><code class="python">
+def rdiv7():
+  rdivDemo([
+    [&quot;x1&quot;] +  [rand()**0.5 for _ in range(256)],
+    [&quot;x2&quot;] +  [rand()**2   for _ in range(256)],
+    [&quot;x3&quot;] +  [rand()      for _ in range(256)]
+  ])
+
+</code></pre>
+
+<h2 id="rank-name-med-iqr_6">rank ,         name ,    med   ,  iqr</h2>
+<p>1 ,           x2 ,      25  ,    50 (--     *      -|---------     ), 0.01,  0.09,  0.25,  0.47,  0.86
+   2 ,           x3 ,      49  ,    47 (  ------      *|   -------    ), 0.08,  0.29,  0.49,  0.66,  0.89
+   3 ,           x1 ,      73  ,    37 (         ------|-    *   ---  ), 0.32,  0.57,  0.73,  0.86,  0.95</p>
+<h2 id="so-how-to-rank">So, How to Rank?</h2>
+<p>For the most part, we are concerned with very high-level issues that
+strike to the heart of the human condition:</p>
+<ul>
+<li>What does it mean to find controlling principles in the world?</li>
+<li>How can we find those principles better, faster, cheaper?</li>
+</ul>
+<p>But sometimes we have to leave those lofty heights to discuss more
+pragmatic issues. Specifically, how to present the results of an
+optimizer and, sometimes, how to compare and rank the results from
+different optimizers.</p>
+<p>Note that there is no best way, and often the way we present results
+depends on our goals, the data we are procesing, and the audience we are
+trying to reach. So the statistical methods discussed below are more
+like first-pass approximations to something you may have to change
+extensively, depending on the task at hand.</p>
+<p>In any case, in order to have at least one report that that you quickly
+generate, then....</p>
+<h3 id="theory">Theory</h3>
+<p>The test that one optimizer is better than another can be recast as four
+checks on the <em>distribution</em> of performance scores.</p>
+<ol>
+<li>Visualize the data, somehow.</li>
+<li>Check if the central tendency of one distribution is <em>better</em> than
+    the other; e.g. compare their median values.</li>
+<li>Check the different between the central tendencies is not some
+    <em>small effect</em>.</li>
+<li>Check if the distributions are <em>significantly different</em>;</li>
+</ol>
+<p>The first step is very important. Stats should always be used as sanity
+checks on intuitions gained by other means. So look at the data before
+making, possibly bogus, inferences from it. For example, here are some
+charts showing the effects on a population as we apply more and more of
+some treatment. Note that the mean of the populations remains unchanged,
+yet we might still endorse the treatment since it reduces the
+uncertainty associated with each population.</p>
+<p><img alt="img" src="img/index_customers_clip_image002.jpg" /></p>
+<p>Note that 2 and 3 and 4 must be all be true to assert that one thing
+generates better numbers than another.  For example, one bogus
+conclusion would be to just check median values (step2) and ignore
+steps3 and steps4. <em>BAD IDEA</em>. Medians can be very misleading unless
+you consider the overall distributions (as done in step3 and step4).</p>
+<p>(As an aside, note that the above requests a check for <em>median</em>,
+not <em>mean</em>. This is required since, all things considered,
+means do not mean much, especially for highly skewed distributions.
+For example, Bill Gates and 35 homeless people are in the same room.
+Their mean annual income is over a billion dollars each- which is
+a number that characterized neither Mr. Gates or the homeless people.
+On the other hand, the median income of that population is close to zero-
+which is a number that characterizes most of that population. )</p>
+<p>In practice, step2,step3,step4 are
+listed in increasing order of effort (e.g. the <em>bootstrap sample</em> method
+discussed later in this subject is an example of step4, and this
+can take a while to compute). So pragmatically, it is useful
+to explore the above in the order step1 then step2 then step3 then step4 (and <em>stopping</em>
+along the way if any part fails). For example, 
+one possible bogus inference would be to apply step4 without
+the step3 since if the <em>small effect</em> test fails, then the third
+<em>significance</em> test is misleading.
+ For example, returning to the above distributions, note the large
+overlap in the top two curves in those plots. When distributions exhibit
+a very large overlap, it is very hard to determine if one is really
+different to the other. So large variances can mean that even if the
+means are <em>better</em>, we cannot really say that the values in one
+distribution are usually better than the other.</p>
+<h3 id="step1-visualization">Step1: Visualization</h3>
+<p>Suppose we had two optimizers which in a 10 repeated runs generated
+performance from two models:</p>
+<pre><code>    1:       def _tile2():
+    2:         def show(lst):
+    3:            return xtile(lst,lo=0, hi=1,width=25,
+    4:                         show= lambda s:" %3.2f" % s)
+    5:         print "one", show([0.21, 0.29, 0.28, 0.32, 0.32, 
+    6:                            0.28, 0.29, 0.41, 0.42, 0.48])
+    7:         print "two", show([0.71, 0.92, 0.80, 0.79, 0.78, 
+    8:                            0.9,  0.71, 0.82, 0.79, 0.98])
+</code></pre>
+<p>When faced with new data, always chant the following mantra:</p>
+<ul>
+<li><em>First</em> visualize it to get some intuitions;</li>
+<li><em>Then</em> apply some statistics to double check those intuitions.</li>
+</ul>
+<p>That is, it is <em>strong recommended</em> that, prior doing any statistical
+work, an analyst generates a visualization of the data. Percentile
+charts a simple way to display very large populations in very little
+space. For example, here are our results from <em>one</em>, displayed on a
+range from 0.00 to 1.00.</p>
+<pre><code>one         * --|            , 0.28,  0.29,  0.32,  0.41,  0.48
+two             |    -- * -- , 0.71,  0.79,  0.80,  0.90,  0.98
+</code></pre>
+<p>In this percentile chart, the 2nd and 3rd percentiles as little dashes
+left and right of the median value, shown with a <em>"*"</em>, (learner
+<em>two</em>'s 3rd percentile is so small that it actually disappears in this
+display). The vertical bar <em>"|"</em> shows half way between the display's
+min and max (in this case, that would be (0.0+1.00)/2= 0.50)</p>
+<h4 id="xtile">Xtile</h4>
+<p>The advantage of percentile charts is that we can show a lot of data in
+very little space. </p>
+<p>For example, here's an example where the <em>xtile</em> Python function
+shows 2000 numbers on two lines:</p>
+<ul>
+<li>Quintiles divide the data into the 10th, 30th, 50th, 70th, 90th
+    percentile.</li>
+<li>Dashes (<em>"-"</em>) mark the range (10,30)th and (70,90)th percentiles;</li>
+<li>White space marks the ranges (30,50)th and (50,70)th percentiles.</li>
+</ul>
+<p>Consider two distributions, of 1000 samples each: one shows square root
+of a <em>rand()</em> and the other shows the square of a <em>rand()</em>.</p>
+<pre><code>   10:       def _tile() :
+   11:         import random
+   12:         r = random.random
+   13:         def show(lst):
+   14:           return xtile(lst,lo=0, hi=1,width=25,
+   15:                        show= lambda s:" %3.2f" % s)
+   16:         print "one", show([r()*0.5 for x in range(1000)])
+   17:         print "two", show([r()2   for x in range(1000)])
+</code></pre>
+<p>In the following quintile charts, we show these distributions:</p>
+<ul>
+<li>The range is 0 to 1.</li>
+<li>One line shows the square of 1000 random numbers;</li>
+<li>The other line shows the square root of 1000 random numbers;</li>
+</ul>
+<p>Note the brevity of the display:</p>
+<pre><code>one        -----|    *  ---  , 0.32,  0.55,  0.70,  0.84,  0.95
+two --    *     |--------    , 0.01,  0.10,  0.27,  0.51,  0.85
+</code></pre>
+<p>As before, the median value, shown with a <em>"*"</em>; and the point half-way
+between min and max (in this case, 0.5) is shown as a vertical bar
+<em>"|"</em>.</p>
+<h3 id="step2-check-medians">Step2: Check Medians</h3>
+<p>The median of a list is the middle item of the sorted values, if the list is of an odd size.
+If the list size is even, the median is the two values either side of the middle:</p>
+<pre><code>def median(lst,ordered=False):
+  lst = lst if ordered else sorted(lst)
+  n   = len(lst)
+  p   = n // 2
+  if (n % 2):  return lst[p]
+  p,q = p-1,p
+  q   = max(0,(min(q,n)))
+  return (lst[p] + lst[q]) * 0.5
+</code></pre>
+<h3 id="step3-effect-size">Step3: Effect size</h3>
+<p>An <em>effect size</em> test is a sanity check that can be summarizes as follows:</p>
+<ul>
+<li>Don't  sweat the small stuff; </li>
+</ul>
+<p>I.e. ignore small differences between items in the samples.</p>
+<p>My
+preferred test for <em>small effect</em> has:</p>
+<ul>
+<li>a simple intuition;</li>
+<li>which makes no assumptions about (say) Gaussian assumptions;</li>
+<li>and which has a solid lineage in the literature.</li>
+</ul>
+<p>Such a test is <a href="http://jeb.sagepub.com/content/25/2/101.short" title="A. Vargha and H. D. Delaney. A critique and improvement of the CL common language effect size statistics of McGraw and Wong. Journal of Educational and Behavioral Statistics, 25(2):101-132, 2000">Vargha and Delaney</a>'s A12 statistic.
+ The statistic was
+proposed in Vargha and Delaney's 2000 paper was endorsed in many places
+including in <a href="http://goo.gl/4N34gk" title="Andrea Arcuri, Lionel C. Briand: A practical guide for using statistical tests to assess randomized algorithms in software  engineering. ICSE 2011: 1-10">Acruci and Briad</a>'s ICSE 2011 paper.
+After I describe it to you, you will wonder why anyone would ever want
+to use anything else.</p>
+<p>Given a performance measure seen in <em>m</em> measures
+of <em>X</em> and <em>n</em> measures of <em>Y</em>, the A12 statistics measures the
+probability that running algorithm <em>X</em> yields higher values than running
+another algorithm <em>Y</em>. Specifically, it counts how often we seen larger
+numbers in <em>X</em> than <em>Y</em> (and if the same numbers are found in both, we
+add a half mark):</p>
+<pre><code> a12= #(X.i &gt; Y.j) / (n*m) + .5#(X.i == Y.j) / (n*m)
+</code></pre>
+<p>According to Vargha and Delaney, a small, medium, large difference
+between two populations is:</p>
+<ul>
+<li><em>large</em> if <code>a12</code> is over 71%;</li>
+<li><em>medium</em> if <code>a12</code> is over 64%;</li>
+<li><em>small</em> if <code>a12</code> is 56%, or less.</li>
+</ul>
+<p>A naive version of this code is shown here in the <em>ab12slow</em> function. While simple to
+code, this <em>ab12slow</em> function runs in polynomial time (since for each item in <em>lst1</em>,
+it runs over all of <em>lst2</em>):</p>
+<pre><code class="python">def _ab12():
+  def a12slow(lst1,lst2):
+    more = same = 0.0
+    for x in sorted(lst1):
+      for y in sorted(lst2):
+        if   x==y : 
+          same += 1
+        elif x &gt; y : 
+          more += 1
+    return (more + 0.5*same) / (len(lst1)*len(lst2))
+  random.seed(1)
+  l1 = [random.random() for x in range(5000)]
+  more = [random.random()*2 for x in range(5000)]
+  l2 = [random.random()  for x in range(5000)]
+  less = [random.random()/2.0 for x in range(5000)]
+  for tag, one,two in [(&quot;1less&quot;,l1,more), 
+                       (&quot;1more&quot;,more,less),(&quot;same&quot;,l1,l2)]:
+    t1  = msecs(lambda : a12(l1,less))
+    t2  = msecs(lambda : a12slow(l1,less))
+    print(&quot;\n&quot;,tag,&quot;\n&quot;,t1,a12(one,two))
+    print(t2, a12slow(one,two))
+
+</code></pre>
+
+<p>Note that the test code _<em>ab12</em> shows that our fast and slow method generate the same A12 score, but the
+fast way does so thousands of times faster. The following tests show runtimes for lists of 5000 numbers:</p>
+<pre><code>experimemt  msecs(fast)  a12(fast)  msecs(slow)  a12(slow)
+1less          13        0.257      9382           0.257  
+1more          20        0.868      9869           0.868
+same           11        0,502      9937           0.502
+</code></pre>
+<h2 id="significance-tests">Significance Tests</h2>
+<h3 id="standard-utils">Standard Utils</h3>
+<p>Didn't we do this before?</p>
+<pre><code class="python">
+
+</code></pre>
+
+<p>Misc functions:</p>
+<pre><code class="python">rand = random.random
+any  = random.choice
+seed = random.seed
+exp  = lambda n: math.e**n
+ln   = lambda n: math.log(n,math.e)
+g    = lambda n: round(n,2)
+
+def median(lst,ordered=False):
+  if not ordered: lst= sorted(lst)
+  n = len(lst)
+  p = n//2
+  if n % 2: return lst[p]
+  q = p - 1
+  q = max(0,min(q,n))
+  return (lst[p] + lst[q])/2
+
+def msecs(f):
+  import time
+  t1 = time.time()
+  f()
+  return (time.time() - t1) * 1000
+
+def pairs(lst):
+  &quot;Return all pairs of items i,i+1 from a list.&quot;
+  last=lst[0]
+  for i in lst[1:]:
+    yield last,i
+    last = i
+
+def xtile(lst,lo=The.lo,hi=The.hi,width=The.width,
+             chops=[0.1 ,0.3,0.5,0.7,0.9],
+             marks=[&quot;-&quot; ,&quot; &quot;,&quot; &quot;,&quot;-&quot;,&quot; &quot;],
+             bar=&quot;|&quot;,star=&quot;*&quot;,show=&quot; %3.0f&quot;):
+  &quot;&quot;&quot;The function _xtile_ takes a list of (possibly)
+  unsorted numbers and presents them as a horizontal
+  xtile chart (in ascii format). The default is a 
+  contracted _quintile_ that shows the 
+  10,30,50,70,90 breaks in the data (but this can be 
+  changed- see the optional flags of the function).
+  &quot;&quot;&quot;
+  def pos(p)   : return ordered[int(len(lst)*p)]
+  def place(x) : 
+    return int(width*float((x - lo))/(hi - lo+0.00001))
+  def pretty(lst) : 
+    return ', '.join([show % x for x in lst])
+  ordered = sorted(lst)
+  lo      = min(lo,ordered[0])
+  hi      = max(hi,ordered[-1])
+  what    = [pos(p)   for p in chops]
+  where   = [place(n) for n in  what]
+  out     = [&quot; &quot;] * width
+  for one,two in pairs(where):
+    for i in range(one,two): 
+      out[i] = marks[0]
+    marks = marks[1:]
+  out[int(width/2)]    = bar
+  out[place(pos(0.5))] = star 
+  return '('+''.join(out) +  &quot;),&quot; +  pretty(what)
+
+def _tileX() :
+  import random
+  random.seed(1)
+  nums = [random.random()**2 for _ in range(100)]
+  print(xtile(nums,lo=0,hi=1.0,width=25,show=&quot; %5.2f&quot;))
+
+</code></pre>
+
+<h3 id="standard-accumulator-for-numbers">Standard Accumulator for Numbers</h3>
+<p>Note the <em>lt</em> method: this accumulator can be sorted by median values.</p>
+<p>Warning: this accumulator keeps <em>all</em> numbers. Might be better to use
+a bounded cache.</p>
+<pre><code class="python">class Num:
+  &quot;An Accumulator for numbers&quot;
+  def __init__(i,name,inits=[]): 
+    i.n = i.m2 = i.mu = 0.0
+    i.all=[]
+    i._median=None
+    i.name = name
+    i.rank = 0
+    for x in inits: i.add(x)
+  def s(i)       : return (i.m2/(i.n - 1))**0.5
+  def add(i,x):
+    i._median=None
+    i.n   += 1   
+    i.all += [x]
+    delta  = x - i.mu
+    i.mu  += delta*1.0/i.n
+    i.m2  += delta*(x - i.mu)
+  def __add__(i,j):
+    return Num(i.name + j.name,i.all + j.all)
+  def quartiles(i):
+    def p(x) : return float(g(xs[x]))
+    i.median()
+    xs = i.all
+    n  = int(len(xs)*0.25)
+    return p(n) , p(2*n) , p(3*n)
+  def median(i):
+    if not i._median:
+      i.all = sorted(i.all)
+      i._median=median(i.all)
+    return i._median
+  def __lt__(i,j):
+    return i.median() &lt; j.median() 
+  def spread(i):
+    i.all=sorted(i.all)
+    n1=i.n*0.25
+    n2=i.n*0.75
+    if len(i.all) &lt;= 1:
+      return 0
+    if len(i.all) == 2:
+      return i.all[1] - i.all[0]
+    else:
+      return i.all[int(n2)] - i.all[int(n1)]
+
+</code></pre>
+
+<h3 id="cliffs-delta">Cliff's Delta</h3>
+<pre><code class="python">def cliffsDelta(lst1, lst2, **dull):
+
+    &quot;&quot;&quot;Returns delta and true if there are more than 'dull' differences&quot;&quot;&quot;
+#    if not dull:
+#        dull = {'small': 0.147, 'medium': 0.33, 'large': 0.474} # effect sizes from (Hess and Kromrey, 2004)
+    size = True
+    m, n = len(lst1), len(lst2)
+    lst2 = sorted(lst2)
+    j = more = less = 0
+    for repeats, x in runs(sorted(lst1)):
+        while j &lt;= (n - 1) and lst2[j] &lt; x:
+            j += 1
+        more += j*repeats
+        while j &lt;= (n - 1) and lst2[j] == x:
+            j += 1
+        less += (n - j)*repeats
+    d = (more - less) / (m*n)
+    if abs(d) &lt; The.cdelta:
+        size = False
+    return size
+
+
+def lookup_size(delta, dull):
+    &quot;&quot;&quot;
+    :type delta: float
+    :type dull: dict, a dictionary of small, medium, large thresholds.
+    &quot;&quot;&quot;
+    delta = abs(delta)
+    if delta &lt;= dull['small']:
+        return False
+    if dull['small'] &lt; delta &lt; dull['medium']:
+        return True
+    if dull['medium'] &lt;= delta &lt; dull['large']:
+        return True
+    if delta &gt;= dull['large']:
+        return True
+
+
+def runs(lst):
+    &quot;&quot;&quot;Iterator, chunks repeated values&quot;&quot;&quot;
+    for j, two in enumerate(lst):
+        if j == 0:
+            one, i = two, 0
+        if one != two:
+            yield j - i, one
+            i = j
+        one = two
+    yield j - i + 1, two
+
+
+</code></pre>
+
+<h3 id="the-a12-effect-size-test">The A12 Effect Size Test</h3>
+<p>As above</p>
+<pre><code class="python">
+def a12slow(lst1,lst2):
+  &quot;how often is x in lst1 more than y in lst2?&quot;
+  more = same = 0.0
+  for x in lst1:
+    for y in lst2:
+      if    x == y : same += 1
+      elif  x &gt;  y : more += 1
+  x= (more + 0.5*same) / (len(lst1)*len(lst2))
+  return x
+
+def a12(lst1,lst2):
+  &quot;how often is x in lst1 more than y in lst2?&quot;
+  def loop(t,t1,t2): 
+    while t1.j &lt; t1.n and t2.j &lt; t2.n:
+      h1 = t1.l[t1.j]
+      h2 = t2.l[t2.j]
+      h3 = t2.l[t2.j+1] if t2.j+1 &lt; t2.n else None 
+      if h1&gt;  h2:
+        t1.j  += 1; t1.gt += t2.n - t2.j
+      elif h1 == h2:
+        if h3 and h1 &gt; h3 :
+            t1.gt += t2.n - t2.j  - 1
+        t1.j  += 1; t1.eq += 1; t2.eq += 1
+      else:
+        t2,t1  = t1,t2
+    return t.gt*1.0, t.eq*1.0
+  #--------------------------
+  lst1 = sorted(lst1, reverse=True)
+  lst2 = sorted(lst2, reverse=True)
+  n1   = len(lst1)
+  n2   = len(lst2)
+  t1   = o(l=lst1,j=0,eq=0,gt=0,n=n1)
+  t2   = o(l=lst2,j=0,eq=0,gt=0,n=n2)
+  gt,eq= loop(t1, t1, t2)
+  return gt/(n1*n2) + eq/2/(n1*n2)  &gt;= The.a12
+
+def _a12():
+  def f1(): return a12slow(l1,l2)
+  def f2(): return a12(l1,l2)
+  for n in [100,200,400,800,1600,3200,6400]:
+    l1 = [rand() for _ in xrange(n)]
+    l2 = [rand() for _ in xrange(n)]
+    t1 = msecs(f1)
+    t2 = msecs(f2)
+    print(n, g(f1()),g(f2()),int((t1/t2)))
+
+</code></pre>
+
+<p>n   a12(fast)       a12(slow)       tfast / tslow</p>
+<hr />
+<p>100  0.53           0.53               4
+200  0.48           0.48               6
+400  0.49           0.49              28
+800  0.5            0.5               26
+1600 0.51           0.51              72
+3200 0.49           0.49             109
+6400 0.5            0.5              244
+````</p>
+<h2 id="non-parametric-hypothesis-testing">Non-Parametric Hypothesis Testing</h2>
+<p>The following <em>bootstrap</em> method was introduced in
+1979 by Bradley Efron at Stanford University. It
+was inspired by earlier work on the
+jackknife.
+Improved estimates of the variance were <a href="http://goo.gl/14n8Wf" title="Bradley Efron and R.J. Tibshirani. An Introduction to the Bootstrap (Chapman &amp; Hall/CRC Monographs on Statistics &amp; Applied Probability), 1993">developed later</a>.  </p>
+<p>To check if two populations <em>(y0,z0)</em>
+are different, many times sample with replacement
+from both to generate <em>(y1,z1), (y2,z2), (y3,z3)</em>.. etc.</p>
+<pre><code class="python">def sampleWithReplacement(lst):
+  &quot;returns a list same size as list&quot;
+  def any(n)  : return random.uniform(0,n)
+  def one(lst): return lst[ int(any(len(lst))) ]
+  return [one(lst) for _ in lst]
+
+</code></pre>
+
+<p>Then, for all those samples,
+ check if some <em>testStatistic</em> in the original pair
+hold for all the other pairs. If it does more than (say) 99%
+of the time, then we are 99% confident in that the
+populations are the same.</p>
+<p>In such a <em>bootstrap</em> hypothesis test, the <em>some property</em>
+is the difference between the two populations, muted by the
+joint standard deviation of the populations.</p>
+<pre><code class="python">def testStatistic(y,z): 
+    &quot;&quot;&quot;Checks if two means are different, tempered
+     by the sample size of 'y' and 'z'&quot;&quot;&quot;
+    tmp1 = tmp2 = 0
+    for y1 in y.all: tmp1 += (y1 - y.mu)**2 
+    for z1 in z.all: tmp2 += (z1 - z.mu)**2
+    s1    = (float(tmp1)/(y.n - 1))**0.5
+    s2    = (float(tmp2)/(z.n - 1))**0.5
+    delta = z.mu - y.mu
+    if s1+s2:
+      delta =  delta/((s1/y.n + s2/z.n)**0.5)
+    return delta
+</code></pre>
+
+<p>The rest is just details:</p>
+<ul>
+<li>Efron advises
+  to make the mean of the populations the same (see
+  the <em>yhat,zhat</em> stuff shown below).</li>
+<li>The class <em>total</em> is a just a quick and dirty accumulation class.</li>
+<li>For more details see <a href="http://goo.gl/14n8Wf" title="Bradley Efron and R.J. Tibshirani. An Introduction to the Bootstrap (Chapman &amp; Hall/CRC Monographs on Statistics &amp; Applied Probability), 1993">the Efron text</a>.  </li>
+</ul>
+<pre><code class="python">def bootstrap(y0,z0,conf=The.conf,b=The.b):
+  &quot;&quot;&quot;The bootstrap hypothesis test from
+     p220 to 223 of Efron's book 'An
+    introduction to the boostrap.&quot;&quot;&quot;
+  class total():
+    &quot;quick and dirty data collector&quot;
+    def __init__(i,some=[]):
+      i.sum = i.n = i.mu = 0 ; i.all=[]
+      for one in some: i.put(one)
+    def put(i,x):
+      i.all.append(x);
+      i.sum +=x; i.n += 1; i.mu = float(i.sum)/i.n
+    def __add__(i1,i2): return total(i1.all + i2.all)
+  y, z   = total(y0), total(z0)
+  x      = y + z
+  tobs   = testStatistic(y,z)
+  yhat   = [y1 - y.mu + x.mu for y1 in y.all]
+  zhat   = [z1 - z.mu + x.mu for z1 in z.all]
+  bigger = 0.0
+  for i in range(b):
+    if testStatistic(total(sampleWithReplacement(yhat)),
+                     total(sampleWithReplacement(zhat))) &gt; tobs:
+      bigger += 1
+  return bigger / b &lt; conf
+</code></pre>
+
+<h4 id="examples">Examples</h4>
+<pre><code class="python">def _bootstraped(): 
+  def worker(n=1000,
+             mu1=10,  sigma1=1,
+             mu2=10.2, sigma2=1):
+    def g(mu,sigma) : return random.gauss(mu,sigma)
+    x = [g(mu1,sigma1) for i in range(n)]
+    y = [g(mu2,sigma2) for i in range(n)]
+    return n,mu1,sigma1,mu2,sigma2,\
+        'different' if bootstrap(x,y) else 'same'
+  # very different means, same std
+  print(worker(mu1=10, sigma1=10, 
+               mu2=100, sigma2=10))
+  # similar means and std
+  print(worker(mu1= 10.1, sigma1=1, 
+               mu2= 10.2, sigma2=1))
+  # slightly different means, same std
+  print(worker(mu1= 10.1, sigma1= 1, 
+               mu2= 10.8, sigma2= 1))
+  # different in mu eater by large std
+  print(worker(mu1= 10.1, sigma1= 10, 
+               mu2= 10.8, sigma2= 1))
+
+</code></pre>
+
+<p>Output:</p>
+<pre><code class="python">
+#_bootstraped()
+
+(1000, 10, 10, 100, 10, 'different')
+(1000, 10.1, 1, 10.2, 1, 'same')
+(1000, 10.1, 1, 10.8, 1, 'different')
+(1000, 10.1, 10, 10.8, 1, 'same')
+
+</code></pre>
+
+<p>Warning- the above took 8 seconds to generate since we used 1000 bootstraps.
+As to how many bootstraps are enough, that depends on the data. There are
+results saying 200 to 400 are enough but, since I am  suspicious man, I run it for 1000.</p>
+<p>Which means the runtimes associated with bootstrapping is a significant issue.
+To reduce that runtime, I avoid things like an all-pairs comparison of all treatments
+(see below: Scott-knott).  Also, BEFORE I do the boostrap, I first run
+the effect size test (and only go to bootstrapping in effect size passes:</p>
+<pre><code class="python">def different(l1,l2):
+  #return bootstrap(l1,l2) and a12(l2,l1)
+  #return a12(l2,l1) and bootstrap(l1,l2)
+  if The.useA12:
+      return a12(l2,l1) and bootstrap(l1,l2)
+  else:
+      return cliffsDelta(l1,l2) and bootstrap(l1,l2)
+
+</code></pre>
+
+<h2 id="saner-hypothesis-testing">Saner Hypothesis Testing</h2>
+<p>The following code, which you should use verbatim does the following:</p>
+<ul>
+<li>All treatments are clustered into <em>ranks</em>. In practice, dozens
+  of treatments end up generating just a handful of ranks.</li>
+<li>The numbers of calls to the hypothesis tests are minimized:<ul>
+<li>Treatments are sorted by their median value.</li>
+<li>Treatments are divided into two groups such that the
+  expected value of the mean values <em>after</em> the split is minimized;</li>
+<li>Hypothesis tests are called to test if the two groups are truly difference.<ul>
+<li>All hypothesis tests are non-parametric and include (1) effect size tests
+    and (2) tests for statistically significant numbers;</li>
+<li>Slow bootstraps are executed  if the faster <em>A12</em> tests are passed;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>In practice, this means that the hypothesis tests (with confidence of say, 95%)
+are called on only a logarithmic number of times. So...</p>
+<ul>
+<li>With this method, 16 treatments can be studied using less than <em>&sum;<sub>1,2,4,8,16</sub>log<sub>2</sub>i =15</em> hypothesis tests  and confidence <em>0.99<sup>15</sup>=0.86</em>.</li>
+<li>But if did this with the 120 all-pairs comparisons of the 16 treatments, we would have total confidence _0.99<sup>120</sup>=0.30.</li>
+</ul>
+<p>For examples on using this code, see <em>rdivDemo</em> (below).</p>
+<pre><code class="python">def scottknott(data,cohen=The.cohen,small=The.small,useA12=The.a12 &gt; 0, epsilon=The.epsilon):
+  &quot;&quot;&quot;Recursively split data, maximizing delta of
+  the expected value of the mean before and 
+  after the splits. 
+  Reject splits with under 3 items&quot;&quot;&quot;
+  all  = reduce(lambda x,y:x+y,data)
+  same = lambda l,r: abs(l.median() - r.median()) &lt;= all.s()*cohen
+  if useA12:
+    same = lambda l, r:   not different(l.all,r.all) 
+  big  = lambda    n: n &gt; small
+  return rdiv(data,all,minMu,big,same,epsilon)
+
+def rdiv(data,  # a list of class Nums
+         all,   # all the data combined into one num
+         div,   # function: find the best split
+         big,   # function: rejects small splits
+         same, # function: rejects similar splits
+         epsilon): # small enough to split two parts
+  &quot;&quot;&quot;Looks for ways to split sorted data, 
+  Recurses into each split. Assigns a 'rank' number
+  to all the leaf splits found in this way. 
+  &quot;&quot;&quot;
+  def recurse(parts,all,rank=0):
+    &quot;Split, then recurse on each part.&quot;
+    cut,left,right = maybeIgnore(div(parts,all,big,epsilon),
+                                 same,parts)
+    if cut: 
+      # if cut, rank &quot;right&quot; higher than &quot;left&quot;
+      rank = recurse(parts[:cut],left,rank) + 1
+      rank = recurse(parts[cut:],right,rank)
+    else: 
+      # if no cut, then all get same rank
+      for part in parts: 
+        part.rank = rank
+    return rank
+  recurse(sorted(data),all)
+  return data
+
+
+
+def maybeIgnore((cut,left,right), same,parts):
+  if cut:
+    if same(sum(parts[:cut],Num('upto')),
+            sum(parts[cut:],Num('above'))):    
+      cut = left = right = None
+  return cut,left,right
+
+def minMu(parts,all,big,epsilon):
+  &quot;&quot;&quot;Find a cut in the parts that maximizes
+  the expected value of the difference in
+  the mean before and after the cut.
+  Reject splits that are insignificantly
+  different or that generate very small subsets.
+  &quot;&quot;&quot;
+  cut,left,right = None,None,None
+  before, mu     =  0, all.mu
+  for i,l,r in leftRight(parts,epsilon):
+    if big(l.n) and big(r.n):
+      n   = all.n * 1.0
+      now = l.n/n*(mu- l.mu)**2 + r.n/n*(mu- r.mu)**2  
+      if now &gt; before:
+        before,cut,left,right = now,i,l,r
+  return cut,left,right
+
+def leftRight(parts,epsilon=The.epsilon):
+  &quot;&quot;&quot;Iterator. For all items in 'parts',
+  return everything to the left and everything
+  from here to the end. For reasons of
+  efficiency, take a first pass over the data
+  to pre-compute and cache right-hand-sides
+  &quot;&quot;&quot;
+  rights = {}
+  n = j = len(parts) - 1
+  while j &gt; 0:
+    rights[j] = parts[j]
+    if j &lt; n: rights[j] += rights[j+1]
+    j -=1
+  left = parts[0]
+  for i,one in enumerate(parts):
+    if i&gt; 0:
+      if parts[i]._median - parts[i-1]._median &gt; epsilon:
+        yield i,left,rights[i]
+      left += one
+</code></pre>
+
+<h2 id="putting-it-all-together">Putting it All Together</h2>
+<p>Driver for the demos:</p>
+<pre><code class="python">def rdivDemo(data,latex = True):
+  def zzz(x):
+    return int(100 * (x - lo) / (hi - lo + 0.00001))
+  data = map(lambda lst:Num(lst[0],lst[1:]),
+             data)
+  print(&quot;&quot;)
+  ranks=[]
+  for x in scottknott(data,useA12=True):
+    ranks += [(x.rank,x.median(),x)]
+  all=[]
+
+  for _,__,x in sorted(ranks): all += x.all
+  all = sorted(all)
+  lo, hi = all[0], all[-1]
+  line = &quot;----------------------------------------------------&quot;
+  last = None
+  formatStr = '%%4s , %%%ss ,    %%s   , %%4s ' %  The.text
+
+#  print((formatStr  % \
+#               ('rank', 'name', 'med', 'iqr')) + &quot;\n&quot;+ line)
+  if latex:
+      latexPrint(ranks,all)
+  for _,__,x in sorted(ranks):
+    q1,q2,q3 = x.quartiles()
+    print((formatStr % \
+                 (x.rank+1, x.name, q2, q3 - q1))  + \
+              xtile(x.all,lo=lo,hi=hi,width=30,show=&quot;%5.2f&quot;))
+    last = x.rank 
+
+def _rdivs():
+  seed(1)
+  rdiv0();  rdiv1(); rdiv2(); rdiv3(); 
+  rdiv5(); rdiv6(); print(&quot;###&quot;); rdiv7()
+
+def latexPrint(ranks,all):
+    print(&quot;%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%&quot;)
+    print(&quot;%%%%%%%%%%%%%%%%%%%%%%%Latex Table%%%%%%%%%%%%%%%%%%%%%%%%%&quot;)
+    print(&quot;&quot;&quot;\\begin{figure}[!t]
+{\small
+{\small \\begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\\arrayrulecolor{darkgray}
+\\rowcolor[gray]{.9}  rank &amp; treatment &amp; median &amp; IQR &amp; \\\\&quot;&quot;&quot;)
+    lo, hi = all[0], all[-1]
+    for _,__,x in sorted(ranks):
+        q1,q2,q3 = x.quartiles()
+        q1,q2,q3 = q1*100,q2*100,q3*100
+        print(&quot;    %d &amp;      %s &amp;    %d &amp;  %d &amp; \quart{%d}{%d}{%d}{%d} \\\\&quot; % (x.rank+1,x.name.replace('_','\_'),q2,q3-q1,q1,q2-q1,q3,q3-q2))
+        last = x.rank   
+    print( &quot;&quot;&quot;\end{tabular}}
+}
+\\caption{%%%Enter Caption%%%
+}\\label{fig:my fig}
+\\end{figure}&quot;&quot;&quot;)
+    print(&quot;%%%%%%%%%%%%%%%%%%%%%%%End Latex Table%%%%%%%%%%%%%%%%%%%%%&quot;)
+    print(&quot;%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%&quot;)
+
+def xtile_modified(lst,lo=The.lo,hi=The.hi,width=The.width,
+             chops=[0.1 ,0.3,0.5,0.7,0.9],
+             marks=[&quot;-&quot; ,&quot; &quot;,&quot; &quot;,&quot;-&quot;,&quot; &quot;],
+             bar=&quot;|&quot;,star=&quot;*&quot;,show=&quot; %3.0f&quot;):
+  &quot;&quot;&quot;The function _xtile_ takes a list of (possibly)
+  unsorted numbers and presents them as a horizontal
+  xtile chart (in ascii format). The default is a 
+  contracted _quintile_ that shows the 
+  10,30,50,70,90 breaks in the data (but this can be 
+  changed- see the optional flags of the function).
+  &quot;&quot;&quot;
+  def pos(p)   : return ordered[int(len(lst)*p)]
+  def place(x) : 
+    return int(width*float((x - lo))/(hi - lo+0.00001))
+  def pretty(lst) : 
+    return ', '.join([show % x for x in lst])
+  ordered = sorted(lst)
+  lo      = min(lo,ordered[0])
+  hi      = max(hi,ordered[-1])
+  what    = [pos(p)   for p in chops]
+  where   = [place(n) for n in  what]
+  out     = [&quot; &quot;] * width
+  for one,two in pairs(where):
+    for i in range(one,two): 
+      out[i] = marks[0]
+    marks = marks[1:]
+  out[int(width/2)]    = bar
+  out[place(pos(0.5))] = star 
+  print(what)
+  return what
+####################################
+
+def thing(x):
+    &quot;Numbers become numbers; every other x is a symbol.&quot;
+    try: return int(x)
+    except ValueError:
+        try: return float(x)
+        except ValueError:
+            return x
+
+def main():
+  log=None
+  latex = The.latex
+  all={}
+  now=[]
+  for line in sys.stdin:
+    for word in line.split():
+      word = thing(word)
+      if isinstance(word,str):
+        now = all[word] = all.get(word,[])
+      else:
+        now += [word]
+  rdivDemo( [ [k] + v for k,v in all.items() ],latex) 
+
+
+if args.demo:
+  _rdivs()
+else:
+  main()
+
+#print(&quot;&quot;&quot;\begin{figure}[!t]
+#
+#{\small
+#
+#{\small \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+#\arrayrulecolor{darkgray}
+#\rowcolor[gray]{.9}  rank &amp; treatment &amp; median &amp; IQR &amp; 
+#%min= 20, max= 117
+#\\&quot;&quot;&quot; + 
+#  %d &amp;      %s &amp;    %d  &amp;  %d &amp; \quart{%d}{%d}{%d}{%d} \\
+#+ &quot;&quot;&quot;\end{tabular}}
+#
+#% :learn 4.64 :analyze 1.69 :boots 3 effects 5 :conf 0.970299
+#
+#}
+#\caption{COCOMO vs just lines
+#of code. SE values seen in 
+#leave-one-studies, repeated ten times.
+#For each of the four tables in this figure,
+#{\em better} methods appear {\em higher} in the tables.
+#In these tables,
+#median and IQR are the 50th and the 
+#(75-25)th percentiles. The IQR range is
+#shown  in the right column
+#with black dot at the median. Horizontal lines
+#divide the ``ranks'' found by our Scott-Knott+bootstrapping+effect size tests  (shown in  left column).
+#}\label{fig:loc}
+#\end{figure}&quot;&quot;&quot;)
+
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
