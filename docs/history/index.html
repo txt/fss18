@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>SE+AI,  then and now - found/soft/sci/18</title>
+        <title>SE+AI,  then and now - ncsu/cs/fss/2018</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -40,7 +40,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="..">found/soft/sci/18</a>
+                    <a class="navbar-brand" href="..">ncsu/cs/fss/2018</a>
                 </div>
 
                 <!-- Expanded navigation -->
@@ -50,12 +50,13 @@
                             <li >
                                 <a href="..">Home</a>
                             </li>
-                            <li >
-                                <a href="../about/">Syllabus</a>
-                            </li>
                             <li class="dropdown active">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lectures <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notes <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../syllabus.md">Syllabus</a>
+</li>
                                     
 <li >
     <a href="../lectures/w2.md">Bye</a>
@@ -77,15 +78,20 @@
     <a href="../inspiration/">Inspiration</a>
 </li>
             
-<li >
-    <a href="../syllabus.md">Syllabus</a>
-</li>
-            
 <li class="active">
     <a href="./">SE+AI,  then and now</a>
 </li>
     </ul>
   </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">H/W <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../proj/w1/">One</a>
+</li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -102,7 +108,7 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Glossary <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Terms <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
   <li class="dropdown-submenu">
@@ -157,7 +163,7 @@
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../license/">
+                                <a rel="prev" href="../proj/w1/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -224,7 +230,17 @@ A: AI</p>
 <h3 id="q-so-whats-next">Q: So What's next?</h3>
 <p>A: AI</p>
 <h2 id="se-the-present">SE: the present</h2>
-<p>Software, matters</p>
+<p>Software now mediates what we see and how we act</p>
+<ul>
+<li>Chemists win  Nobel Prize for  <a href="http://goo.gl/Lwensc">software sims</a></li>
+<li>Engineers use software to design <a href="http://goo.gl/qBMyIZ">optical tweezers, radiation therapy, remote sensing,  chip design</a></li>
+<li>Web analysts use software  to analyze clickstreams to <a href="http://goo.gl/b26CfY">improve sales and marketing strategies</a></li>
+<li>Stock traders write software to <a href="http://www.quantopian.com">simulate trading strategies</a></li>
+<li>Analysts write software  to mine   labor statistics data to <a href="http://goo.gl/X4kgnc">review proposed gov policies</a></li>
+<li>Journalists use software   to analyze economic data, <a href="http://fivethirtyeight.com">make visualizations of their news stories</a></li>
+<li>Etc etc etc</li>
+</ul>
+<p>In short, now more than ever, software really really matters</p>
 <ul>
 <li>In London or New York,<ul>
 <li>The time for ambulance to reach patient
@@ -242,16 +258,20 @@ someone repossesses your car</li>
 </ul>
 </li>
 <li>Autonomous cars</li>
+<li>Software is essential to international financial and transport systems; our energy generation and distribution systems; and even the pacemakers that control the beat of our hearts.</li>
+<li>Looking forward,  to the forthcoming age of autonomous cars and
+flying drones, it is clear that software models (written in traditional
+programming languages or in some next-generation interpretation)
+will be key in determining what we can do, when, where, and how.</li>
 </ul>
-<p>Software now mediates what we see and how we act</p>
+<p>So how can we help our AI systems reason better about our data, and our models?</p>
 <ul>
-<li>Chemists win  Nobel Prize for  <a href="http://goo.gl/Lwensc">software sims</a></li>
-<li>Engineers use software to design <a href="http://goo.gl/qBMyIZ">optical tweezers, radiation therapy, remote sensing,  chip design</a></li>
-<li>Web analysts use software  to analyze clickstreams to <a href="http://goo.gl/b26CfY">improve sales and marketing strategies</a></li>
-<li>Stock traders write software to <a href="http://www.quantopian.com">simulate trading strategies</a></li>
-<li>Analysts write software  to mine   labor statistics data to <a href="http://goo.gl/X4kgnc">review proposed gov policies</a></li>
-<li>Journalists use software   to analyze economic data, <a href="http://fivethirtyeight.com">make visualizations of their news stories</a></li>
-<li>Etc etc etc</li>
+<li>Using data mining,
+we might learn a model from data that predicts for (say) a single target class;</li>
+<li>Using optionzers, we might  a multi-objective optimizer to find what solutions score best on multiple target variables.</li>
+<li>Also, data miners can be used to
+to summarize the data, after which optimizers can <a href="http://menzies.us/pdf/15gale.pdf">leap to better solutions, faster</a>;</li>
+<li>Also, optimizers can be used to <a href="https://arxiv.org/pdf/1609.01759.pdf">select intelligent settings for data mining algorithms</a> e.g. such as how many trees should be included in a random forest.</li>
 </ul>
 <h2 id="se-the-future">SE: the future</h2>
 <p>Software enginenering isn't just about software any more</p>
