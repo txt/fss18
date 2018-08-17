@@ -68,5 +68,19 @@ However, with some clever sampling of the data, it is possible to scale these tr
 One way to look at a table of data is an example of some function that computes
 columns "_Y_" from input columns "_X_".
 
+## Splits
 
-TBD
+Another way to look at a table of data is as a source of `Split`s.
+
+- Columns have ranges
+- Most ranges are not interesting (not useful for decision making)
+- So most columns are not interesting 
+     - Standard lesson: need only `sqrt(col)` of the columns (and for text mining data, even fewer)
+
+Sym columns:
+
+- Splits are solo simples or disjunctions
+
+Num columns:
+
+- Splits can be found oh so many ways
