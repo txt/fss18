@@ -1,4 +1,4 @@
-site_name: ncsu/cs/fss/2018
+site_name: Found.Soft.Sci
 nav:
     - Home: index.md
     - Notes: 
@@ -17,14 +17,14 @@ nav:
              - Week1: review/w1.md
     - A-Z: 
          - E: 
-              - Effect size: gloss/effectsize.md
+              - Effect size: lectures/effectsize.md
               - Explanation: lectures/explain.md
          - B: 
-              - Bootstrap: gloss/bootstrap.md
+              - Bootstrap: lectures/bootstrap.md
          - S:
-              - Significance test: gloss/significance.md 
+              - Significance test: lectures/significance.md 
               - Simplicity: lectures/simple.md
-              - Scott-Knot: gloss/sk.md
+              - Scott-Knot: lectures/sk.md
          - T:
               - Tables : lectures/tables.md
               - Things : lectures/things.md
@@ -38,7 +38,7 @@ nav:
                       - JMetal: dd
                       - Deep: dd
                       - EvoSuite: ee
-    - License: license.md
+    - (c) 2018 Tim Menzies: license.md
 extra_css:
     - css/extra.css
 edit_uri: tree/master/web/docs

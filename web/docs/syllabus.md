@@ -114,10 +114,10 @@ Grades will be added together using:
 
 + Weekly solo homeworks (till October): 8 marks (8 homeworks 1 mark each)
      - Homeworks can be resubmitted till you get full marks on them. But:
-     - But no homeworks will be accepted after October 15.
-     - And once you submit homework i+1, your marks for homework 1..i will freeze.
-     - And only 2 homeworks (max) will be marked per student per week (this includes resubmissions)
-     - And you will lose 0.5 marks for any week where you do not submit a homework
+          - No homeworks will be accepted after October 15.
+          - Once you submit homework i+1, your marks for homework 1..i will freeze.
+          - Only 2 homeworks (max) will be marked per student per week (this includes resubmissions)
+          - You lose 0.5 marks for any week where you do not submit a homework (including resubmissions)
 + Mid-term Oct 28 (on terminology): 22  marks
 + Solo poster (on current  directions in foundations of software science): 10 marks
     - 2 page paper
@@ -126,27 +126,28 @@ Grades will be added together using:
         - Topic: Posters will explain some interesting aspect on some paper on some work NOT authored by Menzies.  Something on data mining and/or search-based SE and/or thorem proving **as applied to some SE task**
         - To find examples of that work, see papers **after 2012** from top SE-venues
              - [Google scholar, top SE-venues](https://scholar.google.com/citations?view_op=top_venues&hl=en&vq=eng_softwaresystems)
-	     - In particular, ICSE, TSE, JSS, IST, MSR, ESE, ASE,  TOSEM, ICSM (now ICSME)
+             - In particular, ICSE, TSE, JSS, IST, MSR, ESE, ASE,  TOSEM, ICSM (now ICSME)
         - Poster may burrow definitions and graphics from the paper they are reviewing. BUT. Anything the student must be able to explain
           in further detail anything they put into their poster.
     - Presentation (5 mins talk, 5 mins questions) 10 marks
            - No slides
            - Instead, place your 2 page paper under the podium camera, then talk to the content.
-           - **IMPORTANT** : Prior to class, post your paper to [the give site](http://tiny.cc/fss18give). Otherwise, lose 1 mark.
+           - **IMPORTANT** : Prior to class, post your paper to [the submit site](http://tiny.cc/fss18give). Otherwise, lose 1 mark.
 + Big project (due end November) on automated SE): 25 (essay) 15 (presentation) 10 (code review)
     - Project must present two implementations
            - An initial implementation which you will critize using our [baseline criteria](lectures/baseline.md)
-           - A second implementation  where the initial implementation is augmented with the concepts of this subject
+           - A second implementation  where the you strive to improve that implementation, according to any of the baseline criteria.
            - Note that merely doing some existing standard data mining project **will NOT** be sufficcient
     - Paper are 8+ pages pdf in [ACM format](https://www.acm.org/publications/proceedings-template)
     - The code review will be the lecturer reading the code checking that the implementation is above a minimum level of effort.
+           - Lecturer may call students/ teams at any time to his office for such reviews.
     - Presentations will start mid-November
     - Paper is not due till Dec 1.
 
 Note that:
 
-- master students will do the big project in groups of 3. All other work is solo.
-- All submissions will be posted to [the submit site](http://tiny.cc/fss18give). Take long urls and shorten them with (e.g.) tiny.cc before psiting.
+- Master students will do the big project in groups of 3. All other work is solo.
+- Submissions will be posted to [the submit site](http://tiny.cc/fss18give). Take long urls and shorten them with (e.g.) tiny.cc before psiting.
 
 
 ## Attendance
