@@ -371,45 +371,24 @@ DATA2 =&quot;&quot;&quot;
 <pre><code class="python">
 def lines(s):
   &quot;Return contents, one line at a time.&quot;
-  if s[-3:] in [&quot;csv&quot;,&quot;dat&quot;]:
-    with open(s) as fs:
-      for line in fs: 
-        yield line
-  else:
-    for line in s.splitlines():
-      yield line
+  yourCodeHere()
 
 def rows(src):
   &quot;&quot;&quot;Kill bad characters. If line ends in ',' 
    then join to next. Skip blank lines.&quot;&quot;&quot;
-  cache = []
-  for line in src:
-    line = re.sub(r'([ \n\r\t]|#.*)', &quot;&quot;, line)
-    cache += [line]
-    if len(line)&gt; 0:
-      if line[-1] != &quot;,&quot;:
-        line = ''.join(cache)
-        cache=[]
-        yield line
+  yourCodeHere()
 
-def cols(src,   uses=None):
+
+def cols(src):
   &quot;&quot;&quot; If a column name on row1 contains '?', 
   then skip over that column.&quot;&quot;&quot;
-  for row in src:
-    cells = row.split(&quot;,&quot;)
-    uses  = uses or [False if &quot;?&quot; in s[0] else True for s in cells]
-    out   = [cells[pos] for pos,use  in enumerate(uses) if use]
-    yield out
+  yourCodeHere()
 
-def prep(src,  nums=None):
+
+def prep(src):
   &quot;&quot;&quot; If a column name on row1 contains '$', 
   coerce strings in that column to a float.&quot;&quot;&quot;
-  for xs in src:
-    if nums:
-      xs= [(float(x) if num else x) for x,num in zip(xs,nums)]
-    else:
-      nums = [&quot;$&quot; in x[0] for x in xs]
-    yield xs
+  yourCodeHere()
 
 </code></pre>
 
