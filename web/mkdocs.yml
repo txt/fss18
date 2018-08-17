@@ -15,13 +15,15 @@ nav:
     - Review: 
          - Week1: review/w2.md
          - Week1: review/w1.md
-    - Terms: 
+    - A-Z: 
          - E: 
               - Effect size: gloss/effectsize.md
+              - Explanation: lectures/explain.md
          - B: 
               - Bootstrap: gloss/bootstrap.md
          - S:
               - Significance test: gloss/significance.md 
+              - Simplicity: lectures/simple.md
               - Scott-Knot: gloss/sk.md
     - License: license.md
 extra_css:

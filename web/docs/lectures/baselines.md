@@ -15,6 +15,11 @@ Requirements of a Baseline Estimation Model. Extended from [Sarro, TOSEM'18](htt
 - Do not be expensive to apply.
 -  Offer comparable performance to standard methods.
 
+XXXX why [simplicity](simplicity.md).
+
+
+XXX what does [explanatory](explaination.md) mean
+
 XXX streaming
 
 XXX revising
