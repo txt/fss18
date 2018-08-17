@@ -1,5 +1,6 @@
 
 build:
+	(cd docs/proj; make)
 	mkdocs build
 	cp -r site/* ../docs
 	- git add  ../docs/* 
