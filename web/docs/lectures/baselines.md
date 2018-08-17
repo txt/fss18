@@ -39,6 +39,21 @@ community could and should turn its at- tention [30].
 M. Harman and B. Jones. Search-based software engineering. Journal of
 Information and Software Technology, 43:833–839, December 2001.
 
+## All Connected
+
+The more we compress the smaller the memory and the faster we learn and the less we need to share (so
+more privacy).
+
+The more we understand the data's prototypes the more we know what is usual/
+unusual so we more we know what is anomlaous so the easier it is to ofer a
+certification envelope
+
+Note that if our compression method is somehow hierarhical and if we track the
+errors seen by our learners in different subtrees then the more we know which
+parts of the model need revising (and which can stay the same). Which means we
+only make revisions to the parts that matter, elaving the rest stable.
+
+
 ## Other Requirements
 
 ### No eval tools 
