@@ -31,6 +31,11 @@ M=N=10 is common
 - Divide into "_x_" buckets, 
 - Train on buckets 1..i, test on i+1
 
+
+
+http://www.cs.le.ac.uk/people/llm11/publications/MinkuYaoICSE14.pdf
+
+
 ###  e.g. moving validation. 
 
 - Divide into "_x_"

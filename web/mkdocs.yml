@@ -16,6 +16,8 @@ nav:
              - Week2: review/w2.md
              - Week1: review/w1.md
     - A-Z: 
+         - A: 
+              - Axe: lectures/axe.md
          - E: 
               - Effect size: lectures/effectsize.md
               - Explanation: lectures/explain.md
@@ -38,8 +40,6 @@ nav:
                       - JMetal: dd
                       - Deep: dd
                       - EvoSuite: ee
-    - (c) 2018 Tim Menzies: license.md
+    - (c) 2018: license.md
 extra_css:
     - css/extra.css
-edit_uri: tree/master/web/docs
-repo_url: http://github.com/txt/fss18
