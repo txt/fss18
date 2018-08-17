@@ -10,11 +10,11 @@ nav:
          - Starting:
              - Inspiration : inspiration.md
              - SE+AI,  then and now: history.md
+    - H/W: 
+         - One: proj/w1.md 
          - Review: 
              - Week2: review/w2.md
              - Week1: review/w1.md
-    - H/W: 
-         - One: proj/w1.md 
     - A-Z: 
          - E: 
               - Effect size: gloss/effectsize.md

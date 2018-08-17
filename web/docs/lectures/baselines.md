@@ -1,5 +1,8 @@
 # Baseline for an "Adequate" AI
 
+nott everything works everywhre (wolpert, not always)
+
+
 ## What do uou want?
 
 Requirements of a Baseline Estimation Model. Extended from [Sarro, TOSEM'18](http://www0.cs.ucl.ac.uk/staff/F.Sarro/resource/papers/SarroTOSEM18.pdf):
