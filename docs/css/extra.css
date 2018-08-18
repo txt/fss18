@@ -3,5 +3,5 @@
 
 
 h2 { border-top: 2px #26a6e4 solid; }
-xdiv.navbar {background: #CC0000;}
+p.note {background-color: #ddd; font-style: italic; padding: 10px; box-shadow: 5px 5px; }
 img { border: 1px white solid; }

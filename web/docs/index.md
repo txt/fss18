@@ -15,12 +15,20 @@ Most software companies now learn their policies via data-driven methods. Modern
 This subject will explore methods for generating and using models built from data (i.e. how to  collectthat data; exploring that data; then presenting that data in such a way to support business-level decision making for software projects).
 
 
+Graduates of this class will no longer be **consumers** of AI software. 
+
+- Rather, they will be the **producers** of the next generation of  software engineers that build and maintain new AI tools.
+
+
 For more admin details, see the [syllabus](syllabus.md).
 
 ## Why?
 
+In this subject we ask the question: if [deep learning](lectures/deeplearning) is the answer, what was the question?
+We ask ["what kind of learners do we need?"](lectures/baselines)  then work backwards from there to design new AI methods, or
+improve existing ones.
 
-Here is a pressing question;
+This is an important task since the following is a very pressing issue:
 
 - The future of SE is [more and more AI](history.md).
 - But AI software is still software;

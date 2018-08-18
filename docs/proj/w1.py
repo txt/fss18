@@ -93,7 +93,7 @@ you will see
 
 Note the last line (number of passes and failes in the code).
 
-## Task1: Python101
+## Task1 (week1): Python101
 
 - Read [Basic Python](../pdf/python201.pdf) 
 - Write 27 functions like `testingSuccess` (above)
@@ -101,7 +101,7 @@ that demonstrate you understand that the code on pages 5 to 33, skipping p21 (so
 for one thing on each page).
 
 
-## Task2: Sample Table Data (that we want to read)
+## Task2 (week2): Sample Table Data (that we want to read)
 
 Suppose we need to read in a table.
 
@@ -122,7 +122,6 @@ sunny,75,70,TRUE,yes
 overcast,100,25,90,TRUE,yes
 overcast,81,75,FALSE,yes
 rainy,71,91,TRUE,no"""
-
 """
 
 Then we need to learn the type of the data (on row1) which in this case is
@@ -138,7 +137,6 @@ And some tables of data are more challenging that others. Here's one where
 - there can be blank lines in the file
 
 """
-
 DATA2 ="""
     outlook,   # weather forecast.
     $temp,     # degrees farenheit
@@ -163,7 +161,6 @@ DATA2 ="""
     overcast,100,25,90,TRUE,yes
     overcast,81,75,FALSE,yes # unique day
     rainy,71,91,TRUE,no"""
-
 """
 Regardless of those details, when we read both these strings, we see as output
 
@@ -188,7 +185,6 @@ Regardless of those details, when we read both these strings, we see as output
 The following functions implement the table reader.
 
 """
-
 def lines(s):
   "Return contents, one line at a time."
   yourCodeHere()
@@ -209,13 +205,11 @@ def prep(src):
   """ If a column name on row1 contains '$', 
   coerce strings in that column to a float."""
   yourCodeHere()
-
 """
 
 ### Test cases
 
 """
-
 def ok0(s):
   for row in prep(cols(rows(lines(s)))):
     print(row)

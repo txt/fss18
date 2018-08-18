@@ -3,21 +3,23 @@ nav:
     - Home: index.md
     - Notes: 
          - Admin:
-              - Syllabus : syllabus.md
-              - Submit site: http://tiny.cc/fss18give
-              - Chat: http://found18.slack
+              - Syllabus &#10004;: syllabus.md
+              - Submit site &#10004;: http://tiny.cc/fss18give
+              - Chat &#10004;: http://found18.slack
          - Baselines for Adequate AI: lectures/baselines.md
          - Starting:
-             - Inspiration : inspiration.md
-             - SE+AI,  then and now: history.md
+             - Inspiration &#10004; : inspiration.md
+             - SE+AI,  then and now &#10004;: history.md
     - H/W: 
-         - One: proj/w1.md 
+         - One &#10004;: proj/w1.md 
          - Review: 
              - Week2: review/w2.md
              - Week1: review/w1.md
     - A-Z: 
          - A: 
               - Axe: lectures/axe.md
+         - D: 
+              - Deep learning &#10004;: lectures/deeplearning.md
          - E: 
               - Effect size: lectures/effectsize.md
               - Explanation: lectures/explain.md

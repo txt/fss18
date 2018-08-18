@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>One - Found.Soft.Sci</title>
+        <title>One &#10004; - Found.Soft.Sci</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -59,15 +59,15 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../../syllabus/">Syllabus</a>
+    <a href="../../syllabus/">Syllabus &#10004;</a>
 </li>
             
 <li >
-    <a href="http://tiny.cc/fss18give">Submit site</a>
+    <a href="http://tiny.cc/fss18give">Submit site &#10004;</a>
 </li>
             
 <li >
-    <a href="http://found18.slack">Chat</a>
+    <a href="http://found18.slack">Chat &#10004;</a>
 </li>
     </ul>
   </li>
@@ -81,11 +81,11 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../../inspiration/">Inspiration</a>
+    <a href="../../inspiration/">Inspiration &#10004;</a>
 </li>
             
 <li >
-    <a href="../../history/">SE+AI,  then and now</a>
+    <a href="../../history/">SE+AI,  then and now &#10004;</a>
 </li>
     </ul>
   </li>
@@ -96,7 +96,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li class="active">
-    <a href="./">One</a>
+    <a href="./">One &#10004;</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -117,6 +117,26 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">A-Z <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">A</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../lectures/axe/">Axe</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">D</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../lectures/deeplearning/">Deep learning &#10004;</a>
+</li>
+    </ul>
+  </li>
                                     
   <li class="dropdown-submenu">
     <a href="#">E</a>
@@ -222,7 +242,7 @@
                                 </ul>
                             </li>
                             <li >
-                                <a href="../../license/">(c) 2018 Tim Menzies</a>
+                                <a href="../../license/">(c) 2018</a>
                             </li>
                         </ul>
 
@@ -238,12 +258,9 @@
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../../lectures/explain/">
+                                <a rel="prev" href="../../lectures/axe/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
-                            </li>
-                            <li>
-                                <a href="http://github.com/txt/fss18/tree/master/web/docs/proj/w1.md"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -256,8 +273,8 @@
         <li class="main active"><a href="#homework-week1-week2">Homework Week1, Week2</a></li>
             <li><a href="#todo">Todo</a></li>
             <li><a href="#a-simple-unit-test-rig-in-python">A Simple Unit Test Rig (in Python)</a></li>
-            <li><a href="#task1-python101">Task1: Python101</a></li>
-            <li><a href="#task2-sample-table-data-that-we-want-to-read">Task2: Sample Table Data (that we want to read)</a></li>
+            <li><a href="#task1-week1-python101">Task1 (week1): Python101</a></li>
+            <li><a href="#task2-week2-sample-table-data-that-we-want-to-read">Task2 (week2): Sample Table Data (that we want to read)</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -348,14 +365,14 @@ AssertionError
 # pass= 1 fail= 1 %pass = 50%
 </code></pre>
 <p>Note the last line (number of passes and failes in the code).</p>
-<h2 id="task1-python101">Task1: Python101</h2>
+<h2 id="task1-week1-python101">Task1 (week1): Python101</h2>
 <ul>
 <li>Read <a href="../../pdf/python201.pdf">Basic Python</a> </li>
 <li>Write 27 functions like <code>testingSuccess</code> (above)
 that demonstrate you understand that the code on pages 5 to 33, skipping p21 (so one function
 for one thing on each page).</li>
 </ul>
-<h2 id="task2-sample-table-data-that-we-want-to-read">Task2: Sample Table Data (that we want to read)</h2>
+<h2 id="task2-week2-sample-table-data-that-we-want-to-read">Task2 (week2): Sample Table Data (that we want to read)</h2>
 <p>Suppose we need to read in a table.</p>
 <pre><code class="python">DATA1 =&quot;&quot;&quot;
 outlook,$temp,?humidity,windy,play
@@ -373,7 +390,6 @@ sunny,75,70,TRUE,yes
 overcast,100,25,90,TRUE,yes
 overcast,81,75,FALSE,yes
 rainy,71,91,TRUE,no&quot;&quot;&quot;
-
 </code></pre>
 
 <p>Then we need to learn the type of the data (on row1) which in this case is</p>
@@ -388,8 +404,7 @@ rainy,71,91,TRUE,no&quot;&quot;&quot;
 <li>rows can continue onto the next line (if they end in ",");</li>
 <li>there can be blank lines in the file</li>
 </ul>
-<pre><code class="python">
-DATA2 =&quot;&quot;&quot;
+<pre><code class="python">DATA2 =&quot;&quot;&quot;
     outlook,   # weather forecast.
     $temp,     # degrees farenheit
     ?humidity, # relative humidity
@@ -413,7 +428,6 @@ DATA2 =&quot;&quot;&quot;
     overcast,100,25,90,TRUE,yes
     overcast,81,75,FALSE,yes # unique day
     rainy,71,91,TRUE,no&quot;&quot;&quot;
-
 </code></pre>
 
 <p>Regardless of those details, when we read both these strings, we see as output</p>
@@ -435,8 +449,7 @@ DATA2 =&quot;&quot;&quot;
 </code></pre>
 <h3 id="functions">Functions</h3>
 <p>The following functions implement the table reader.</p>
-<pre><code class="python">
-def lines(s):
+<pre><code class="python">def lines(s):
   &quot;Return contents, one line at a time.&quot;
   yourCodeHere()
 
@@ -456,12 +469,10 @@ def prep(src):
   &quot;&quot;&quot; If a column name on row1 contains '$', 
   coerce strings in that column to a float.&quot;&quot;&quot;
   yourCodeHere()
-
 </code></pre>
 
 <h3 id="test-cases">Test cases</h3>
-<pre><code class="python">
-def ok0(s):
+<pre><code class="python">def ok0(s):
   for row in prep(cols(rows(lines(s)))):
     print(row)
 
