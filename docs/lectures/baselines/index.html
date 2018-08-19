@@ -272,9 +272,9 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#baseline-for-an-adequate-ai">Baseline for an "Adequate" AI</a></li>
             <li><a href="#but-what-is-a-good-baseline">But what is a "good" baseline?</a></li>
+            <li><a href="#project">Project</a></li>
             <li><a href="#all-connected">All Connected</a></li>
             <li><a href="#other-requirements">Other Requirements</a></li>
-            <li><a href="#no-support-for-stats-tests">No support for stats tests</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -285,8 +285,8 @@ generate a produce of adequate quality, given the available constraints.
 What does that mean for AI-enhanced software?</p>
 <p>Within any optimizer or data mining toolkit
 we can find hundreds of classifiers, regression tools, neural nets, support
-vector machines, evlutioanry algorithms, ant-colony optimizers, etc etc, etc.
-These primtives can be combined in millions of ways, then tuned in quadrillions of ways  (see the very active research literature
+vector machines, evolutionary algorithms, ant-colony optimizers, etc etc, etc.
+These primitives can be combined in millions of ways, then tuned in quadrillions of ways  (see the very active research literature
 on all these methods). 
 So given a new problem, which learner/optimizer should we apply? </p>
 <p>This is a very hard problem. <a href="https://ubiquity.acm.org/article.cfm?id=2555237">Wolpert</a>
@@ -294,15 +294,15 @@ reports in his famous No Free Lunch
 Theorems that if some optimizer/learner works best for some data, then some
 other optimizer/learner <a href="https://en.wikipedia.org/wiki/No_free_lunch_theorem#Example">will work best for other
 data</a>. This means that when
-new data arrives, you need <em>comissioning experiments</em>; i.e. try a variery of techniques before you can
-find what workds best for the local data.</p>
+new data arrives, you need <em>commissioning experiments</em>; i.e. try a variety of techniques before you can
+find what words best for the local data.</p>
 <p class=note>(Aside: it turns out that the NFL has some good news for us: 
 the greater the performance gain desired,
 <a href="http://www.cs.cmu.edu/~gmontane/pdfs/montanez-2013-bounding.pdf">
 the fewer the learners  exist that produce
 at least such a performance gain</a>.
 See the <a href="https://arxiv.org/abs/1603.06560">Hyperband optimizer</a> for
-an adapative approach to pruning away less-than-great methods.
+an adaptive approach to pruning away less-than-great methods.
 Also, for many learners/optimizers, their
 performance is indistinguishable for anything less than some &epsilon; value.
 So if we divide the output space into bins of width &epsilon;
@@ -322,7 +322,7 @@ algorithm</a>
 as a scout that runs
 ahead of a more complicated learners as a way to judge the complexity
 of up-coming tasks. </li>
-<li>In the software engineering community, Sarro et al
+<li>In the software engineering community, Sarro et al<br />
 et al.  recently proposed <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.112.8862&amp;rep=rep1&amp;type=pdf">baseline methods for effort
 estimation</a>.</li>
 <li>Shepperd and Macdonnel argue convincingly that 
@@ -345,108 +345,195 @@ baseline</a></li>
 with two other questions that make more sense to engineers racing to deliver
 products with limited time and resources:</p>
 <ul>
-<li>How can we quickly comission an initial, adequate, AI baseline system?</li>
+<li>How can we quickly commission an initial, adequate, AI baseline system?</li>
 <li>What can we do to test and improve on that baseline?</li>
 </ul>
 <h2 id="but-what-is-a-good-baseline">But what is a "good" baseline?</h2>
-<p>Here's one list of what a "baseline" means, from <a href="http://www0.cs.ucl.ac.uk/staff/F.Sarro/resource/papers/SarroTOSEM18.pdf">Sarro, TOSEM'18</a>,
-which we extend with our own notes. </p>
+<p>Here's one list of what a "baseline" means. Items 1..10 are adapted
+from <a href="http://www0.cs.ucl.ac.uk/staff/F.Sarro/resource/papers/SarroTOSEM18.pdf">Sarro, TOSEM'18</a>.
+(which we extend with our own notes). The other items come from my experience. </p>
 <p class=note>The key thing to note about the following is that one system may not satisfy
 all these criteria (in fact, no known system satisfied all of them). That said,
  each
 of the following points is important. And by reflecting on the value of each
 point
 for a particular AI application, we naturally consider and review (and possibly
-discard) design alternatives.
-Which is no bad thing.<br>
-&nbsp;<br>
+discard) important design alternatives.<br>
+Which is no bad thing.
+  </p>
 
-Also, the following list offers a roadmap for future research in SE+AI. Find
+<p>Note also that  the following list offers a road map for future research in SE+AI. Find
   cases where some of these points do not matter. Find ways to enhance
   existing systems such that they perform better on the following criteria.
   Etc.</p>
-
+<p><img src="https://i.ytimg.com/vi/lcxOVKqz4JA/maxresdefault.jpg" align=right width=400"></p>
 <h3 id="the-checklist">The Checklist</h3>
+<p>Now stay calm citizens of FSS'18. The following is not as complex as it looks. 
+  while there are many complex ways to support the following, there
+  are also very simple ways that can work very well for each. And for your project, you nly
+  have to undersnt a <strong>one</strong> of the following.</p>
+<p><strong>1. REASONABLE:</strong> Offer comparable performance to standard methods.</p>
+<p><strong>2. SIMPLE:</strong> Be simple to describe, implement, and interpret (i.e. interpret the output for business uses).</p>
 <ul>
-<li>SIMPLE: Be simple to describe, implement, and interpret (i.e. interpret the output for business uses).</li>
-<li>STABLE: Be <strike>deterministic</strike> stable in its outcomes<ul>
-<li>I've replaced deterministic with stable, sicne I think that is more
-  important.  </li>
-<li>For example:<ul>
+<li>My current "simplest" methods is <a href="https://arxiv.org/pdf/1803.05067.pdf">Fast-and-Frugal decision trees</a> (or see also <a href="http://library.mpib-berlin.mpg.de/ft/awk/AWK_Intuitive_2011.pdf">here</a>);
+  which is available in a nice
+  <a href="https://cran.r-project.org/web/packages/FFTrees/vignettes/guide.html">R-package</a>.</li>
+<li></li>
+</ul>
+<p><strong>3. STABLE:</strong> Be <strike>deterministic</strike> stable in its outcomes</p>
+<ul>
+<li>I've replaced deterministic with stable, since I think that is more important.  </li>
+<li>Instability is very unsettling for software project managers struggling to find general policies. Project managers lose faith in the results of software analytics if those results keep changing. Also, such instability prevents project managers from offering clear guidelines on what to change, or what to avoid, in a project.</li>
+<li>And <a href="https://link.springer.com/article/10.1007/s10664-011-9193-5">instability plagues SE data</a>. For example:<ul>
 <li><a href="http://menzies.us/pdf/12gense.pdf">Here</a>, 
-  Fig1, are the coeffectivents learned by regression on 20
-   67% samples of some training data. Note their WILD instability.</li>
+      Fig1, are the coefficients learned by regression on 20
+       67% samples of some training data. Note their WILD instability.</li>
 </ul>
 </li>
+<li>One trick for increasing stability is not to focus on all the smaller details <ul>
+<li>e.g.  when learning regression equations, do not use all the variables;</li>
+<li>e.g. when learning rules, avoid wide conditions</li>
+<li>e.g. when learning trees, do not learn deep trees).</li>
 </ul>
 </li>
-<li>INUTIAITVE: Be applicable to mixed qualitative and quantitative data.<ul>
-<li>It is good to use numeric and symblic data.</li>
+<li>Of course, if you optimize for simplicity, you may pay a performance penalty.</li>
+</ul>
+<p><strong>4a. INTUITIVE:</strong> Be applicable to mixed qualitative and quantitative data.</p>
+<ul>
+<li>It is good to use numeric and symbolic data.</li>
 <li>It is useful to be able to initial a systems with qualitative intuitions.<ul>
 <li>Then, at least, you can compare the output to what folks already
-  believe.<ul>
+      believe.<ul>
 <li>But be warned, in SE, the beliefs of many developers are...
-    <a href="http://web.cs.ucdavis.edu/~devanbu/belief+evidence.pdf">dubious</a>.</li>
+        <a href="http://web.cs.ucdavis.edu/~devanbu/belief+evidence.pdf">dubious</a>.</li>
+<li>If for no other reasons that humans have <a href="http://images.mentalfloss.com/sites/default/files/styles/insert_main_wide_image/public/cognitive_biases.png">numerous cognitive
+  biases</a><ul>
+<li>For a really long list of those biases, see
+     <a href="https://en.wikipedia.org/wiki/List_of_cognitive_biases">Wikipedia</a> or <a href="https://en.wikipedia.org/wiki/List_of_cognitive_biases#/media/File:The_Cognitive_Bias_Codex_-_180%2B_biases,_designed_by_John_Manoogian_III_(jm3).png">this chart</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>It is useful to be able to guide model construction via high-level qualitative goals.</li>
 <li>One useful technology here are <a href="https://www.eecs.qmul.ac.uk/~norman/papers/fentonMMR_Full_v1_0.pdf">Bayes nets</a> which can be either initially
-  drawn by people, then revised by data miners, or vice versa.</li>
+      drawn by people, then revised by data miners, or vice versa.</li>
+<li>Another trick is to use some incremental rule learning algorithm that updates
+  many possible new rules, then scores them by their distance to old rules (and
+  the best new rules are those that are closest to old and score highest). In
+  that rig, user background beliefs would become the first generation rules.</li>
+<li>Yet another method is to use multi-objective optimizers that fit rule
+     learner to human biases.</li>
+</ul>
+<p><strong>4b. COMPREHENSIBLE:</strong></p>
+<p>This is connected to 4a.</p>
+<ul>
+<li>Essential for communities critiquing ideas. </li>
+<li>If the only person reading a model is a carburetor, then we can expect little push back. But if your models are about policies that humans have to implement, then I take it as axiomatic that humans will want to read and critique the models.</li>
+</ul>
+<p><strong>5. GENERAL:</strong> Offer some explanatory information regarding the prediction
+  by representing generalized properties of the underlying data.</p>
+<ul>
+<li>Many systems offer only "point" solutions; i.e. examples of what might be useful.<ul>
+<li>Given <em>N</em> attributes, a point solution offers exact values for all attributes.<ul>
+<li>E.g. the output of most evolutionary programs</li>
+<li>E.g. all instance-based (nearest neighbor) methods</li>
 </ul>
 </li>
-<li>GENERAL: Offer some explanatory information regarding the prediction
-  by representing generalised properties of the underlying data.<ul>
-<li>Many systems offer only "point" solutions; i.e. examples of what might be useful.<ul>
-<li>Given <em>N</em> attributes, a point solution offers exact values for all attributes.</li>
-<li>E.g. A happy author might be editting this particular file and this particular time and place. </li>
+<li>E.g. A happy author might be editing this particular file and this particular time and place. </li>
 </ul>
 </li>
 <li>Some systems offer solutions that hold over a volume;<ul>
 <li>I.e. they ignore some values while saying things like <em>x &gt; 10</em> for
-  others.</li>
-<li>E.g. Happy authors might be editting html files on many computers
-  (and when they do it does not matter).</li>
+      others.</li>
+<li>E.g. Happy authors might be editing html files on many computers
+      (and when they do it does not matter).</li>
 </ul>
 </li>
+<li>One way to generalize  a instance-based method is to cluster the solutions,
+  then only report ranges that are different in different clusters.</li>
 </ul>
-</li>
-<li>NO MAGIC: Have no magic parameters within the modelling process that require tuning. <ul>
-<li>E.g. for random forests, engineers have to decide on how many trees are
-  included in the forest.</li>
-<li>Alternatively, if such tunings exist, then the must be some automatic method for selecting what
-  tunings are best for particular data sets.</li>
-</ul>
-</li>
-<li>AVAILABLE: Be publicly available via a reference implementation and associated environment for execution.<ul>
-<li>In this day and age of Docker images and package managers and Github-like
-  environments where everyone can load up each ooher's
-  code at the drop of a hat, it makes no sense for some baseline tool to be
-  inaccessible.</li>
-</ul>
-</li>
-<li>USEFUL: Generally be more accurate than a random guess or (e.g. an estimate based purely on the distribution of the response variable).</li>
-<li>CHEAP: Do not be expensive to apply.<ul>
-<li>Here we mean that the CPU, Ram, and disk space required to make something
-  work is not crazy high.</li>
-</ul>
-</li>
-<li>REASONABLE: Offer comparable performance to standard methods.</li>
-<li>ROBUST: I.e. does not change much over different data splits and validation
-  methods?<ul>
-<li>And if it does vary wildly, can it find ways to find regions in the data
-  where the data conclusions are stable?</li>
-</ul>
-</li>
-</ul>
-<p>Other desirable features are:</p>
+<p><strong>6. NO MAGIC:</strong> Have no magic parameters within the modeling process that require tuning. </p>
 <ul>
-<li>HUMBLE:  cerfication enveiope</li>
-<li>ICREMENTAL:</li>
+<li>E.g. for random forests, engineers have to decide on how many trees are
+      included in the forest.</li>
+<li>Alternatively, if such tunings exist, then the must be some <a href="https://arxiv.org/pdf/1705.03697.pdf">automatic method</a> for selecting what
+      tunings are best for particular data sets.</li>
 </ul>
+<p><strong>7. AVAILABLE:</strong> Be publicly available via a reference implementation and associated environment for execution.</p>
+<ul>
+<li>In this day and age of Docker images and package managers and Github-like
+      environments where everyone can load up each other's
+      code at the drop of a hat, it makes no sense for some baseline tool to be
+      inaccessible.</li>
+</ul>
+<p><strong>8. USEFUL:</strong> Generally be more accurate than a random guess or (e.g. an estimate based purely on the distribution of the response variable).</p>
+<ul>
+<li>E.g. evaluate the output via "standardarized error"; i.e. compare the
+  prediction to some some prediction generated from (say) the median value of the response variable.</li>
+</ul>
+<p><strong>9. CHEAP:</strong> Do not be expensive to apply.</p>
+<ul>
+<li>Here we mean that the CPU, Ram, and disk space required to make something
+      work is not crazy high.</li>
+<li>"CHEAP is important since ~Reproducing and improving an old ideas means that you can reproduce that old result. Also, certifying that new ideas often means multiple runs over many sub-samples of the data. Such reproducibility and certification is impractical when such reproduction is impractically slow</li>
+</ul>
+<p><strong>10. ROBUST:</strong> I.e. does not change much over different data splits and validation
+  methods?</p>
+<ul>
+<li>And if it does vary wildly, can it find ways to find regions in the data
+      where the data conclusions are stable.</li>
+</ul>
+<p><strong>11. GOAL-AWARE:</strong>
+Different goals means different models. AND multiple goals = no problem!</p>
+<ul>
+<li>This is important since most data miners build models that optimizer for a single goal (e.g. minimize error or least-square error) yet business users often want their data miners to achieve many goals.</li>
+<li>For example, if we want to ask "what to do" rather than "what is", then we
+  need a planner, not a classifier. Of course, in that case, the classifier can
+  be used as a what-if guide to assess different plans.</li>
+</ul>
+<p><strong>12. CONTEXT-AWARE:</strong> context-aware:</p>
+<ul>
+<li>Knows that local parts of data generate different models.</li>
+<li>E.g. hierarchically clusters the data and builds one model per cluster.</li>
+<li>While general principles are good, so too is how to handle particular contexts. For example, in general, exercise is good for maintaining healthy. However, in the particular context of patients who have just had cardiac surgery, then that general principle has to be carefully tailored to particular patients. ideas need to be updated.</li>
+</ul>
+<p><strong>13. HUMBLE:</strong>  </p>
+<ul>
+<li>Can publish succinct certification envelope that can report when new data is
+  out-of-scope to what was seen before.(so we know when not to trust)<ul>
+<li>This is important since the delivered data mined models should be able to recognize when new data is out-of-scope of anything they’ve seen before. This means, at runtime, having access to the data used to build that model. </li>
+<li>Note that phrase succinct here: certification envelopes cannot include all the data relating to a model, otherwise every hard drive in the world will soon fill up.</li>
+</ul>
+</li>
+<li>Another form of humility is knowing when the baseline should be replaced with
+  something else. 
+  Holte  uses the <a href="https://www.mlpack.org/papers/ds.pdf">OneR baseline
+algorithm</a> 
+as a scout that runs
+ahead of a more complicated learners as a way to judge the complexity
+of up-coming tasks. </li>
+</ul>
+<p><strong>14. STREAMING:</strong></p>
+<ul>
+<li>Can run over an infinite stream of data, updating itself (or knows when to go
+back to old versions of itself).</li>
+<li>Can detect anomalies (when new inputs differ from old training data).
+This is the trigger for re-learning.</li>
+</ul>
+<p><strong>15. SHARABLE:</strong> Knows how to transfer models, data, between contexts.</p>
+<ul>
+<li>Such transfer may requires some transformation of the source data to the target data.</li>
+</ul>
+<p><strong> 16. PRIVACY-AWARE: </strong></p>
+<ul>
+<li>Can hide an individual's data</li>
+<li>This is essential when sharing a certification envelope</li>
+</ul>
+<h2 id="project">Project</h2>
 <p>The project of this class is to apply the above to AI tools applied to SE
-problemes. Even trying to apply the above
+problems. Even trying to apply the above
 and not getting anywhere, would also be fine (just as you long as
 you document your comprehension of the ideas of baselines,  along the way). 
 So go seek, or build, good baselines:</p>
@@ -454,16 +541,17 @@ So go seek, or build, good baselines:</p>
 <li>Take any SE problem and ask are
 the current methods "baselines?". Would simpler alternatives suffice? </li>
 <li>Can you make the method simpler to use; <ul>
-<li>e.g. replace it with somethign much simpler to implement and explain</li>
+<li>e.g. replace it with something much simpler to implement and explain</li>
 <li>e.g. apply an optimizer to a data mining to find better settings from that
 data miner? </li>
 </ul>
 </li>
+<li>If you replace the complex with the simpler, what (if any) is the performance penalty?</li>
 <li>Can you make the method use less RAM or be faster to use; <ul>
 <li>e.g. see what happens if you learn on just X% of the data (randomly
   selected) for  <br />
   X &isin; {50,25,10,5,1}%?</li>
-<li>If you apply a prototype generator, can you select/build a very small
+<li>If you apply a prototype generator, can you select/build a very small 
   subset of the data from which learning is faster and just as effective?<ul>
 <li>Finding prototypes can be as easy as "cluster and take just a few
     from each cluster"</li>
@@ -487,63 +575,37 @@ of that method by large amounts e.g.
 see <a href="https://arxiv.org/pdf/1802.05319.pdf">500+ faster than deep learning</a>. </li>
 <li>If we stream over the data, how soon does this model stabilize? </li>
 <li>If we inject mutations into the data, can
-this method be used to recognize that strange data? Once the wierd data
+this method be used to recognize that strange data? Once the weird data
 arrives, how long (if ever) before the model recovers? </li>
 <li>If a model is update, can be it done some <em>minimally</em>; i.e. with least change to the existing model?</li>
+<li>etc</li>
+<li>etc</li>
+<li>etc</li>
 </ul>
-<p>Why these </p>
-<p>report when the baseline is not enough (e.g. see One1 being used as
-preferomfnac epredictor for other, more complex learners)</p>
-<p>XXXX why <a href="simplicity.md">simplicity</a>.</p>
-<p>XXX what does <a href="explaination.md">explanatory</a> mean</p>
-<p>XXX streaming</p>
-<p>XXX revising</p>
-<p>re stochasthic. Disagree
-stochastic = scalability, stability (shout stochastic you won't know
-if your re living in some some tiny  island surrounded by forces of
-chaos)</p>
-<ul>
-<li>
-<p>In some software engineering applications, solution robustness may
-be as im- portant as solution functionality. For example, it may be
-better to locate an area of the search space that is rich in fit
-solutions, rather than identifying an even better solution that is
-surrounded by a set of far less fit solutions.</p>
-</li>
-<li>
-<p>Hitherto, research on SBSE has tended to focus on the production of
-the fittest possible results. However, many application areas require
-solutions in a search space that may be subject to change. This makes
-robustness a natural second order property to which the research
-community could and should turn its at- tention [30].</p>
-</li>
-</ul>
-<p>M. Harman and B. Jones. Search-based software engineering. Journal of
-Information and Software Technology, 43:833–839, December 2001.</p>
 <h2 id="all-connected">All Connected</h2>
 <p>The more we compress the smaller the memory and the faster we learn and the less we need to share (so
 more privacy).</p>
 <p>The more we understand the data's prototypes the more we know what is usual/
-unusual so we more we know what is anomlaous so the easier it is to ofer a
+unusual so we more we know what is anomalous so the easier it is to offer a
 certification envelope</p>
-<p>Note that if our compression method is somehow hierarhical and if we track the
+<p>Note that if our compression method is somehow hierarchical and if we track the
 errors seen by our learners in different subtrees then the more we know which
 parts of the model need revising (and which can stay the same). Which means we
-only make revisions to the parts that matter, elaving the rest stable.</p>
+only make revisions to the parts that matter, leaving the rest stable.</p>
 <h2 id="other-requirements">Other Requirements</h2>
 <h3 id="no-eval-tools">No eval tools</h3>
 <p>Tests conclusion stability</p>
 <ul>
-<li>across mulitple data sets (if
-  avaialable) </li>
+<li>across multiple data sets (if
+  available) </li>
 <li>or across multiple subsets of know scenarios</li>
 </ul>
-<p>See <a href="eval">Evalaution</a> for many examples of that kind of evaluation.</p>
+<p>See <a href="eval">Evaluation</a> for many examples of that kind of evaluation.</p>
 <ul>
 <li>Note that these can significantly increase the computational cost of using learners. </li>
 <li>Hence, the need to <a href="faster">faster</a>, <a href="lighter">lighter</a> AI algorithms. </li>
 </ul>
-<h2 id="no-support-for-stats-tests">No support for stats tests</h2>
+<h3 id="no-support-for-stats-tests">No support for stats tests</h3>
 <ul>
 <li>Check if <em>this</em> treatment has
    same effect as <em>that</em> treatment.</li>
