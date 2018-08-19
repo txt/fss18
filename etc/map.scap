@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScappleDocument Version="1.1" ID="BE48F218-FF6C-4A5A-B378-20F34A02A2B6">
+    <Notes>
+        <Note ID="2" FontSize="12.0" Position="52.78316,264.0" Width="61.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Fill>1.0 0.999974 0.999991</Fill>
+            </Appearance>
+            <String>Learners</String>
+            <ConnectedNoteIDs>7, 27, 32, 75</ConnectedNoteIDs>
+        </Note>
+        <Note ID="5" FontSize="12.0" Position="226.78316,557.0" Width="113.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Fill>1.0 0.999974 0.999991</Fill>
+            </Appearance>
+            <String>Cover&amp;Differentiate</String>
+            <ConnectedNoteIDs>9-11, 32</ConnectedNoteIDs>
+        </Note>
+        <Note ID="6" FontSize="12.0" Position="231.94279,355.993711" Width="100.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Fill>1.0 0.999974 0.999991</Fill>
+            </Appearance>
+            <String>Divide&amp;conqueor</String>
+            <ConnectedNoteIDs>12-13, 32</ConnectedNoteIDs>
+        </Note>
+        <Note ID="7" FontSize="12.0" Position="216.78316,72.0" Width="57.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Fill>1.0 0.999974 0.999991</Fill>
+            </Appearance>
+            <String>Cluster</String>
+            <ConnectedNoteIDs>2, 44, 46, 51</ConnectedNoteIDs>
+        </Note>
+        <Note ID="9" FontSize="12.0" Position="370.78316,560.0" Width="44.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 0.999974 0.999991</Fill>
+            </Appearance>
+            <String>Ripper</String>
+            <ConnectedNoteIDs>5</ConnectedNoteIDs>
+        </Note>
+        <Note ID="10" FontSize="12.0" Position="376.78316,595.0" Width="30.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 0.999974 0.999991</Fill>
+            </Appearance>
+            <String>FFT</String>
+            <ConnectedNoteIDs>5</ConnectedNoteIDs>
+        </Note>
+        <Note ID="11" FontSize="12.0" Position="369.78316,530.0" Width="44.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 0.999974 0.999991</Fill>
+            </Appearance>
+            <String>Prism</String>
+            <ConnectedNoteIDs>5</ConnectedNoteIDs>
+        </Note>
+        <Note ID="12" FontSize="12.0" Position="360.902406,374.754156" Width="41.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 0.999974 0.999991</Fill>
+            </Appearance>
+            <String>CART</String>
+            <ConnectedNoteIDs>6, 14-15</ConnectedNoteIDs>
+        </Note>
+        <Note ID="13" FontSize="12.0" Position="353.588711,414.170708" Width="57.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 0.999974 0.999991</Fill>
+            </Appearance>
+            <String>J48/C4.5</String>
+            <ConnectedNoteIDs>6, 16</ConnectedNoteIDs>
+        </Note>
+        <Note ID="14" FontSize="12.0" Position="405.78316,330.0" Width="54.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 0.999974 0.999991</Fill>
+            </Appearance>
+            <String>variance</String>
+            <ConnectedNoteIDs>12, 30</ConnectedNoteIDs>
+        </Note>
+        <Note ID="15" FontSize="12.0" Position="471.78316,396.0" Width="33.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 0.999974 0.999991</Fill>
+            </Appearance>
+            <String>GINI</String>
+            <ConnectedNoteIDs>12, 30</ConnectedNoteIDs>
+        </Note>
+        <Note ID="16" FontSize="12.0" Position="469.78316,433.0" Width="67.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 0.999974 0.999991</Fill>
+            </Appearance>
+            <String>ENTROPY</String>
+            <ConnectedNoteIDs>13, 31</ConnectedNoteIDs>
+        </Note>
+        <Note ID="17" FontSize="12.0" Position="424.537974,273.766735" Width="119.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 0.999974 0.999991</Fill>
+            </Appearance>
+            <String>ARGMIN.EXPECT</String>
+            <ConnectedNoteIDs>18</ConnectedNoteIDs>
+        </Note>
+        <Note ID="18" FontSize="12.0" Position="584.322262,271.514012" Width="53.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 0.999974 0.999991</Fill>
+            </Appearance>
+            <String>diversity</String>
+            <ConnectedNoteIDs>17, 29</ConnectedNoteIDs>
+        </Note>
+        <Note ID="23" FontSize="12.0" Position="127.78316,951.0" Width="55.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 0.999974 0.999991</Fill>
+            </Appearance>
+            <String>Baseline</String>
+            <ConnectedNoteIDs>24-25, 53-54, 71, 76</ConnectedNoteIDs>
+        </Note>
+        <Note ID="24" FontSize="12.0" Position="240.78316,830.0" Width="32.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 0.999974 0.999991</Fill>
+            </Appearance>
+            <String>Fast</String>
+            <ConnectedNoteIDs>23</ConnectedNoteIDs>
+        </Note>
+        <Note ID="25" FontSize="12.0" Position="248.001804,898.629127" Width="132.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 0.999974 0.999991</Fill>
+            </Appearance>
+            <String>Light (low RAM)</String>
+            <ConnectedNoteIDs>23, 80</ConnectedNoteIDs>
+        </Note>
+        <Note ID="27" FontSize="12.0" Position="616.78316,139.0" Width="69.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>Table</String>
+            <ConnectedNoteIDs>2, 47, 62-63</ConnectedNoteIDs>
+        </Note>
+        <Note ID="28" FontSize="12.0" Position="512.78316,208.0" Width="36.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>splits</String>
+            <ConnectedNoteIDs>29, 32</ConnectedNoteIDs>
+        </Note>
+        <Note ID="29" FontSize="12.0" Position="691.100142,231.740143" Width="39.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>Thing</String>
+            <ConnectedNoteIDs>18, 28, 30-31</ConnectedNoteIDs>
+        </Note>
+        <Note ID="30" FontSize="12.0" Position="776.164386,373.868024" Width="34.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>Num</String>
+            <ConnectedNoteIDs>14-15, 29, 37, 66</ConnectedNoteIDs>
+        </Note>
+        <Note ID="31" FontSize="12.0" Position="679.664167,306.106246" Width="38.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>Sym</String>
+            <ConnectedNoteIDs>16, 29, 66</ConnectedNoteIDs>
+        </Note>
+        <Note ID="32" FontSize="12.0" Position="118.607664,319.729167" Width="127.0" Level="1" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>Recursive descent</String>
+            <ConnectedNoteIDs>2, 5-6, 28</ConnectedNoteIDs>
+        </Note>
+        <Note ID="37" FontSize="12.0" Position="825.78316,446.0" Width="36.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>Stats</String>
+            <ConnectedNoteIDs>30, 38-39</ConnectedNoteIDs>
+        </Note>
+        <Note ID="38" FontSize="12.0" Position="849.78316,403.0" Width="71.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>significance</String>
+            <ConnectedNoteIDs>37, 40, 43</ConnectedNoteIDs>
+        </Note>
+        <Note ID="39" FontSize="12.0" Position="902.78316,441.0" Width="62.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>effect size</String>
+            <ConnectedNoteIDs>37, 41-42</ConnectedNoteIDs>
+        </Note>
+        <Note ID="40" FontSize="12.0" Position="896.78316,334.0" Width="35.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>t-test</String>
+            <ConnectedNoteIDs>38</ConnectedNoteIDs>
+        </Note>
+        <Note ID="41" FontSize="12.0" Position="1006.78316,402.0" Width="48.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>hedges</String>
+            <ConnectedNoteIDs>39</ConnectedNoteIDs>
+        </Note>
+        <Note ID="42" FontSize="12.0" Position="1015.78316,439.0" Width="58.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>cliffs</String>
+            <ConnectedNoteIDs>39</ConnectedNoteIDs>
+        </Note>
+        <Note ID="43" FontSize="12.0" Position="936.78316,361.0" Width="59.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>bootstrap</String>
+            <ConnectedNoteIDs>38</ConnectedNoteIDs>
+        </Note>
+        <Note ID="44" FontSize="12.0" Position="282.78316,107.0" Width="55.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>k-means</String>
+            <ConnectedNoteIDs>7, 45</ConnectedNoteIDs>
+        </Note>
+        <Note ID="45" FontSize="12.0" Position="332.78316,144.0" Width="113.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>mini-batch k-means</String>
+            <ConnectedNoteIDs>44</ConnectedNoteIDs>
+        </Note>
+        <Note ID="46" FontSize="12.0" Position="273.78316,164.0" Width="59.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>rFastMap</String>
+            <ConnectedNoteIDs>7</ConnectedNoteIDs>
+        </Note>
+        <Note ID="47" FontSize="12.0" Position="850.78316,71.0" Width="33.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>Row</String>
+            <ConnectedNoteIDs>27, 48, 51</ConnectedNoteIDs>
+        </Note>
+        <Note ID="48" FontSize="12.0" Position="924.78316,34.0" Width="67.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>domination</String>
+            <ConnectedNoteIDs>47, 49-50</ConnectedNoteIDs>
+        </Note>
+        <Note ID="49" FontSize="12.0" Position="1023.78316,38.0" Width="51.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>boolean</String>
+            <ConnectedNoteIDs>48</ConnectedNoteIDs>
+        </Note>
+        <Note ID="50" FontSize="12.0" Position="1014.78316,84.0" Width="54.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>indicator</String>
+            <ConnectedNoteIDs>48</ConnectedNoteIDs>
+        </Note>
+        <Note ID="51" FontSize="12.0" Position="817.78316,23.0" Width="53.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>distance</String>
+            <ConnectedNoteIDs>7, 47</ConnectedNoteIDs>
+        </Note>
+        <Note ID="53" FontSize="12.0" Position="241.78316,1105.0" Width="109.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>knows when failing</String>
+            <ConnectedNoteIDs>23, 54</ConnectedNoteIDs>
+        </Note>
+        <Note ID="54" FontSize="12.0" Position="263.008785,1025.126766" Width="100.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>knows what’s unusual</String>
+            <ConnectedNoteIDs>23, 53, 71</ConnectedNoteIDs>
+        </Note>
+        <Note ID="55" FontSize="12.0" Position="1039.78316,858.0" Width="49.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>science</String>
+            <ConnectedNoteIDs>56, 58</ConnectedNoteIDs>
+        </Note>
+        <Note ID="56" FontSize="12.0" Position="939.78316,904.0" Width="67.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>community</String>
+            <ConnectedNoteIDs>55</ConnectedNoteIDs>
+        </Note>
+        <Note ID="57" FontSize="12.0" Position="1014.78316,989.0" Width="57.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>critiquing</String>
+            <ConnectedNoteIDs>58-59</ConnectedNoteIDs>
+        </Note>
+        <Note ID="58" FontSize="12.0" Position="1103.78316,966.0" Width="48.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>sharing</String>
+            <ConnectedNoteIDs>55, 57</ConnectedNoteIDs>
+        </Note>
+        <Note ID="59" FontSize="12.0" Position="1052.78316,1035.0" Width="61.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>improving</String>
+            <ConnectedNoteIDs>57</ConnectedNoteIDs>
+        </Note>
+        <Note ID="61" FontSize="12.0" Position="757.78316,696.0" Width="73.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>explaination</String>
+        </Note>
+        <Note ID="62" FontSize="12.0" Position="786.512394,149.983526" Width="20.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>x</String>
+            <ConnectedNoteIDs>27, 66</ConnectedNoteIDs>
+        </Note>
+        <Note ID="63" FontSize="12.0" Position="772.280209,180.725272" Width="20.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>y</String>
+            <ConnectedNoteIDs>27, 66</ConnectedNoteIDs>
+        </Note>
+        <Note ID="65" FontSize="12.0" Position="888.87977,660.883459" Width="100.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>user/goal specific</String>
+        </Note>
+        <Note ID="66" FontSize="12.0" Position="841.991334,178.60289" Width="31.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>cols</String>
+            <ConnectedNoteIDs>30-31, 62-63, 69</ConnectedNoteIDs>
+        </Note>
+        <Note ID="69" FontSize="12.0" Position="863.523489,266.088288" Width="67.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>num+syms</String>
+            <ConnectedNoteIDs>66</ConnectedNoteIDs>
+        </Note>
+        <Note ID="71" FontSize="12.0" Position="266.581848,949.773429" Width="100.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>knows how to revise</String>
+            <ConnectedNoteIDs>23, 54</ConnectedNoteIDs>
+        </Note>
+        <Note ID="73" FontSize="12.0" Position="49.607611,665.0" Width="60.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>Optimizer</String>
+            <ConnectedNoteIDs>74-75</ConnectedNoteIDs>
+        </Note>
+        <Note ID="74" FontSize="12.0" Position="144.790476,683.851785" Width="58.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>configure</String>
+            <ConnectedNoteIDs>73</ConnectedNoteIDs>
+        </Note>
+        <Note ID="75" FontSize="12.0" Position="37.00302,477.398239" Width="95.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>transfer learning</String>
+            <ConnectedNoteIDs>2, 73, 78</ConnectedNoteIDs>
+        </Note>
+        <Note ID="76" FontSize="12.0" Position="203.0,1186.0" Width="82.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>has eval tools</String>
+            <ConnectedNoteIDs>23, 77, 79-80</ConnectedNoteIDs>
+        </Note>
+        <Note ID="77" FontSize="12.0" Position="374.5,1166.0" Width="69.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>round robin</String>
+            <ConnectedNoteIDs>76, 78</ConnectedNoteIDs>
+        </Note>
+        <Note ID="78" FontSize="12.0" Position="628.133917,1090.448301" Width="69.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>bellwethers</String>
+            <ConnectedNoteIDs>75, 77, 84</ConnectedNoteIDs>
+        </Note>
+        <Note ID="79" FontSize="12.0" Position="368.438236,1197.060483" Width="53.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>crossval</String>
+            <ConnectedNoteIDs>76, 83</ConnectedNoteIDs>
+        </Note>
+        <Note ID="80" FontSize="12.0" Position="392.277948,1107.746956" Width="71.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>incremental</String>
+            <ConnectedNoteIDs>25, 76, 81-82</ConnectedNoteIDs>
+        </Note>
+        <Note ID="81" FontSize="12.0" Position="485.0,1102.0" Width="52.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>stream</String>
+            <ConnectedNoteIDs>80</ConnectedNoteIDs>
+        </Note>
+        <Note ID="82" FontSize="12.0" Position="554.02558,1229.664048" Width="54.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>boosting</String>
+            <ConnectedNoteIDs>80, 84</ConnectedNoteIDs>
+        </Note>
+        <Note ID="83" FontSize="12.0" Position="516.614203,1193.135872" Width="89.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>bagging</String>
+            <ConnectedNoteIDs>79, 84</ConnectedNoteIDs>
+        </Note>
+        <Note ID="84" FontSize="12.0" Position="665.989411,1197.209861" Width="61.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Fill>1.0 1.0 1.0</Fill>
+            </Appearance>
+            <String>ensemble</String>
+            <ConnectedNoteIDs>78, 82-83</ConnectedNoteIDs>
+        </Note>
+    </Notes>
+    <BackgroundShapes></BackgroundShapes>
+    <AutoFit>5-6, 9-10, 12-16, 18, 23-24, 28-30, 37-41, 43-51, 53, 55-59, 61-63, 69, 73-80, 82, 84</AutoFit>
+    <NoteStyles>
+        <Style Name="Bubble (Blue)" ID="5398BB66-C3E0-42E4-83DD-A38038B553E0" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.561855 0.71062 0.779401</BorderColor>
+            <FillColor>0.702319 0.888276 0.974252</FillColor>
+        </Style>
+        <Style Name="Bubble (Green)" ID="9C52C8FC-676C-40F4-9976-1331FB54013C" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.572684 0.758969 0.558154</BorderColor>
+            <FillColor>0.715855 0.948712 0.697692</FillColor>
+        </Style>
+        <Style Name="Bubble (Pink)" ID="E0F10628-09B7-4E64-856E-78E2A9C116B4" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.794796 0.560965 0.58607</BorderColor>
+            <FillColor>0.957566 0.766747 0.999616</FillColor>
+        </Style>
+        <Style Name="Bubble (Red)" ID="96470150-8694-49D0-8562-1EBD3811C3A5" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.794796 0.560965 0.58607</BorderColor>
+            <FillColor>0.993495 0.701207 0.732587</FillColor>
+        </Style>
+        <Style Name="Bubble (Yellow)" ID="B0C7D57A-3370-4491-8F2D-55331BB1652C" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.798177 0.714184 0.522055</BorderColor>
+            <FillColor>0.997722 0.89273 0.652569</FillColor>
+        </Style>
+        <Style Name="Red Text" ID="376AA5C9-99A1-40C7-AA19-5F1847BF9023" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
+            <TextColor>0.985948 0.0 0.026951</TextColor>
+        </Style>
+        <Style Name="Title Text" ID="6165352F-80EC-4919-99B9-7DD22818F73C" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
+            <FontSize>28.0</FontSize>
+            <IsBold>Yes</IsBold>
+        </Style>
+    </NoteStyles>
+    <UISettings>
+        <BackgroundColor>0.999767 0.98837 0.949907</BackgroundColor>
+        <DefaultFont>Helvetica</DefaultFont>
+        <DefaultTextColor>0.0 0.0 0.0</DefaultTextColor>
+    </UISettings>
+    <PrintSettings PaperSize="611.99999,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScappleDocument>
