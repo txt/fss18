@@ -1,5 +1,7 @@
 # Baseline for an "Adequate" AI
 
+  <img src="https://i.ytimg.com/vi/lcxOVKqz4JA/maxresdefault.jpg"  width=700">
+
 Software engineering is about engineering and engineering is about
 generate a produce of adequate quality, given the available constraints.
 What does that mean for AI-enhanced software?
@@ -60,6 +62,7 @@ baseline](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.112.8862&rep=
 - I've offered several good baseline AI tools for SE tasks. In both the
   following, my graduate students were able to replace widely used very complex
   solutions with much simple alternative. For example:
+    - Search-based SE: [A Baseline Method For Search-Based Software Engineering](http://greggay.com/pdf/10baseline.pdf)
     - Data mining: [Bellwethers: A Baseline Method For Transfer Learning](https://arxiv.org/pdf/1703.06218)
     - Optimizing: ["Sampling"' as a Baseline Optimizer for Search-based Software Engineering](https://arxiv.org/pdf/1608.07617)
 
@@ -80,39 +83,52 @@ Here's one list of what a "baseline" means. Items 1..10 are adapted
 from [Sarro, TOSEM'18](http://www0.cs.ucl.ac.uk/staff/F.Sarro/resource/papers/SarroTOSEM18.pdf).
 (which we extend with our own notes). The other items come from my experience. 
 
-<p class=note>The key thing to note about the following is that one system may not satisfy
+<small class="sidenote">
+<i class="fa  fa-hand-o-right fa-4x"></i> 
+Note also that  the following list offers a road map for future research in SE+AI. Find
+  cases where some of these points do not matter. Find ways to enhance
+  existing systems such that they perform better on the following criteria.
+  Etc.
+</small>
+The key thing to note about the following is that one system may not satisfy
 all these criteria (in fact, no known system satisfied all of them). That said,
  each
 of the following points is important. And by reflecting on the value of each
 point
 for a particular AI application, we naturally consider and review (and possibly
-discard) important design alternatives.<br>
-Which is no bad thing.
-  </p>
+discard) important design alternatives.
 
-Note also that  the following list offers a road map for future research in SE+AI. Find
-  cases where some of these points do not matter. Find ways to enhance
-  existing systems such that they perform better on the following criteria.
-  Etc.
+<br clear=all>
 
-  <img src="https://i.ytimg.com/vi/lcxOVKqz4JA/maxresdefault.jpg" align=right width=400">
 ### The Checklist
 
 Now stay calm citizens of FSS'18. The following is not as complex as it looks. 
   while there are many complex ways to support the following, there
-  are also very simple ways that can work very well for each. And for your project, you nly
-  have to undersnt a **one** of the following.
+  are also very simple ways that can work very well for each. And for your project, you only
+  have to understand a **one** of the following.
   
-**1. REASONABLE:** Offer comparable performance to standard methods.
 
-**2. SIMPLE:** Be simple to describe, implement, and interpret (i.e. interpret the output for business uses).
+**1. SIMPLE:** Be simple to describe, implement, and interpret (i.e. interpret the output for business uses).
 
 - My current "simplest" methods is [Fast-and-Frugal decision trees](https://arxiv.org/pdf/1803.05067.pdf) (or see also [here](http://library.mpib-berlin.mpg.de/ft/awk/AWK_Intuitive_2011.pdf));
   which is available in a nice
   [R-package](https://cran.r-project.org/web/packages/FFTrees/vignettes/guide.html).
-- 
+
+**2. REASONABLE:** Offer comparable performance to standard methods.
+
+- So note the great paradox of simplicity research
+- <small class="sidenote">
+<i class="fa  fa-hand-o-right fa-4x"></i> Curious fact: evaluation can get so hard that we usually  try to milk it for everything that can.
+So "cross val" experiments lead us to [ensemble learning](http://menzies.us/pdf/11comba.pdf) then to [boosting](https://pdfs.semanticscholar.org/79ea/6a5a68e05065f82acd11a478aa7eac5f6c06.pdf);
+"round robin" lead to [transfer learning](http://menzies.us/pdf/13transferEffort.pdf);
+"jiggle a little" lead to [evolutionary methods](http://www0.cs.ucl.ac.uk/staff/M.Harman/ACM-surveys-sbse.pdf);
+evolutionary methods.
+</small>It is very hard to be simple
+    - Cause the simplest thing has to be compared against other, more complex, things.
+
 
 **3. STABLE:** Be <strike>deterministic</strike> stable in its outcomes
+
 
 - I've replaced deterministic with stable, since I think that is more important.  
 - Instability is very unsettling for software project managers struggling to find general policies. Project managers lose faith in the results of software analytics if those results keep changing. Also, such instability prevents project managers from offering clear guidelines on what to change, or what to avoid, in a project.
@@ -214,12 +230,23 @@ Different goals means different models. AND multiple goals = no problem!
 
 **12. CONTEXT-AWARE:** context-aware:
 
+<small class="sidenote">
+<i class="fa  fa-hand-o-right fa-4x"></i> Easy path context
+awareness:  first cluster the data, then build different models
+for different clusters: see [NbTrees](http://robotics.stanford.edu/~ronnyk/nbtree.pdf).
+</small>
+
 - Knows that local parts of data generate different models.
 - E.g. hierarchically clusters the data and builds one model per cluster.
 - While general principles are good, so too is how to handle particular contexts. For example, in general, exercise is good for maintaining healthy. However, in the particular context of patients who have just had cardiac surgery, then that general principle has to be carefully tailored to particular patients. ideas need to be updated.
 
 
 **13. HUMBLE:**  
+<small class="sidenote">
+<i class="fa  fa-hand-o-right fa-4x"></i> Easy path to
+certification envelopes: cluster data, report k items per cluster.
+</small>
+
 
 - Can publish succinct certification envelope that can report when new data is
   out-of-scope to what was seen before.(so we know when not to trust)
@@ -237,19 +264,37 @@ of up-coming tasks.
 
 - Can run over an infinite stream of data, updating itself (or knows when to go
 back to old versions of itself).
-- Can detect anomalies (when new inputs differ from old training data).
+- <small class="sidenote">
+<i class="fa  fa-hand-o-right fa-4x"></i> Easy path to
+anomaly detection: cluster data, report items that fall far from each cluster.
+</small>
+Can detect anomalies (when new inputs differ from old training data).
 This is the trigger for re-learning.
 
+<br clear=all>
 **15. SHARABLE:** Knows how to transfer models, data, between contexts.
 
+<small class="sidenote">
+<i class="fa  fa-hand-o-right fa-4x"></i> Easy path to
+lightweight sharing: just share reduced data from context awareness.
+</small>
 
+- Need some way to keep the volume of shared data down (otherwise "sharing" would clog the Internet).
 - Such transfer may requires some transformation of the source data to the target data.
 
+<br clear=all>
 ** 16. PRIVACY-AWARE: **
+
+<small class="sidenote">
+<i class="fa  fa-hand-o-right fa-4x"></i> Easy path to
+privacy: within the clusters of the certification envelope, just share k items per cluster, each slightly mutated.
+See [LACE2](http://menzies.us/pdf/15lace2.pdf).
+</small>
 
 - Can hide an individual's data
 - This is essential when sharing a certification envelope
 
+<br clear=all>
 ## Project
 
 The project of this class is to apply the above to AI tools applied to SE
@@ -324,7 +369,7 @@ See [Evaluation](eval) for many examples of that kind of evaluation.
 - Note that these can significantly increase the computational cost of using learners. 
 - Hence, the need to [faster](faster), [lighter](lighter) AI algorithms. 
 
-### No support for stats tests
+## No support for stats tests
 
 - Check if _this_ treatment has
    same effect as _that_ treatment.

@@ -6,3 +6,16 @@ h2 { border-top: 2px #26a6e4 solid; }
 p.note {background-color: #ddd; font-style: italic; padding: 10px; box-shadow: 5px 5px;
 }
 img { border: 1px white solid; }
+
+.fa { float: left; padding-right: 3px;}
+
+.sidenote {
+	display: block;
+	float: right;
+	width: 200px;
+	background-color: #ddd;
+	border: 1px solid #000;
+	margin: 2px;
+	padding: 3px;
+}
+

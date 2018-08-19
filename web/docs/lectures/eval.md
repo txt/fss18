@@ -1,6 +1,11 @@
 # Evaluation
 XXX must show SA
 
+trueth isnt what we thought. t tif a example
+
+depends of goals
+
+onwhat we are willing to comprosmise
 ## Re-run on Multiple Samples
 
 ###  e.g. cross-val

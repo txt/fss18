@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Baselines for Adequate AI - Found.Soft.Sci</title>
+        <title>Baselines for Adequate AI &10004; - Found.Soft.Sci</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -72,10 +72,6 @@
     </ul>
   </li>
                                     
-<li class="active">
-    <a href="./">Baselines for Adequate AI</a>
-</li>
-                                    
   <li class="dropdown-submenu">
     <a href="#">Starting</a>
     <ul class="dropdown-menu">
@@ -86,6 +82,10 @@
             
 <li >
     <a href="../../history/">SE+AI,  then and now &#10004;</a>
+</li>
+            
+<li class="active">
+    <a href="./">Baselines for Adequate AI &10004;</a>
 </li>
     </ul>
   </li>
@@ -253,12 +253,12 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../../syllabus/">
+                                <a rel="next" href="../../history/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../../inspiration/">
+                                <a rel="prev" href="../../proj/w1/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -275,11 +275,13 @@
             <li><a href="#project">Project</a></li>
             <li><a href="#all-connected">All Connected</a></li>
             <li><a href="#other-requirements">Other Requirements</a></li>
+            <li><a href="#no-support-for-stats-tests">No support for stats tests</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="baseline-for-an-adequate-ai">Baseline for an "Adequate" AI</h1>
+<p><img src="https://i.ytimg.com/vi/lcxOVKqz4JA/maxresdefault.jpg"  width=700"></p>
 <p>Software engineering is about engineering and engineering is about
 generate a produce of adequate quality, given the available constraints.
 What does that mean for AI-enhanced software?</p>
@@ -336,6 +338,7 @@ baseline</a></li>
 <li>I've offered several good baseline AI tools for SE tasks. In both the
   following, my graduate students were able to replace widely used very complex
   solutions with much simple alternative. For example:<ul>
+<li>Search-based SE: <a href="http://greggay.com/pdf/10baseline.pdf">A Baseline Method For Search-Based Software Engineering</a></li>
 <li>Data mining: <a href="https://arxiv.org/pdf/1703.06218">Bellwethers: A Baseline Method For Transfer Learning</a></li>
 <li>Optimizing: <a href="https://arxiv.org/pdf/1608.07617">"Sampling"' as a Baseline Optimizer for Search-based Software Engineering</a></li>
 </ul>
@@ -352,33 +355,45 @@ products with limited time and resources:</p>
 <p>Here's one list of what a "baseline" means. Items 1..10 are adapted
 from <a href="http://www0.cs.ucl.ac.uk/staff/F.Sarro/resource/papers/SarroTOSEM18.pdf">Sarro, TOSEM'18</a>.
 (which we extend with our own notes). The other items come from my experience. </p>
-<p class=note>The key thing to note about the following is that one system may not satisfy
+<p><small class="sidenote">
+<i class="fa  fa-hand-o-right fa-4x"></i> 
+Note also that  the following list offers a road map for future research in SE+AI. Find
+  cases where some of these points do not matter. Find ways to enhance
+  existing systems such that they perform better on the following criteria.
+  Etc.
+</small>
+The key thing to note about the following is that one system may not satisfy
 all these criteria (in fact, no known system satisfied all of them). That said,
  each
 of the following points is important. And by reflecting on the value of each
 point
 for a particular AI application, we naturally consider and review (and possibly
-discard) important design alternatives.<br>
-Which is no bad thing.
-  </p>
-
-<p>Note also that  the following list offers a road map for future research in SE+AI. Find
-  cases where some of these points do not matter. Find ways to enhance
-  existing systems such that they perform better on the following criteria.
-  Etc.</p>
-<p><img src="https://i.ytimg.com/vi/lcxOVKqz4JA/maxresdefault.jpg" align=right width=400"></p>
+discard) important design alternatives.</p>
+<p><br clear=all></p>
 <h3 id="the-checklist">The Checklist</h3>
 <p>Now stay calm citizens of FSS'18. The following is not as complex as it looks. 
   while there are many complex ways to support the following, there
-  are also very simple ways that can work very well for each. And for your project, you nly
-  have to undersnt a <strong>one</strong> of the following.</p>
-<p><strong>1. REASONABLE:</strong> Offer comparable performance to standard methods.</p>
-<p><strong>2. SIMPLE:</strong> Be simple to describe, implement, and interpret (i.e. interpret the output for business uses).</p>
+  are also very simple ways that can work very well for each. And for your project, you only
+  have to understand a <strong>one</strong> of the following.</p>
+<p><strong>1. SIMPLE:</strong> Be simple to describe, implement, and interpret (i.e. interpret the output for business uses).</p>
 <ul>
 <li>My current "simplest" methods is <a href="https://arxiv.org/pdf/1803.05067.pdf">Fast-and-Frugal decision trees</a> (or see also <a href="http://library.mpib-berlin.mpg.de/ft/awk/AWK_Intuitive_2011.pdf">here</a>);
   which is available in a nice
   <a href="https://cran.r-project.org/web/packages/FFTrees/vignettes/guide.html">R-package</a>.</li>
-<li></li>
+</ul>
+<p><strong>2. REASONABLE:</strong> Offer comparable performance to standard methods.</p>
+<ul>
+<li>So note the great paradox of simplicity research</li>
+<li><small class="sidenote">
+<i class="fa  fa-hand-o-right fa-4x"></i> Curious fact: evaluation can get so hard that we usually  try to milk it for everything that can.
+So "cross val" experiments lead us to <a href="http://menzies.us/pdf/11comba.pdf">ensemble learning</a> then to <a href="https://pdfs.semanticscholar.org/79ea/6a5a68e05065f82acd11a478aa7eac5f6c06.pdf">boosting</a>;
+"round robin" lead to <a href="http://menzies.us/pdf/13transferEffort.pdf">transfer learning</a>;
+"jiggle a little" lead to <a href="http://www0.cs.ucl.ac.uk/staff/M.Harman/ACM-surveys-sbse.pdf">evolutionary methods</a>;
+evolutionary methods.
+</small>It is very hard to be simple<ul>
+<li>Cause the simplest thing has to be compared against other, more complex, things.</li>
+</ul>
+</li>
 </ul>
 <p><strong>3. STABLE:</strong> Be <strike>deterministic</strike> stable in its outcomes</p>
 <ul>
@@ -494,12 +509,21 @@ Different goals means different models. AND multiple goals = no problem!</p>
   be used as a what-if guide to assess different plans.</li>
 </ul>
 <p><strong>12. CONTEXT-AWARE:</strong> context-aware:</p>
+<p><small class="sidenote">
+<i class="fa  fa-hand-o-right fa-4x"></i> Easy path context
+awareness:  first cluster the data, then build different models
+for different clusters: see <a href="http://robotics.stanford.edu/~ronnyk/nbtree.pdf">NbTrees</a>.
+</small></p>
 <ul>
 <li>Knows that local parts of data generate different models.</li>
 <li>E.g. hierarchically clusters the data and builds one model per cluster.</li>
 <li>While general principles are good, so too is how to handle particular contexts. For example, in general, exercise is good for maintaining healthy. However, in the particular context of patients who have just had cardiac surgery, then that general principle has to be carefully tailored to particular patients. ideas need to be updated.</li>
 </ul>
-<p><strong>13. HUMBLE:</strong>  </p>
+<p><strong>13. HUMBLE:</strong><br />
+<small class="sidenote">
+<i class="fa  fa-hand-o-right fa-4x"></i> Easy path to
+certification envelopes: cluster data, report k items per cluster.
+</small></p>
 <ul>
 <li>Can publish succinct certification envelope that can report when new data is
   out-of-scope to what was seen before.(so we know when not to trust)<ul>
@@ -519,18 +543,35 @@ of up-coming tasks. </li>
 <ul>
 <li>Can run over an infinite stream of data, updating itself (or knows when to go
 back to old versions of itself).</li>
-<li>Can detect anomalies (when new inputs differ from old training data).
+<li><small class="sidenote">
+<i class="fa  fa-hand-o-right fa-4x"></i> Easy path to
+anomaly detection: cluster data, report items that fall far from each cluster.
+</small>
+Can detect anomalies (when new inputs differ from old training data).
 This is the trigger for re-learning.</li>
 </ul>
-<p><strong>15. SHARABLE:</strong> Knows how to transfer models, data, between contexts.</p>
+<p><br clear=all>
+<strong>15. SHARABLE:</strong> Knows how to transfer models, data, between contexts.</p>
+<p><small class="sidenote">
+<i class="fa  fa-hand-o-right fa-4x"></i> Easy path to
+lightweight sharing: just share reduced data from context awareness.
+</small></p>
 <ul>
+<li>Need some way to keep the volume of shared data down (otherwise "sharing" would clog the Internet).</li>
 <li>Such transfer may requires some transformation of the source data to the target data.</li>
 </ul>
-<p><strong> 16. PRIVACY-AWARE: </strong></p>
+<p><br clear=all>
+<strong> 16. PRIVACY-AWARE: </strong></p>
+<p><small class="sidenote">
+<i class="fa  fa-hand-o-right fa-4x"></i> Easy path to
+privacy: within the clusters of the certification envelope, just share k items per cluster, each slightly mutated.
+See <a href="http://menzies.us/pdf/15lace2.pdf">LACE2</a>.
+</small></p>
 <ul>
 <li>Can hide an individual's data</li>
 <li>This is essential when sharing a certification envelope</li>
 </ul>
+<p><br clear=all></p>
 <h2 id="project">Project</h2>
 <p>The project of this class is to apply the above to AI tools applied to SE
 problems. Even trying to apply the above
@@ -605,7 +646,7 @@ only make revisions to the parts that matter, leaving the rest stable.</p>
 <li>Note that these can significantly increase the computational cost of using learners. </li>
 <li>Hence, the need to <a href="faster">faster</a>, <a href="lighter">lighter</a> AI algorithms. </li>
 </ul>
-<h3 id="no-support-for-stats-tests">No support for stats tests</h3>
+<h2 id="no-support-for-stats-tests">No support for stats tests</h2>
 <ul>
 <li>Check if <em>this</em> treatment has
    same effect as <em>that</em> treatment.</li>

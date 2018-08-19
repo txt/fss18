@@ -6,10 +6,10 @@ nav:
               - Syllabus &#10004;: syllabus.md
               - Submit site &#10004;: http://tiny.cc/fss18give
               - Chat &#10004;: http://found18.slack
-         - Baselines for Adequate AI: lectures/baselines.md
          - Starting:
              - Inspiration &#10004; : inspiration.md
              - SE+AI,  then and now &#10004;: history.md
+             - Baselines for Adequate AI &10004; : lectures/baselines.md
     - H/W: 
          - One &#10004;: proj/w1.md 
          - Review: 
