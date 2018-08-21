@@ -26,8 +26,9 @@ For more admin details, see the [syllabus](syllabus.md).
 
 ## Why?
 
-<small class="sidenote">Why facticious way
-to sumamrize this subject is 
+<small class="sidenote"> Facetiously, I'll say
+this subject
+asks:
 "If [deep learning](lectures/deeplearning) is the answer, what was the question?".
 </small>
 
