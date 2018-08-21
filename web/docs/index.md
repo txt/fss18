@@ -12,20 +12,26 @@ Prof. [Tim Menzies](http://menzies.us)
 
 Most software companies now learn their policies via data-driven methods. Modern practitioners treat every planned feature as an experiment, of which only a few are expected to survive. Key performance metrics are carefully monitored and analyzed to judge the progress of a feature. Even simple design decisions such as the color of a link are chosen by the outcome of software experiments.
 
+<small class="sidenote">
+Graduates of this class will becomes
+**producers**, not mere
+**consumers**,  of AI tools. 
+</small>
+
 This subject will explore methods for generating and using models built from data (i.e. how to  collectthat data; exploring that data; then presenting that data in such a way to support business-level decision making for software projects).
 
-
-Graduates of this class will no longer be **consumers** of AI software. 
-
-- Rather, they will be the **producers** of the next generation of  software engineers that build and maintain new AI tools.
 
 
 For more admin details, see the [syllabus](syllabus.md).
 
 ## Why?
 
-In this subject we ask the question: if [deep learning](lectures/deeplearning) is the answer, what was the question?
-We ask ["what kind of learners do we need?"](lectures/baselines)  then work backwards from there to design new AI methods, or
+<small class="sidenote">Why facticious way
+to sumamrize this subject is 
+"If [deep learning](lectures/deeplearning) is the answer, what was the question?".
+</small>
+
+In this subject, we  ask ["what kind of learners do we need?"](lectures/baselines)  then work backwards from there to design new AI methods, or
 improve existing ones.
 
 This is an important task since the following is a very pressing issue:
@@ -43,8 +49,12 @@ Enter this subject.
 
 How to teach software how to be a scientist
 
-- Automatically build, critique, and revise models.
 
+<small class="sidenote">In short,
+we will teach software how to a scientist;
+i.e. how to 
+automatically build, critique, and revise models.
+</small>
 How to build and modify and refactor and remix and repurpose:
 
 - Software for data miners;
@@ -62,6 +72,12 @@ How to achieve maximum AI benefits at minimal AI costs:
 ## How?
 
 Monthly:
+
+<small class="sidenote">Can you
+do better than last year's
+[high water mark](https://arxiv.org/pdf/1802.05319.pdf)?
+A 500 to 1000-fold speed up of a text miner?
+</small>
 
 - August = Start-up
 - September = Data mining
