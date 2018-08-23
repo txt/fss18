@@ -15,7 +15,7 @@ Most software companies now learn their policies via data-driven methods. Modern
 <small class="sidenote">
 Graduates of this class will becomes
 **producers**, not mere
-**consumers**,  of AI tools. 
+**consumers**,  of AI software. 
 </small>
 
 This subject will explore methods for generating and using models built from data (i.e. how to  collectthat data; exploring that data; then presenting that data in such a way to support business-level decision making for software projects).
