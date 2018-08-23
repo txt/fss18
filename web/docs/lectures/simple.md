@@ -75,25 +75,20 @@ And there are many reasons to reflect on how not to do "it" simpler.
 - Fewer headaches
 - Higher marks
 
-### Because, Historically, Simpler is often Better
+### Because at least in SE, there are  inherent simpliticies
 
+And we would be foolish not to exploit them.
 
-- PCA, 1901
-- Narrows: Amarel 1960s
-- Prototypes: Chen 1975 
-- Frames: Minsky, 1975
-- Min environments: DeKleer, 1986
-- Saturation: Horgan & Mathur: 1980
-- Homogeneous propagation: Michael: 1981
-- Master variables: Crawford & Baker, 1995
-- Clumps, Druzdel, 1997
-- Feature subset section, Kohavi, 1997, 
-- Back doors, Williams, 2002 
-- Active learning: many people (2000+)
+Why is this so? Not clear. But:
 
-Mathematically, models are either simple or poorly supported by the data:
+- Mathematically, models are either simple or poorly supported by the data:
+      - See [here](http://menzies.us/lessdata.html)
+- Programming languages are a subset of natural language and both kinds of
+  languages exhibit remarkably [simple "language models"](https://arxiv.org/pdf/1709.06182.pdf); i.e. given the last
+  N symbols, you can pretty much guess the next symbol.
+      - [Hindle et al.](http://web.cs.ucdavis.edu/~su/publications/natural.pdf): 
+         "Programming languages, in theory, are complex, flexible and powerful, but the programs that real people actually write are mostly simple and rather repetitive, and thus they have usefully predictable statistical proper- ties that can be captured in statistical language models and leveraged for software engineering tasks."
 
-- See [here](http://menzies.us/lessdata.html)
 
 
 ### Because in SE, More Complex is often superfluous
@@ -123,6 +118,34 @@ Project 21 features onto first 2 components of PCA
 ![](../img/papa.png)
 
 For more, see [Data Mining for very busy people](http://menzies.us/pdf/03tar2.pdf)
+
+### Because, Historically, Simpler is often Better
+
+
+- PCA, 1901
+- Narrows: Amarel 1960s
+- Prototypes: Chen 1975 
+- Frames: Minsky, 1975
+- Min environments: DeKleer, 1986
+- Saturation: Horgan & Mathur: 1980
+- Homogeneous propagation: Michael: 1981
+- Master variables: Crawford & Baker, 1995
+- Clumps, Druzdel, 1997
+- Feature subset section, Kohavi, 1997, 
+- Back doors, Williams, 2002 
+- Active learning: many people (2000+)
+
+From Section 2.2 of [this paper](https://arxiv.org/pdf/1803.05067.pdf)
+
+
+- Simpler methods may build smaller  models that
+use fewer attributes from the data. Such models are more likely
+to be robust against overfitting, especially on small and noisy data
+(and have been found to predict data at levels comparable with regression).
+- Very simple rule-based methpds can perform comparably well to more complex models in a range of domains e.g., public health, medical risk management, performance sci- ence, etc.
+- Neth and Gigerenzer argue that such rule-bases are tools that work well under conditions of uncertainty.
+- Brighton showed that rule-based models can perform better than complex nonlinear algorithms such as neural networks, exemplar models, and classification/regression trees.
+
 
 ### Speed speed speed
 

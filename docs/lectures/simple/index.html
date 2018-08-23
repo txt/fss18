@@ -343,24 +343,21 @@ divide into three bins; train on 2, test on the other):</li>
 <li>Fewer headaches</li>
 <li>Higher marks</li>
 </ul>
-<h3 id="because-historically-simpler-is-often-better">Because, Historically, Simpler is often Better</h3>
+<h3 id="because-at-least-in-se-there-are-inherent-simpliticies">Because at least in SE, there are  inherent simpliticies</h3>
+<p>And we would be foolish not to exploit them.</p>
+<p>Why is this so? Not clear. But:</p>
 <ul>
-<li>PCA, 1901</li>
-<li>Narrows: Amarel 1960s</li>
-<li>Prototypes: Chen 1975 </li>
-<li>Frames: Minsky, 1975</li>
-<li>Min environments: DeKleer, 1986</li>
-<li>Saturation: Horgan &amp; Mathur: 1980</li>
-<li>Homogeneous propagation: Michael: 1981</li>
-<li>Master variables: Crawford &amp; Baker, 1995</li>
-<li>Clumps, Druzdel, 1997</li>
-<li>Feature subset section, Kohavi, 1997, </li>
-<li>Back doors, Williams, 2002 </li>
-<li>Active learning: many people (2000+)</li>
-</ul>
-<p>Mathematically, models are either simple or poorly supported by the data:</p>
-<ul>
+<li>Mathematically, models are either simple or poorly supported by the data:<ul>
 <li>See <a href="http://menzies.us/lessdata.html">here</a></li>
+</ul>
+</li>
+<li>Programming languages are a subset of natural language and both kinds of
+  languages exhibit remarkably <a href="https://arxiv.org/pdf/1709.06182.pdf">simple "language models"</a>; i.e. given the last
+  N symbols, you can pretty much guess the next symbol.<ul>
+<li><a href="http://web.cs.ucdavis.edu/~su/publications/natural.pdf">Hindle et al.</a>: 
+     "Programming languages, in theory, are complex, flexible and powerful, but the programs that real people actually write are mostly simple and rather repetitive, and thus they have usefully predictable statistical proper- ties that can be captured in statistical language models and leveraged for software engineering tasks."</li>
+</ul>
+</li>
 </ul>
 <h3 id="because-in-se-more-complex-is-often-superfluous">Because in SE, More Complex is often superfluous</h3>
 <p>Data from Norman Fenton’s Bayes nets discussing software defects = yes, no</p>
@@ -390,6 +387,31 @@ Project 21 features onto first 2 components of PCA<ul>
 </ul>
 <p><img alt="" src="../../img/papa.png" /></p>
 <p>For more, see <a href="http://menzies.us/pdf/03tar2.pdf">Data Mining for very busy people</a></p>
+<h3 id="because-historically-simpler-is-often-better">Because, Historically, Simpler is often Better</h3>
+<ul>
+<li>PCA, 1901</li>
+<li>Narrows: Amarel 1960s</li>
+<li>Prototypes: Chen 1975 </li>
+<li>Frames: Minsky, 1975</li>
+<li>Min environments: DeKleer, 1986</li>
+<li>Saturation: Horgan &amp; Mathur: 1980</li>
+<li>Homogeneous propagation: Michael: 1981</li>
+<li>Master variables: Crawford &amp; Baker, 1995</li>
+<li>Clumps, Druzdel, 1997</li>
+<li>Feature subset section, Kohavi, 1997, </li>
+<li>Back doors, Williams, 2002 </li>
+<li>Active learning: many people (2000+)</li>
+</ul>
+<p>From Section 2.2 of <a href="https://arxiv.org/pdf/1803.05067.pdf">this paper</a></p>
+<ul>
+<li>Simpler methods may build smaller  models that
+use fewer attributes from the data. Such models are more likely
+to be robust against overfitting, especially on small and noisy data
+(and have been found to predict data at levels comparable with regression).</li>
+<li>Very simple rule-based methpds can perform comparably well to more complex models in a range of domains e.g., public health, medical risk management, performance sci- ence, etc.</li>
+<li>Neth and Gigerenzer argue that such rule-bases are tools that work well under conditions of uncertainty.</li>
+<li>Brighton showed that rule-based models can perform better than complex nonlinear algorithms such as neural networks, exemplar models, and classification/regression trees.</li>
+</ul>
 <h3 id="speed-speed-speed">Speed speed speed</h3>
 <ul>
 <li>Analytics =   work flow to condense much  low-value data down to a few diamonds.</li>
