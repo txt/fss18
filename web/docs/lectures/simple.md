@@ -191,15 +191,28 @@ usually infeasible due to long benchmarking time
 
 ### Because we need a baseline
 
-[Empirical methods in AI](http://www.eecs.harvard.edu/cs286r/courses/spring08/reading6/CohenTutorial.pdf):
 
-- Supposedly newer more sophisticated methods should be baselined against a seemingly
+Because better science needs better baselines:
+
+- [Empirical methods in AI](http://www.eecs.harvard.edu/cs286r/courses/spring08/reading6/CohenTutorial.pdf):
+    - Supposedly newer more sophisticated methods should be baselined against a seemingly
 simpler alternative
-- Warning: when I do that, I often find simpler is better.
-    - Search-based SE: [A Baseline Method For Search-Based Software Engineering](http://greggay.com/pdf/10baseline.pdf)
-    - Data mining: [Bellwethers: A Baseline Method For Transfer Learning](https://arxiv.org/pdf/1703.06218)
-    - Optimizing: ["Sampling"' as a Baseline Optimizer for Search-based Software Engineering](https://arxiv.org/pdf/1608.07617)
+    - Warning: when I do that, I often find simpler is better.
+         - Search-based SE: [A Baseline Method For Search-Based Software Engineering](http://greggay.com/pdf/10baseline.pdf)
+         - Data mining: [Bellwethers: A Baseline Method For Transfer Learning](https://arxiv.org/pdf/1703.06218)
+         - Optimizing: ["Sampling"' as a Baseline Optimizer for Search-based Software Engineering](https://arxiv.org/pdf/1608.07617)
 
+Because better engineering needs better baselines:
+
+- So many AI tools, so many ways to tune them, so many ways to combine them
+       - So given a new problem, which learner/optimizer should we apply? 
+       - Hard to say, apriori.
+       - When new data arrives, you need _commissioning experiments_; i.e. try a variety of techniques before you can
+find what words best for the local data.
+- Comissioning needs baselines
+	- i.e. an algorithm which can generate floor performance values. 
+	- Lets a developer quickly rule out any method that falls “below the floor”. 
+	- Lets us achieve fast early results, while also gaining some guidance in all their subsequent experimentation (specifically: "try to beat the baseline").
 
 
 ### Other

@@ -463,14 +463,33 @@ orders of magnitude faster. Just imagine what else could we use all that saved C
 usually infeasible due to long benchmarking time</li>
 </ul>
 <h3 id="because-we-need-a-baseline">Because we need a baseline</h3>
-<p><a href="http://www.eecs.harvard.edu/cs286r/courses/spring08/reading6/CohenTutorial.pdf">Empirical methods in AI</a>:</p>
+<p>Because better science needs better baselines:</p>
 <ul>
+<li><a href="http://www.eecs.harvard.edu/cs286r/courses/spring08/reading6/CohenTutorial.pdf">Empirical methods in AI</a>:<ul>
 <li>Supposedly newer more sophisticated methods should be baselined against a seemingly
 simpler alternative</li>
 <li>Warning: when I do that, I often find simpler is better.<ul>
 <li>Search-based SE: <a href="http://greggay.com/pdf/10baseline.pdf">A Baseline Method For Search-Based Software Engineering</a></li>
 <li>Data mining: <a href="https://arxiv.org/pdf/1703.06218">Bellwethers: A Baseline Method For Transfer Learning</a></li>
 <li>Optimizing: <a href="https://arxiv.org/pdf/1608.07617">"Sampling"' as a Baseline Optimizer for Search-based Software Engineering</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Because better engineering needs better baselines:</p>
+<ul>
+<li>So many AI tools, so many ways to tune them, so many ways to combine them<ul>
+<li>So given a new problem, which learner/optimizer should we apply? </li>
+<li>Hard to say, apriori.</li>
+<li>When new data arrives, you need <em>commissioning experiments</em>; i.e. try a variety of techniques before you can
+find what words best for the local data.</li>
+</ul>
+</li>
+<li>Comissioning needs baselines<ul>
+<li>i.e. an algorithm which can generate floor performance values. </li>
+<li>Lets a developer quickly rule out any method that falls “below the floor”. </li>
+<li>Lets us achieve fast early results, while also gaining some guidance in all their subsequent experimentation (specifically: "try to beat the baseline").</li>
 </ul>
 </li>
 </ul>
