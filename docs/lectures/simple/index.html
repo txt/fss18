@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Simplicity &#10004; - Found.Soft.Sci</title>
+        <title>Simplicity ; - Found.Soft.Sci</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -89,7 +89,7 @@
 </li>
             
 <li class="active">
-    <a href="./">Simplicity &#10004;</a>
+    <a href="./">Simplicity ;</a>
 </li>
     </ul>
   </li>
@@ -283,9 +283,13 @@
 <h1 id="simpler-please">Simpler. Please.</h1>
 <p><img alt="" src="../../img/dragon.png" /></p>
 <h2 id="enough-inference-but-not-too-much">Enough Inference, But Not Too Much</h2>
-<p>Simplicity is the ultimate form of sophistication.<br />
+<p>"As complexity rises, precise statements lose meaning and meaningful statements lose precision."<br />
+-- Lofti Zadeh</p>
+<p>"Simplicity is the ultimate form of sophistication."  <br />
 -- Leonardo da Vinci</p>
-<p>Less, But Better <br />
+<p>"No! No! No!" <br />
+-- Business user running in fear from overly complex maths</p>
+<p>"Less, But Better"     <br />
 -- Dieter Rams</p>
 <p><img alt="" src="../../img/radio.png" /></p>
 <p><small class="sidenote">
@@ -317,12 +321,22 @@ I would say perhaps not.
 derive fascinating internal features uses layers of neural nets</p>
 <ul>
 <li>All good stuff</li>
-<li>But much SE inference exhibits a large &epsilon; effect where large variances
-are observed in the performance of the learned models. </li>
-<li>For such large &epsilon; learning problems, ever increasing
+<li>For "large &epsilon; problems", ever increasing
 exact inference is... silly.</li>
-<li>And there are many reasons to reflect on how not to do "it" simpler.</li>
 </ul>
+<p>Example of "large &epsilon;":</p>
+<ul>
+<li>Many SE inference results a large &epsilon; i.e. small changes to the training data
+or the AI model leads to large changes in the performance.
+<small class="sidenote">
+77 equals  79 when performance variance is &pm; 10
+</small></li>
+<li>For example, here are 10*3 cross-val software effort estimation
+results (10 times: randomize order of data,
+divide into three bins; train on 2, test on the other):</li>
+</ul>
+<p><img alt="" src="../../img/eval.png" /></p>
+<p>And there are many reasons to reflect on how not to do "it" simpler.</p>
 <h2 id="reasons-for-less">Reasons for less</h2>
 <h3 id="your-next-15-weeks">Your next 15 weeks</h3>
 <ul>

@@ -4,12 +4,17 @@
 
 ## Enough Inference, But Not Too Much
 
+"As complexity rises, precise statements lose meaning and meaningful statements lose precision."  
+-- Lofti Zadeh
 
 
-Simplicity is the ultimate form of sophistication.  
+"Simplicity is the ultimate form of sophistication."    
 -- Leonardo da Vinci
 
-Less, But Better   
+"No! No! No!"   
+-- Business user running in fear from overly complex maths
+
+"Less, But Better"       
 -- Dieter Rams
 
 ![](../img/radio.png)
@@ -45,11 +50,23 @@ Much industrial success with very complex image processing based on deep learner
 derive fascinating internal features uses layers of neural nets
 
 - All good stuff
-- But much SE inference exhibits a large &epsilon; effect where large variances
-are observed in the performance of the learned models. 
-- For such large &epsilon; learning problems, ever increasing
+- For "large &epsilon; problems", ever increasing
 exact inference is... silly.
-- And there are many reasons to reflect on how not to do "it" simpler.
+
+Example of "large &epsilon;":
+
+- Many SE inference results a large &epsilon; i.e. small changes to the training data
+or the AI model leads to large changes in the performance.
+<small class="sidenote">
+77 equals  79 when performance variance is &pm; 10
+</small>
+- For example, here are 10\*3 cross-val software effort estimation
+results (10 times: randomize order of data,
+divide into three bins; train on 2, test on the other):
+
+![](../img/eval.png)
+
+And there are many reasons to reflect on how not to do "it" simpler.
 
 ## Reasons for less
 
