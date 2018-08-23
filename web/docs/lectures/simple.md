@@ -58,7 +58,7 @@ Example of "large &epsilon;":
 - Many SE inference results a large &epsilon; i.e. small changes to the training data
 or the AI model leads to large changes in the performance.
 <small class="sidenote">
-77 not different to  79 when  variance is &pm; large; and for SE, its often large.
+77 "equals" 81 when  variance is &pm; large.  And for SE, its often large.
 </small>
 - For example, here are 10\*3 cross-val software effort estimation
 results (10 times: randomize order of data,
@@ -75,9 +75,11 @@ And there are many reasons to reflect on how not to do "it" simpler.
 - Fewer headaches
 - Higher marks
 
+<small class="sidenote">
+We would be foolish not to exploit inherent simplicities.
+</small>
 ### Because at least in SE, there are  inherent simpliticies
 
-And we would be foolish not to exploit them.
 
 Why is this so? Not clear. But:
 
@@ -99,6 +101,10 @@ Data from Norman Fenton’s Bayes nets discussing software defects = yes, no
 - Given classes x,y then Fx, Fy is frequency of some ranges in x,y
     - Log Odds Ratio = log(Fx/Fy )
     - If zero  if no difference in x,y
+<small class="sidenote">
+The secret of big data is [small data](https://www.forbes.com/sites/rogerdooley/2016/02/16/small-data-lindstrom/#711873e37870).
+The best thing to do with data is to ignore most of it.
+</small>
 - Results:
     - Most variables do not contribute to determination of defects
 

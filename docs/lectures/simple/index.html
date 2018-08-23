@@ -329,7 +329,7 @@ exact inference is... silly.</li>
 <li>Many SE inference results a large &epsilon; i.e. small changes to the training data
 or the AI model leads to large changes in the performance.
 <small class="sidenote">
-77 not different to  79 when  variance is &pm; large; and for SE, its often large.
+77 "equals" 81 when  variance is &pm; large.  And for SE, its often large.
 </small></li>
 <li>For example, here are 10*3 cross-val software effort estimation
 results (10 times: randomize order of data,
@@ -343,8 +343,10 @@ divide into three bins; train on 2, test on the other):</li>
 <li>Fewer headaches</li>
 <li>Higher marks</li>
 </ul>
+<p><small class="sidenote">
+We would be foolish not to exploit inherent simplicities.
+</small></p>
 <h3 id="because-at-least-in-se-there-are-inherent-simpliticies">Because at least in SE, there are  inherent simpliticies</h3>
-<p>And we would be foolish not to exploit them.</p>
 <p>Why is this so? Not clear. But:</p>
 <ul>
 <li>Mathematically, models are either simple or poorly supported by the data:<ul>
@@ -364,7 +366,11 @@ divide into three bins; train on 2, test on the other):</li>
 <ul>
 <li>Given classes x,y then Fx, Fy is frequency of some ranges in x,y<ul>
 <li>Log Odds Ratio = log(Fx/Fy )</li>
-<li>If zero  if no difference in x,y</li>
+<li>If zero  if no difference in x,y
+<small class="sidenote">
+The secret of big data is <a href="https://www.forbes.com/sites/rogerdooley/2016/02/16/small-data-lindstrom/#711873e37870">small data</a>.
+The best thing to do with data is to ignore most of it.
+</small></li>
 </ul>
 </li>
 <li>Results:<ul>
