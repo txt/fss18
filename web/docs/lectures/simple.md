@@ -58,7 +58,7 @@ Example of "large &epsilon;":
 - Many SE inference results a large &epsilon; i.e. small changes to the training data
 or the AI model leads to large changes in the performance.
 <small class="sidenote">
-77 equals  79 when performance variance is &pm; 10
+77 not different to  79 when  variance is &pm; large; and for SE, its often large.
 </small>
 - For example, here are 10\*3 cross-val software effort estimation
 results (10 times: randomize order of data,
