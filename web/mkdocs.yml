@@ -10,6 +10,7 @@ nav:
              - Inspiration &#10004; : inspiration.md
              - SE+AI,  then and now &#10004;: history.md
              - Baselines for Adequate AI &#10004; : lectures/baselines.md
+             - Simplicity &#10004; : lectures/simple.md 
     - H/W: 
          - One &#10004;: proj/w1.md 
          - Review: 
@@ -27,7 +28,6 @@ nav:
               - Bootstrap: lectures/bootstrap.md
          - S:
               - Significance test: lectures/significance.md 
-              - Simplicity: lectures/simple.md
               - Scott-Knot: lectures/sk.md
          - T:
               - Tables : lectures/tables.md

@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Simplicity - Found.Soft.Sci</title>
+        <title>Simplicity &#10004; - Found.Soft.Sci</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -50,7 +50,7 @@
                             <li >
                                 <a href="../..">Home</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notes <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -87,6 +87,10 @@
 <li >
     <a href="../baselines/">Baselines for Adequate AI &#10004;</a>
 </li>
+            
+<li class="active">
+    <a href="./">Simplicity &#10004;</a>
+</li>
     </ul>
   </li>
                                 </ul>
@@ -114,7 +118,7 @@
   </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">A-Z <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -168,10 +172,6 @@
             
 <li >
     <a href="../significance.md">Significance test</a>
-</li>
-            
-<li class="active">
-    <a href="./">Simplicity</a>
 </li>
             
 <li >
@@ -253,12 +253,12 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../explain/">
+                                <a rel="next" href="../baselines/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../tables/">
+                                <a rel="prev" href="../../proj/w1/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -270,66 +270,288 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#simple-please">Simple. Please.</a></li>
-            <li><a href="#less-cpu">less CPU</a></li>
-            <li><a href="#less-cost-local-hardware-cloud-services">less cost (local hardware, cloud services)</a></li>
-            <li><a href="#less-energy-consumption">less energy consumption</a></li>
-            <li><a href="#support-the-edge">support the edge</a></li>
-            <li><a href="#less-pollution-creating-that-energy">less pollution creating that energy</a></li>
-            <li><a href="#simpler-explanation">simpler explanation</a></li>
-            <li><a href="#simpler-customization">simpler customization</a></li>
-            <li><a href="#quicker-more-effective-training">quicker more effective training</a></li>
-            <li><a href="#easier-experimentation">easier experimentation</a></li>
-            <li><a href="#easier-reproducibility">easier reproducibility</a></li>
-            <li><a href="#solutions-more-trustable">solutions more trustable</a></li>
-            <li><a href="#because-we-need-a-baseline">because we need a baseline</a></li>
-            <li><a href="#cause-its-just-good-science">cause its just good science</a></li>
+        <li class="main active"><a href="#simpler-please">Simpler. Please.</a></li>
+            <li><a href="#enough-inference-but-not-too-much">Enough Inference, But Not Too Much</a></li>
+            <li><a href="#the-obvious-counter-argument-against-keep-it-simple">The Obvious Counter-argument Against "Keep it Simple"</a></li>
+            <li><a href="#reasons-for-less">Reasons for less</a></li>
+            <li><a href="#a-common-recipe-for-me-at-least">A Common Recipe (For Me, at Least)</a></li>
+            <li><a href="#cautions">Cautions</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="simple-please">Simple. Please.</h1>
-<p>Less complexity in the analysis:</p>
+<h1 id="simpler-please">Simpler. Please.</h1>
+<p><img alt="" src="../../img/dragon.png" /></p>
+<h2 id="enough-inference-but-not-too-much">Enough Inference, But Not Too Much</h2>
+<p>Simplicity is the ultimate form of sophistication.<br />
+-- Leonardo da Vinci</p>
+<p>Less, But Better <br />
+-- Dieter Rams</p>
+<p><img alt="" src="../../img/radio.png" /></p>
+<p><small class="sidenote">
+Are our AI tools designed "good"? Based on my experience with industrial developers,
+I would say perhaps not.
+</small>According to Dieter Rams, good design:</p>
 <ul>
-<li>less CPU</li>
-<li>less cost (local hardware, cloud services)</li>
-<li>less energy consumption</li>
-<li>support the edge</li>
-<li>less pollution creating that energy</li>
-<li>simpler explanation</li>
-<li>simpler customization</li>
-<li>quicker more effective training</li>
-<li>easier experimentation</li>
-<li>easier reproducibility</li>
-<li>solutions more trustable</li>
-<li>because we need a baseline</li>
-<li>cause its just good science</li>
+<li><strong>is innovative</strong> – The possibilities for progression are not, by any means, exhausted. Technological development is always offering new opportunities for original designs. But imaginative design always develops in tandem with improving technology, and can never be an end in itself.</li>
+<li><strong>makes a product useful</strong> – A product is bought to be used. It has to satisfy not only functional, but also psychological and aesthetic criteria. Good design emphasizes the usefulness of a product whilst disregarding anything that could detract from it.</li>
+<li><strong>is aesthetic</strong> – The aesthetic quality of a product is integral to its usefulness because products are used every day and have an effect on people and their well-being. Only well-executed objects can be beautiful.</li>
+<li><strong>makes a product understandable</strong> – It clarifies the product’s structure. Better still, it can make the product clearly express its function by making use of the user's intuition. At best, it is self-explanatory.</li>
+<li><strong>is unobtrusive</strong> – Products fulfilling a purpose are like tools. They are neither decorative objects nor works of art. Their design should therefore be both neutral and restrained, to leave room for the user's self-expression.</li>
+<li><strong>is honest</strong> – It does not make a product appear more innovative, powerful or valuable than it really is. It does not attempt to manipulate the consumer with promises that cannot be kept.</li>
+<li><strong>is long-lasting</strong> – It avoids being fashionable and therefore never appears antiquated. Unlike fashionable design, it lasts many years – even in today's throw away society.</li>
+<li><strong>is thorough down to the last detail</strong> – Nothing must be arbitrary or left to chance. Care and accuracy in the design process show respect towards the consumer.</li>
+<li><strong>is environmentally friendly</strong> – Design makes an important contribution to the preservation of the environment. It conserves resources and minimizes physical and visual pollution throughout the life cycle of the product.</li>
+<li><strong>is as little design as possible</strong> – Less, but better – because it concentrates on the essential aspects, and the products are not burdened with non-essentials. Back to purity, back to simplicity.</li>
 </ul>
-<h2 id="less-cpu">less CPU</h2>
+<h2 id="the-obvious-counter-argument-against-keep-it-simple">The Obvious Counter-argument Against "Keep it Simple"</h2>
+<p>Yes, sometimes, complexity is necessary</p>
 <ul>
-<li>getting out of hand<ul>
-<li>The mark Harman paper</li>
+<li>e.g. 2% optimizations of turbulent non-linear air-flows across a wing in the transonic range</li>
+</ul>
+<p>But when it ain’t</p>
+<ul>
+<li>Needless complexity = is just silliness</li>
+</ul>
+<p>Much industrial success with very complex image processing based on deep learners that 
+derive fascinating internal features uses layers of neural nets</p>
+<ul>
+<li>All good stuff</li>
+<li>But much SE inference exhibits a large &epsilon; effect where large variances
+are observed in the performance of the learned models. </li>
+<li>For such large &epsilon; learning problems, ever increasing
+exact inference is... silly.</li>
+<li>And there are many reasons to reflect on how not to do "it" simpler.</li>
+</ul>
+<h2 id="reasons-for-less">Reasons for less</h2>
+<h3 id="your-next-15-weeks">Your next 15 weeks</h3>
+<ul>
+<li>Fewer headaches</li>
+<li>Higher marks</li>
+</ul>
+<h3 id="because-historically-simpler-is-often-better">Because, Historically, Simpler is often Better</h3>
+<ul>
+<li>PCA, 1901</li>
+<li>Narrows: Amarel 1960s</li>
+<li>Prototypes: Chen 1975 </li>
+<li>Frames: Minsky, 1975</li>
+<li>Min environments: DeKleer, 1986</li>
+<li>Saturation: Horgan &amp; Mathur: 1980</li>
+<li>Homogeneous propagation: Michael: 1981</li>
+<li>Master variables: Crawford &amp; Baker, 1995</li>
+<li>Clumps, Druzdel, 1997</li>
+<li>Feature subset section, Kohavi, 1997, </li>
+<li>Back doors, Williams, 2002 </li>
+<li>Active learning: many people (2000+)</li>
+</ul>
+<p>Mathematically, models are either simple or poorly supported by the data:</p>
+<ul>
+<li>See <a href="http://menzies.us/lessdata.html">here</a></li>
+</ul>
+<h3 id="because-in-se-more-complex-is-often-superfluous">Because in SE, More Complex is often superfluous</h3>
+<p>Data from Norman Fenton’s Bayes nets discussing software defects = yes, no</p>
+<ul>
+<li>Given classes x,y then Fx, Fy is frequency of some ranges in x,y<ul>
+<li>Log Odds Ratio = log(Fx/Fy )</li>
+<li>If zero  if no difference in x,y</li>
 </ul>
 </li>
-<li>
-<p>wei-style inference: $1,100,000 for 5 students for 3 years</p>
-</li>
-<li>
-<p>zhea : 3 years of CPU/day</p>
+<li>Results:<ul>
+<li>Most variables do not contribute to determination of defects</li>
+</ul>
 </li>
 </ul>
-<h2 id="less-cost-local-hardware-cloud-services">less cost (local hardware, cloud services)</h2>
-<h2 id="less-energy-consumption">less energy consumption</h2>
-<h2 id="support-the-edge">support the edge</h2>
-<h2 id="less-pollution-creating-that-energy">less pollution creating that energy</h2>
-<h2 id="simpler-explanation">simpler explanation</h2>
-<h2 id="simpler-customization">simpler customization</h2>
-<h2 id="quicker-more-effective-training">quicker more effective training</h2>
-<h2 id="easier-experimentation">easier experimentation</h2>
-<h2 id="easier-reproducibility">easier reproducibility</h2>
-<h2 id="solutions-more-trustable">solutions more trustable</h2>
-<h2 id="because-we-need-a-baseline">because we need a baseline</h2>
-<h2 id="cause-its-just-good-science">cause its just good science</h2></div>
+<p><img alt="" src="../../img/nomo1.png" /></p>
+<p>Data from <a href="https://oatd.org/oatd/record?record=oai%5C%3Awvuscholar.wvu.edu%5C%3A28332">Papakroni</a>'s masters thesis</p>
+<ul>
+<li>TRAIN:
+Project 21 features onto first 2 components of PCA<ul>
+<li>Recursively divide two dimensions (at median)</li>
+<li>Stopping a SQRT(N)</li>
+<li>In each leaf, replace N projects with median centroid</li>
+</ul>
+</li>
+<li>TEST: Estimate = interpolate 2 near centroids</li>
+<li>Performs no worse, and sometimes better, than Random forests, NaiveBayes</li>
+</ul>
+<p><img alt="" src="../../img/papa.png" /></p>
+<p>For more, see <a href="http://menzies.us/pdf/03tar2.pdf">Data Mining for very busy people</a></p>
+<h3 id="speed-speed-speed">Speed speed speed</h3>
+<ul>
+<li>Analytics =   work flow to condense much  low-value data down to a few diamonds.</li>
+<li><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/inteactions_big_data.pdf">Fisher et al.</a>  survey of  16 industrial data scientists,<ul>
+<li>Due to computational cost of   analytics, "the luxuries of interactivity, direct manipulation, and fast system response are gone".</li>
+<li>Modern cloud-based analytics as a throwback to the 1960s– batch processing</li>
+<li>"Fast iteration is key, but incompatible with the way jobs are submitted and processed in the cloud. It’s frustrating to wait for hours, only to realize you need a slight tweak to your feature set."</li>
+</ul>
+</li>
+</ul>
+<h3 id="less-cost-local-hardware-cloud-services">Less cost (local hardware, cloud services)</h3>
+<p>The following  are somewhat extreme examples. But suppose we could do the following  tasks
+orders of magnitude faster. Just imagine what else could we use all that saved CPU for?</p>
+<ul>
+<li>15 years of CPU, one FSE 2013 analytics paper, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.565.1058&amp;rep=rep1&amp;type=pdf">Wang et al/</a> <ul>
+<li>Evaluate automatic tuning tools for code clone recognition tools</li>
+</ul>
+</li>
+<li>$1.2million<ul>
+<li>Cost or renting of commercial cloud hardware</li>
+<li>One project, 5 students, 3 years</li>
+<li>FYI: that would <strong>EAT</strong> and <strong>SWALLOW</strong> the standard budgets NSF gives researchers like me</li>
+</ul>
+</li>
+<li>Three years of CPU/day<ul>
+<li>Anonymous NCSU grad student tuning deep learning networks at XXXX for summer 2018</li>
+</ul>
+</li>
+</ul>
+<h3 id="support-the-edge">Support the edge</h3>
+<ul>
+<li><a href="https://arxiv.org/pdf/1609.01967.pdf">Edge computing</a><ul>
+<li>Move some computational towards the edge of the network to harness computational capabilities that are currently untapped in edge nodes, such as base stations, routers and switches</li>
+</ul>
+</li>
+<li><a href="https://www.wired.co.uk/article/internet-of-things-what-is-explained-iot">Internet of Things</a><ul>
+<li>Simple AI could  make better use of billions and billions of low power devices, many of
+   which are operating at very low power</li>
+</ul>
+</li>
+</ul>
+<h3 id="less-energy-consumption">Less Energy Consumption</h3>
+<p>Power off your phone</p>
+<ul>
+<li>Stare at it </li>
+<li>How long before you stop?</li>
+<li>Phone - power = silly</li>
+</ul>
+<p>From <a href="https://www.springer.com/us/book/9783319085807">Green in Software Engineering</a>:</p>
+<ul>
+<li>Present-day primary energy footprints of three business software apps add up to as much as 373 Peta Joules/ year.</li>
+<li>People claim   they will pay more for a "green"  product.</li>
+<li>nearly half of surveyed organizations design their business models on the basis of sustainability.</li>
+<li>Sustainability =  new source of innovation, cost-cutting opportunity , mechanism for gaining competitive advantage.</li>
+</ul>
+<h3 id="less-pollution-creating-that-energy">Less pollution Creating that Energy</h3>
+<ul>
+<li>IT-related services now account for 2% of all global carbon emissions-- roughly the same as the aviation sector</li>
+<li>Simpler AI lets us breathe easier.<ul>
+<li>The cloud runs on <a href="dirty coal">http://time.com/46777/your-data-is-dirty-the-carbon-price-of-cloud-computing/</a>. </li>
+</ul>
+</li>
+</ul>
+<h3 id="simpler-explanation">Simpler explanation</h3>
+<p><img alt="" src="https://memegenerator.net/img/instances/57323446/butt-head-im-like-angry-at-numbers-beavis-theres-like-too-many-of-em-and-stuff.jpg" /></p>
+<p>Less generation of  solutions</p>
+<ul>
+<li>Less confusion</li>
+<li><a href="https://goo.gl/LvsQdn">Verrappa and Letier</a>:<ul>
+<li>"..for  industrial problems, these  algorithms generate (many) solutions (makes) understanding them and selecting one among them difficult  and time consuming" </li>
+</ul>
+</li>
+</ul>
+<h3 id="simpler-customization">Simpler Customization</h3>
+<p>We are already delivering software <a href="https://pdfs.semanticscholar.org/ad8d/b361ddd6032526301e79553623fd3f22ca0b.pdf">more complex than what people can manage</a> (see fig1 and fig3).</p>
+<ul>
+<li>Many software systems have poorly chosen defaults. Hence, it is useful to seek better configurations.<ul>
+<li><a href="https://www.cs.cmu.edu/~ggordon/van-aken-etal-parameters.pdf">Van Aken et al.</a>  report that the default MySQL configurations in 2016 assume that it will be installed on a machine that has 160MB of RAM (which, at that time, was incorrect by, at least, an order of magnitude)</li>
+<li><a href="http://cidrdb.org/cidr2011/Papers/CIDR11_Paper36.pdf">Herodotou et al.</a> show how standard settings for text mining appli- cations in Hadoop result in worst-case execution times. </li>
+<li>In the same vein, <a href="https://arxiv.org/pdf/1606.06543.pdf">Jamshidi et al.</a> reports for text mining applications on Apache Storm, the throughput achieved using the worst configuration is 480 times slower than the throughput achieved by the best configuration.</li>
+</ul>
+</li>
+<li>Understanding, the configuration space of software systems with large configuration space, is challenging.</li>
+<li>Exploring more than just a handful of configurations is
+usually infeasible due to long benchmarking time</li>
+</ul>
+<h3 id="because-we-need-a-baseline">Because we need a baseline</h3>
+<p><a href="http://www.eecs.harvard.edu/cs286r/courses/spring08/reading6/CohenTutorial.pdf">Empirical methods in AI</a>:</p>
+<ul>
+<li>Supposedly newer more sophisticated methods should be baselined against a seemingly
+simpler alternative</li>
+<li>Warning: when I do that, I often find simpler is better.<ul>
+<li>Search-based SE: <a href="http://greggay.com/pdf/10baseline.pdf">A Baseline Method For Search-Based Software Engineering</a></li>
+<li>Data mining: <a href="https://arxiv.org/pdf/1703.06218">Bellwethers: A Baseline Method For Transfer Learning</a></li>
+<li>Optimizing: <a href="https://arxiv.org/pdf/1608.07617">"Sampling"' as a Baseline Optimizer for Search-based Software Engineering</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="other">Other</h3>
+<p>Quicker more effective training, experimentation</p>
+<ul>
+<li>Less to understand, faster to understand.</li>
+<li>Less to twiddle, less to explore</li>
+</ul>
+<p>Easier Reproducibility</p>
+<ul>
+<li>Large config spaces are the bane of reproducibility.</li>
+<li>You did not get what I got? Di you set the X to 2, Y to 3, and Z  to 10,30,age/shoe size+temperature?</li>
+</ul>
+<p>Solutions more trust-able</p>
+<ul>
+<li>More understandable, more explainable, more I want to use.</li>
+</ul>
+<p>Solutions easier to apply</p>
+<ul>
+<li>Less to do, faster to do</li>
+</ul>
+<p>Cause its just good science</p>
+<ul>
+<li>If we do not know what we are doing, we are very clumsy;</li>
+<li>When we understand it better, we are more elegant;</li>
+<li>So use this test to check if your thinking is confused, or clarified:<ul>
+<li>are your current methods very complex/ time-consuming?</li>
+</ul>
+</li>
+</ul>
+<h2 id="a-common-recipe-for-me-at-least">A Common Recipe (For Me, at Least)</h2>
+<ul>
+<li>Row reduction:<ul>
+<li>Replace N rows of data with M&Lt;N exemplars</li>
+<li>e.g. cluster and report just some items per cluster</li>
+</ul>
+</li>
+<li>Column reduction:<ul>
+<li>Prune C columns of data with the <em>sqrt(C)</em> most influential columns</li>
+</ul>
+</li>
+<li>Range reduction (in columns):<ul>
+<li>Discretize numerics, but only cut into ranges in sub-ranges have less variance </li>
+</ul>
+</li>
+<li>Range pruning<ul>
+<li>If there is a class variable:<ul>
+<li>only cut if the associated class ranges are less varied</li>
+</ul>
+</li>
+<li>Else, cluster row/column/range data and only cut if
+      associated ranges are less varied in different clusters.</li>
+</ul>
+</li>
+</ul>
+<h2 id="cautions">Cautions</h2>
+<p><img alt="" src="../../img/whitehead.png" /></p>
+<p>So that’s it? Just find the few 
+dimensions that matter, then stop?o</p>
+<p>Well...</p>
+<ul>
+<li>The reduced data space exists... but how to find it?<ul>
+<li>Feature selection on raw data?</li>
+<li>Or may be synthesized (PCA, spectral, etc)</li>
+</ul>
+</li>
+</ul>
+<p>Also:</p>
+<ul>
+<li>And the dimensions that matter NOW <ul>
+<li>May not matter SOON</li>
+</ul>
+</li>
+<li>So an agent that assumes low dimensionality<ul>
+<li><small class="sidenote"> (but fyi, we should
+   be doing that with all data mining approaches, anyway).</small>
+ Will always be checking and  revising their dimensional </li>
+</ul>
+</li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">
