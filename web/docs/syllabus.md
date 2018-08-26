@@ -36,7 +36,7 @@ By the end of the course, students should be able to
 Tim Menzies (Prof)
 
 
-+ Office Hours: Tuesday, 2:00-4:30 and by request
++ Office Hours: Tuesday, 2:00-4:00 and by request
 + Location of Office Hours: EE II room 3298
 + Slack name: timm
 + E-Mail: timm@ieee.org
@@ -118,7 +118,7 @@ Grades will be added together using:
           - Once you submit homework i+1, your marks for homework 1..i will freeze.
           - Only 2 homeworks (max) will be marked per student per week (this includes resubmissions)
           - You lose 0.5 marks for any week where you do not submit a homework (including resubmissions)
-+ Mid-term Oct 28 (on terminology): 22  marks
++ Mid-term Oct 23 (on terminology): 22  marks
 + Solo poster (on current  directions in foundations of software science): 10 marks
     - 2 page paper
         - Posters are 2 pages pdf in [ACM format](https://www.acm.org/publications/proceedings-template)
