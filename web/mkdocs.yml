@@ -18,7 +18,7 @@ nav:
          - One &#10004;: proj/w1.md 
          - Review: 
              - Week2: review/w2.md
-             - Week1: review/w1.md
+             - Week1 &#10004; : review/one.md
     - A-Z: 
          - A: 
               - Axe: lectures/axe.md
