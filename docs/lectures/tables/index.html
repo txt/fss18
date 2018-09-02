@@ -287,6 +287,10 @@
         <li class="main active"><a href="#different-learners-for-different-data">Different Learners for Different Data</a></li>
             <li><a href="#y-fx">Y = F(X)</a></li>
             <li><a href="#splits">Splits</a></li>
+        <li class="main "><a href="#feature-and-instance-selection">Feature and Instance Selection</a></li>
+            <li><a href="#feature-section">Feature Section</a></li>
+            <li><a href="#range-selection">Range Selection</a></li>
+            <li><a href="#instance-selection">Instance Selection</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -355,8 +359,568 @@ columns "<em>Y</em>" from input columns "<em>X</em>".</p>
 </ul>
 <p>Num columns:</p>
 <ul>
-<li>Splits can be found oh so many ways</li>
-</ul></div>
+<li>Splits can be found oh so many ways. In one file called auto, I can set a <code>min</code>imum size (say sqrt(size(rows))
+  and combine adjacent bins when the combination is no different to the parts. This is the expected value calculation<ul>
+<li>let <code>X</code> be a bin of size n and standard deviation <code>s</code></li>
+<li>if <code>X&lt;=2*min</code> return <code>X</code></li>
+<li>else
+        - Split <code>X</code> into <code>Y,Z</code> of size <code>n1,n2</code> and standard deviation <code>s1,s2</code>
+        -  If <code>n1/n+s1 + n2/n*s2 &lt; s</code>, then recurse to return <code>split(Y)</code>, <code>split(Z)</code>
+        -  Else return <code>X</code></li>
+</ul>
+</li>
+</ul>
+<h1 id="feature-and-instance-selection">Feature and Instance Selection</h1>
+<p>Timm's rule: the best thing to do with data is to throw most of it away.</p>
+<ul>
+<li>Simpler models,</li>
+<li>Quicker to explain, audit</li>
+<li>Less work for anything down stream that has to watch or act on any
+  variable</li>
+</ul>
+<p>Occam's Razor</p>
+<ul>
+<li>English philosopher, William of
+    Occam (1300-1349) propounded Occam's Razor:<ul>
+<li>Entia non sunt multiplicanda praeter necessitatem.</li>
+<li>(Latin for "Entities should not be multiplied more
+    than necessary"). That is, the fewer assumptions an explanation
+    of a phenomenon depends on, the better it is.</li>
+</ul>
+</li>
+<li>(BTW, Occam's razor did not survive into the 21st century.<ul>
+<li>The data mining community modified it to the <em>Minimum
+    Description Length</em> (MDL) principle.</li>
+<li>MDL: the best theory is the smallest BOTH is size AND number
+    of errors).</li>
+</ul>
+</li>
+<li>Many ways to throw away data<ul>
+<li>feature selection</li>
+<li>range selection</li>
+<li>instance selection (prototype generation)</li>
+</ul>
+</li>
+</ul>
+<h2 id="feature-section">Feature Section</h2>
+<p>The case for FSS</p>
+<p>Repeated result: throwing out features rarely damages a theory</p>
+<p><a href="../img/fsses.gif"><img alt="" src="../img/fsses.gif" /></a></p>
+<p>And, sometimes, feature removal is very useful:</p>
+<ul>
+<li>
+<p>E.g. linear regression on
+    <a href="https://github.com/abutcher/toe/blob/master/lisp/data/arff/bn.arff">bn.arff</a>
+    yielded:</p>
+<pre><code>Defects =
+    82.2602 * S1=L,M,VH +
+    158.6082 * S1=M,VH +
+    249.407  * S1=VH +
+     41.0281 * S2=L,H +
+     68.9153 * S2=H +
+    151.9207 * S3=M,H +
+    125.4786 * S3=H +
+    257.8698 * S4=H,M,VL +
+    108.1679 * S4=VL +
+    134.9064 * S5=L,M +
+   -385.7142 * S6=H,M,VH +
+    115.5933 * S6=VH +
+   -178.9595 * S7=H,L,M,VL +
+   ...
+   [ 50 lines deleted ]
+</code></pre>
+</li>
+<li>
+<p>On a 10-way cross-validation, this correlates 0.45 from predicted
+    to actuals.</p>
+</li>
+<li>
+<p>10 times, take 90% of the date and run a <em>WRAPPER</em>- a best first
+    search through combinations of attributes. At each step, linear
+    regression was called to asses a particular combination
+    of attributes. In those ten experiments, WRAPPER found that adding
+    feature X to features A,B,C,... improved correlation the following
+    number of times:</p>
+<pre><code>number of folds (%)  attribute
+           2( 20 %)     1 S1
+           0(  0 %)     2 S2
+           2( 20 %)     3 S3
+           1( 10 %)     4 S4
+           0(  0 %)     5 S5
+           1( 10 %)     6 S6
+           6( 60 %)     7 S7     &lt;==
+           1( 10 %)     8 F1
+           1( 10 %)     9 F2
+           2( 20 %)    10 F3
+           2( 20 %)    11 D1
+           0(  0 %)    12 D2
+           5( 50 %)    13 D3     &lt;==
+           0(  0 %)    14 D4
+           0(  0 %)    15 T1
+           1( 10 %)    16 T2
+           1( 10 %)    17 T3
+           1( 10 %)    18 T4
+           0(  0 %)    19 P1
+           1( 10 %)    20 P2
+           0(  0 %)    21 P3
+           1( 10 %)    22 P4
+           6( 60 %)    23 P5     &lt;==
+           1( 10 %)    24 P6
+           2( 20 %)    25 P7
+           1( 10 %)    26 P8
+           0(  0 %)    27 P9
+           2( 20 %)    28 Hours
+           8( 80 %)    29 KLoC   &lt;==
+           4( 40 %)    30 Language
+           3( 30 %)    32 log(hours)
+</code></pre>
+</li>
+<li>
+<p>Four variables appeared in the majority of folds. A second run did a
+    10-way using just those variables to yield a smaller model
+    with (much) larger correlation (98\%):</p>
+<pre><code>Defects =
+    876.3379 * S7=VL +
+   -292.9474 * D3=L,M +
+    483.6206 * P5=M +
+      5.5113 * KLoC +
+     95.4278
+</code></pre>
+</li>
+</ul>
+<h3 id="excess-attributes">Excess attributes</h3>
+<ul>
+<li>Confuse decision tree learners<ul>
+<li>Too much early splitting of data</li>
+<li>Less data available for each sub-tree</li>
+</ul>
+</li>
+<li>Too many things correlated to class?<ul>
+<li>Dump some of them!</li>
+</ul>
+</li>
+</ul>
+<h3 id="why-fss">Why FSS?</h3>
+<ul>
+<li>throw away noisy attributes</li>
+<li>throw away redundant attributes</li>
+<li>smaller model= better accuracies (often)</li>
+<li>smaller model= simpler explanation</li>
+<li>smaller model= less variance</li>
+<li>smaller model= any downstream processing will thank you</li>
+</ul>
+<h3 id="problem">Problem</h3>
+<ul>
+<li>Exploring all subsets exponential</li>
+<li>Need heuristic methods to cull search;<ul>
+<li>e.g. forward/back select</li>
+</ul>
+</li>
+<li>
+<p>Forward select:</p>
+<ul>
+<li>start with empty set</li>
+<li>grow via hill climbing:</li>
+<li>repeat<ul>
+<li>try adding one thing and if that improves things</li>
+<li>try again using the remaining attributes</li>
+</ul>
+</li>
+<li>until no improvement after N additions OR nothing to add</li>
+<li>
+<p>Back select</p>
+</li>
+<li>
+<p>as above but start with all attributes and discard, don't add</p>
+</li>
+<li>
+<p>Usually, we throw away most attributes:</p>
+</li>
+<li>
+<p>so forward select often better</p>
+</li>
+<li>exception: J48 exploits interactions more than,say, NB.</li>
+<li>so, possibly, back select is better when wrapping j48</li>
+<li>so, possibly, forward select is as good as it gets for NB</li>
+</ul>
+</li>
+</ul>
+<h3 id="fss-types">FSS types:</h3>
+<p><img alt="" src="../img/filter-img.jpg" />    
+  <img alt="" src="../img/wrapper-img.jpg" /></p>
+<ul>
+<li>
+<p>filters vs wrappers:</p>
+<ul>
+<li>wrappers: use an actual target learners e.g. WRAPPER</li>
+<li>filters: study aspects of the data e.g. the rest</li>
+<li>filters are faster!</li>
+<li>wrappers exploit bias of target learner so often perform better,
+    when they terminate<ul>
+<li>don't terminate on large data sets</li>
+</ul>
+</li>
+<li>
+<p>solo vs combinations:</p>
+</li>
+<li>
+<p>evaluate solo attributes: e.g. INFO GAIN, RELIEF</p>
+</li>
+<li>evaluate combinations: e.g. PCA, SVD, CFS, CBS, WRAPPER</li>
+<li>solos can be faster than combinations</li>
+<li>
+<p>supervised vs unsupervised:</p>
+</li>
+<li>
+<p>use/ignores class values e.g. PCA/SVD is unsupervised, reset
+    supervised</p>
+</li>
+<li>
+<p>numeric vs discrete search methods</p>
+</li>
+<li>
+<p>ranker: for schemes that numerically score attributes e.g.
+    RELIEF, INFO GAIN,</p>
+</li>
+<li>
+<p>best first: for schemes that do heuristic search e.g. CBS, CFS,
+    WRAPPER</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="hall-and-holmes">Hall and Holmes:</h3>
+<p>This paper: pre-discretize numerics using entropy.</p>
+<p><a href="http://www.cs.waikato.ac.nz/~mhall/HallHolmesTKDE.pdf">Hall &amp; Holmes</a></p>
+<h3 id="info-gain">INFO GAIN</h3>
+<ul>
+<li>often useful in high-dimensional problems<ul>
+<li>real simple to calculate</li>
+</ul>
+</li>
+<li>attributes scored based on info gain: H(C) - H(C|A)</li>
+<li>Sort of like doing decision tree learning, just to one level.</li>
+</ul>
+<h3 id="relief">RELIEF</h3>
+<ul>
+<li><a href="http://menzies.us/iccle/?refs#Kononenko97">Kononenko97</a></li>
+<li>useful attributes differentiate between instances from other class</li>
+<li>randomly pick some instances (here, 250)</li>
+<li>find something similar, in an another class</li>
+<li>compute distance this one to the other one</li>
+<li>Stochastic sampler: scales to large data sets.</li>
+<li>
+<p>Binary RELIEF (two class system) for "n" instances for weights on
+    features "F"</p>
+<pre><code>set all weights W[f]=0
+for i = 1 to n; do
+   randomly select instance R with class C
+   find nearest hit H      // closest thing of same class
+   find nearest miss M     // closest thing of difference class
+   for f = 1 to #features; do
+       W[f] = W[f] - diff(f,R,H)/n + diff(f,R,M)/n
+   done
+done
+</code></pre>
+</li>
+<li>
+<p>diff:</p>
+<ul>
+<li>discrete differences: 0 if same 1 if not.</li>
+<li>continuous: differences absolute differences</li>
+<li>normalized to 0:1</li>
+<li>When values are missing, see
+    <a href="http://menzies.us/iccle/?refs#Kononenko97">Kononenko97</a>, p4.</li>
+</ul>
+</li>
+<li>
+<p>N-class RELIEF: not 1 near hit/miss, but k nearest misses for each
+    class C</p>
+<pre><code>W[f]= W[f] - ∑i=1..k diff(f,R, Hi) / (n*k)
+           + ∑C ≠ class(R) ∑i=1..k (
+                                P(C) / ( 1 - P(class(R)))
+                                * diff(f,R, Mi(C)) / (n*k)
+                               )
+</code></pre>
+<p>The <em>P(C) / (1 - P(class(R))</em> expression is a normalization function
+that</p>
+<ul>
+<li>demotes the effect of R from rare classes</li>
+<li>and rewards the effect of near hits from common classes.</li>
+</ul>
+</li>
+</ul>
+<h3 id="cbs-consistency-based-evaluation">CBS (consistency-based evaluation)</h3>
+<ul>
+<li>Seek combinations of attributes that divide data containing a strong
+    single class majority.<ul>
+<li>Kind of like info gain, but emphasis of single winner</li>
+</ul>
+</li>
+<li>Discrete attributes</li>
+<li>Forward select to find subsets of attributes</li>
+</ul>
+<h3 id="wrapper">WRAPPER</h3>
+<ul>
+<li>Forward select attributes<ul>
+<li>score each combination using a 5-way cross val</li>
+</ul>
+</li>
+<li>When wrapping, best to try different target learners<ul>
+<li>Check that we aren't over exploiting the learner's bias</li>
+<li>e.g. J48 and NB</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../img/wrapper1-img.jpg" /></p>
+<h3 id="principal-components-analysis-pca">PRINCIPAL COMPONENTS ANALYSIS (PCA)</h3>
+<p>(The traditional way to do FSS.)</p>
+<ul>
+<li>Only unsupervised method studied here</li>
+<li>Transform dimensions</li>
+<li>Find covariance matrix C[i,j] is the correlation i to j;<ul>
+<li>C[i,i]=1;</li>
+<li>C[i,j]=C[j,i]</li>
+</ul>
+</li>
+<li>Find eigenvectors</li>
+<li>Transform the original space to the eigenvectors</li>
+<li>Rank them by the variance in their predictions</li>
+<li>Report the top ranked vectors</li>
+</ul>
+<p><img alt="" src="../img/pca-img.jpg" /></p>
+<ul>
+<li>Makes things easier, right? Well...<pre><code>if   domain1  &lt;= 0.180
+then NoDefects
+else if domain1 &gt; 0.180
+     then if domain1 &lt;= 0.371 then NoDefects
+     else if domain1 &gt; 0.371 then Defects
+
+domain1 = 0.241 * loc     + 0.236 * v(g)
+        + 0.222 * ev(g)   + 0.236 * iv(g)     + 0.241 *  n
+        + 0.238 * v       - 0.086 * l         + 0.199  * d
+        + 0.216 * i       + 0.225 * e + 0.236 * b + 0.221  * t
+        + 0.241 * lOCode  + 0.179 * lOComment
+        + 0.221 * lOBlank + 0.158 * lOCodeAndComment
+        + 0.163 * uniqO p + 0.234 * uniqOpnd
+        + 0.241 * totalOp + 0.241 * totalOpnd
+        + 0.236 * branchCount
+</code></pre>
+</li>
+</ul>
+<h3 id="pca-vs-lda-linear-discrminant-analysis">PCA vs LDA (linear discrminant analysis)</h3>
+<p>LDA = PCA + class knowledge</p>
+<p>(Note: LDA should not be confused with <a href="http://portal.acm.org/citation.cfm?id=944937&amp;dl=GUIDE,">LDA (latent Dirichlet
+allocation)</a>
+which currently all the rage in text mining. And that LDA is not covered
+in this subject.)</p>
+<p><img alt="" src="../img/lda-img.jpg" /></p>
+<h3 id="latent-semantic-indexing">Latent Semantic Indexing</h3>
+<ul>
+<li>
+<p>Performing PCA is the equivalent of performing <em>Singular Value
+    Decomposition</em> (SVD) on the data.</p>
+</li>
+<li>
+<p>Any n * m matrix X (of terms n in documents m) can be rewritten as:</p>
+<ul>
+<li>X = To * So * Do'</li>
+<li>So is a diagonal matrix scoring attributes, top to bottom, most
+    interesting to least interesting</li>
+<li>We can shrink X by dumping the duller (lower) rows of So</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../img/sdi-img.jpg" /></p>
+<ul>
+<li>Latent Semantic Indexing is a method for selecting informative
+    subspaces of feature spaces.</li>
+<li>It was developed for information retrieval to reveal semantic
+    information from document co-occurrences.</li>
+<li>Terms that did not appear in a document may still associate with
+    a document.</li>
+<li>
+<p>LSI derives uncorrelated index factors that might be considered
+    artificial concepts.</p>
+</li>
+<li>
+<p>SVD easy to perform in Matlab</p>
+<ul>
+<li>Also, there is some <a href="http://menzies.us/iccle/?svd">C-code</a>.</li>
+<li>Also <a href="http://math.nist.gov/javanumerics/jama/">Java Classes
+    available</a><ul>
+<li>class SingularValueDecomposition<ul>
+<li>Constructor: SingularValueDecomposition(Matrix Arg)</li>
+<li>Methods: GetS(); GetU(); GetV(); (U,V correspond to T,D)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Be careful about using these tools blindly</li>
+<li>It is no harm to understand what is going on!</li>
+<li>The <a href="http://www.imm.dtu.dk/pubdb/views/edoc_download.php/3274/pdf/imm3274.pdf">Matrix
+Cookbook</a></li>
+</ul>
+</li>
+<li>
+<p>Note: major win for SVD/LSI: scales very well.</p>
+<ul>
+<li>Research possibility: text mining for software engineering<ul>
+<li>typically very small corpuses</li>
+<li>so might we find better FSS for text mining than SVD/LSI</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="cfs-correlation-based-feature-selection">CFS (correlation-based feature selection)</h3>
+<ul>
+<li>Scores high subsets with strong correlation to class and weak
+    correlation to each other.</li>
+<li>Numerator: how predictive</li>
+<li>Denominator: how redundant</li>
+<li>FIRST ranks correlation of solo attributes</li>
+<li>THEN heuristic search to explore subsets</li>
+</ul>
+<h3 id="and-the-winner-is">And the winner is:</h3>
+<ul>
+<li>Wrapper! and it that is too slow...</li>
+<li>CFS, Relief are best all round performers<ul>
+<li>CFS selects fewer features</li>
+</ul>
+</li>
+<li>Phew. Hall invented CFS</li>
+</ul>
+<h3 id="other-methods">Other Methods</h3>
+<p>Other methods not explored by Hall and Holmes...</p>
+<ul>
+<li>Note: the text mining literature has yet to make such an assessment.
+    Usually, SVD rules. But see <a href="http://www.rcost.unisannio.it/mdipenta/papers/icsm2002class.pdf">An Approach to Classify Software
+    Maintenance
+    Requests</a>,
+    from ICSM 2002, for a nice comparison of nearest neighbor, CART,
+    Bayes classifiers, and some other information retrieval methods).</li>
+<li>
+<p>Using random forests for feature selection of the mth variable:</p>
+<ul>
+<li>randomly permute all values of the mth variable in the oob data</li>
+<li>Put these altered oob x-values down the tree and
+    get classifications.</li>
+<li>Proceed as though computing a new internal error rate (i.e. run
+    the classifier).</li>
+<li>The amount by which this new error exceeds the original test set
+    error is defined as the importance of the mth variable.</li>
+<li>Use the Nomogram scores</li>
+</ul>
+</li>
+</ul>
+<h2 id="range-selection">Range Selection</h2>
+<p>From before: use only sharp and relevant ranges.</p>
+<p>Using <a href="http://www.saedsayad.com/docs/Nomograms.pdf">Nomograms</a></p>
+<ul>
+<li>Martin Možina, Janez Demšar, Michael Kattan, and Blaž Zupan. 2004.
+       Nomograms for visualization of naive Bayesian classifier. In Proceedings of the
+       8th European Conference on Principles and Practice of Knowledge Discovery in Databases (PKDD '04)</li>
+<li>if there are two classes <em>best</em> and <em>rest</em> with <code>B</code> and <code>R</code> examples</li>
+<li>and <code>x</code> occurs  with frequency <code>n1,n2</code> in <code>B,R</code></li>
+<li>then the odds of <code>x</code> in <em>best</em> and <em>rest</em> are <code>b=n1/B</code> and <code>r=n2/R</code></li>
+<li>then the log of the odds ratio LOR = 0 if <code>b &amp;le; r</code> else <code>log(b/r)</code></li>
+<li>and if we normalize LOR to 0,1 min,max</li>
+<li>then we can draw some pretty diagrams and do some simple <code>what if</code> queries:</li>
+</ul>
+<p><a href="../../img/nomo1.png"><img alt="" src="../../img/nomo1.png" /></a></p>
+<ul>
+<li>The reverse function LOR to  probability with a class occuring a probability <code>p</code>
+is:</li>
+</ul>
+<pre><code>function points2p(lor, p) {
+    E = 2.7182818285
+    return 1 / (1 + E^(-1*log(p/(1 - p)) - lor )) }
+</code></pre>
+
+<p>Many variables have <a href="https://cdn-business.discourse.org/uploads/analyticsvidhya/original/2X/5/51172e8686ab2123e62b50497e863be43bc813cf.png">low nomogram scores</a></p>
+<p>Best or rest</p>
+<ul>
+<li>given a numeric class, sort the values then divide them into 90% rest
+  and 10% best.</li>
+<li>if there are two classes <em>best</em> and <em>rest</em> with <code>B</code> and <code>R</code> examples</li>
+<li>and <code>x</code> occurs  with frequency <code>n1,n2</code> in <code>B,R</code></li>
+<li>then the odds of <code>x</code> in <em>best</em> and <em>rest</em> are <code>b=n1/B</code> and <code>r=n2/R</code></li>
+<li>then we "like" x at strength<ul>
+<li><code>s= b^2/(b+r) if b &gt; r else 0</code><ul>
+<li>the <code>b^2</code>  term muliples Bayes odds <code>b/(b+r)</code> times a support term
+  that rewards things that occur more often</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>in the usual case, very rew ranges with <code>b &gt; r</code></li>
+</ul>
+<p>Generate rules using just the ranges with s&gt;0</p>
+<ul>
+<li>The <a href="http://menzies.us/pdf/03tar2.pdf">TAR2 treatment learner</a></li>
+<li>When compared to <a href="http://menzies.us/pdf/03tar2.pdf">state-of-the-art optimizer</a>, does better. Application: optimizing rocket re-entry tactics.
+        - G. Gay, T. Menzies, M. Davies, and K. Gundy-Burlet. <a href="http://www.greggay.com/pdf/10tar3.pdf">Automatically finding the control variables for complex system behavior</a> Automated Software Engineering 17(4), December 2010, pp 439-468.</li>
+</ul>
+<h2 id="instance-selection">Instance Selection</h2>
+<h3 id="prototype-selection-with-clusters">Prototype Selection with Clusters</h3>
+<ul>
+<li>Step1: Feature selection: sort columns by their Infogain score. Delete bottom half.</li>
+<li>Step2: Cluster: return one example pre centroid.</li>
+</ul>
+<p><img alt="" src="../img/clusters.png" /></p>
+<p>Reduction of 800 rows by 24 attributes to 5 attributes by 22 rows</p>
+<p><img alt="" src="../img/fssvasil.png" /></p>
+<p>For many data sets:</p>
+<p><img alt="" src="../img/reductions.png" /></p>
+<p>Note that for classification by weighted scores from 2 nearest neighbors,
+the reduced data as accurate as the full data.</p>
+<h3 id="active-learning-with-quick">Active Learning with Quick</h3>
+<p>Estimation data sets (a few dozen rows)</p>
+<ul>
+<li>Ekrem Kocaguneli, Tim Menzies, Jacky Keung, David Cok, and Ray Madachy. 2013.
+<a href="../pdf/active.pdf">Active Learning and Effort Estimation: Finding the Essential Content of Software Effort Estimation Data</a>
+IEEE Trans. Softw. Eng. 39, 8 (August 2013), 1040-1053.</li>
+</ul>
+<p>QUICK is an active learning method that assists in reducing the
+complexity of data interpretation by identifying the essential
+content of SEE datasets. QUICK works as follows:</p>
+<ol>
+<li>Group rows and columns by their similarity;</li>
+<li>Discard redundant columns (synonyms) that are too similar;</li>
+<li>Sort rows by their outlier score (i.e. ones that are too distant);</li>
+<li>Ask expert's opinion about sorted rows 1..x</li>
+<li>Run CART on 1..x then check estimates on rows x+1...x+5.</li>
+<li>Stop when accuracy no longer improves</li>
+</ol>
+<p>Details</p>
+<ul>
+<li>Input data matrix D (<code>D</code> may not have</li>
+<li>Normalized all ranges min..max, 0..1</li>
+<li>Discard redundant columns (those that repeat information in other columns)<ul>
+<li>Transpose matrix (columns become rows);
+   <code>D1 = transpose(D)</code></li>
+<li>Compute RNN = reverse nearest neighbor score  between "rows"
+   (count <code>popularity</code>; i.e. how often row X is someone else's nearest neighbor)</li>
+<li>Reject the popular columns (contain repeated information)
+   <code>D2 = reject(D1)</code></li>
+</ul>
+</li>
+<li>Discard outlier rows (those taht are too wierd)<ul>
+<li>Transpose matrix (now columns are columns again);
+   <code>D3 = transpose(D2)</code></li>
+<li>Compute row popularity again</li>
+<li>sort the rows by their popularity (most popular ones are most informative)
+   <code>D4 = sort(D3)</code></li>
+</ul>
+</li>
+<li>Ask in sorted order</li>
+</ul>
+<p>Results: #1:  Need data on just a few projects</p>
+<p><img alt="" src="../img/quick1.png" /></p>
+<p>Results #2: uses very little of the data.</p>
+<p><img alt="" src="../img/quick2.png" /></p>
+<h3 id="prototype-selection">Prototype Selection</h3></div>
         </div>
 
         <footer class="col-md-12">
