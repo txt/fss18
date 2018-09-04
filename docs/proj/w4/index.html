@@ -110,6 +110,10 @@
                                 <ul class="dropdown-menu">
                                     
 <li >
+    <a href="../notes/">Notes</a>
+</li>
+                                    
+<li >
     <a href="../w3/">Three &#10004;</a>
 </li>
                                     
@@ -276,106 +280,60 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#homework-week4">Homework Week4</a></li>
             <li><a href="#todo">Todo</a></li>
-            <li><a href="#background-dom">Background : Dom</a></li>
+            <li><a href="#sample-code-in-lua">Sample code (in Lua)</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="homework-week4">Homework Week4</h1>
-<pre><code>➜  src git:(master) ✗ weather | lua demo | sort -n
-1   outlook 14  sunny   5
-2   $temp   14  73.57   6.57
-3   wind    14  FALSE   8
-4   !play   14  yes 9
-➜  src git:(master) ✗ auto | lua demo | sort -n
-1   %cylinders  398 4   204
-2   $displacement   398 193.43  104.27
-3   $horsepower 392 104.47  38.49
-4   &lt;weight 398 2970.42 846.84
-5   &gt;acceltn    398 15.57   2.76
-6   $model  398 76.01   3.70
-7   origin  398 1   249
-8   &gt;mpg    398 23.84   8.34
-➜  src git:(master) ✗ weatherLong | lua demo | sort -n
-1   %outlook    28  sunny   10
-2   $temp   28  73.57   6.45
-3   &lt;humid  28  81.64   10.09
-4   wind    28  FALSE   16
-5   !play   28  yes 18
-</code></pre>
-
 <h2 id="todo">Todo</h2>
 <ol>
 <li>The usual instructions. Directory = <code>w4</code>.</li>
 <li>Write a table class that reads in data from disk, and maintains one
    <code>num</code> or <code>sym</code> instance for each column.as you read in data from disk,
    update each header, incrementally.</li>
+<li>When the data quits, spit out the statistic on each column. You results should look something like the following:</li>
 </ol>
-<p>Now check your headers are working:
-3. 
-4. For the file
-   <a href="https://github.com/timm/lean/blob/master/data/autoUnsuper.csv">autoUnsuper.csv</a>:
-   print the file, adding in ",&gt;dom" on line one and ",x" on all other lines where "x"
-   is the domination score (discussed below).
-4. Print all the the ranges in <br />
-<a href="https://github.com/timm/lean/blob/master/data/autoUnsuper.csv">autoUnsuper.csv</a>,
-   sorted by the mean dom score of the rows with those ranges.</p>
-<h2 id="background-dom">Background : <code>Dom</code></h2>
-<p>Zitler's indictor-based domination score is a handy aggregation
-function for multipe numeric goals. As we define it, it converts
-multiple  numeric goals (that we want to minimize or maximize)
-into one valie 0 to 1 where <code>1'' is comparatively better 
-on most
-goals
-while</code>0'' is comparatively worse.</p>
-<p>For example, here are some rows
-of <a href="https://github.com/timm/lean/blob/master/data/autoUnsuper.csv">auto.csv</a>:</p>
-<pre><code>  %cylinders   displacement         horsepower   &lt;weight   &gt;acceltn   model   origin   &gt;mpg 
-  8           340:360              150:160      3609      8          70:70   1        10
-  6           198:225              83:86        2587      16         70:70   1        20
-  8           383:455              165:230      4425      10         70:70   1        10
-  8           302:305              120:140      3449      10.5       70:70   1        20
-  6           198:225              92:97        2833      15.5       70:70   1        20
-  8           383:455              165:230      3850      8.5        70:70   1        20
-  4           104:114              92:97        2372      15         70:70   3        20
-  4           104:114              92:97        2375      17.5       70:70   2        30
-  8           340:360              165:230      3693      11.5       70:70   1        20
-  ....
+<p><a href="https://github.com/timm/lean/blob/master/data/weather.csv">weather.csv</a>,</p>
+<pre><code>                n       mode    frequency       
+1   outlook 14  sunny   5
+3   wind    14  FALSE   8
+4   !play   14  yes 9
+
+                        n       mu      sd
+2   $temp   14  73.57   6.57
 </code></pre>
-<p>From the first row,  we see we want to minimize weight and maximize acceleration and mpg. 
-From the other rows, we see that some discretizer has gotten to the <em>displacement</em> and <em>horsepower</em>
-values are replaced them with some string describing a range e.g.<em>lo:hi</em> =  <em>340:360</em>.</p>
-<p>Here's the same data, with <code>dom</code> score added. Shown here are the 5 best and worst rows.</p>
-<pre><code>%cylinders  displacement  horsepower  &lt;weight  &gt;acceltn  model  origin  &gt;mpg  &gt;dom
-8           383:455       165:230     4746     12        71:71  1       10    0
-8           383:455       165:230     4951     11        72:73  1       10    0
-8           383:455       165:230     4952     11.5      72:73  1       10    0
-8           383:455       165:230     4955     11.5      71:71  1       10    0
-8           383:455       165:230     5140     12        71:71  1       10    0
-8           383:455       165:230     4354     9         70:70  1       10    0.01
-8           383:455       165:230     4425     10        70:70  1       10    0.01
-8           383:455       165:230     4464     11.5      71:71  1       10    0.01
-8           383:455       165:230     4735     11        72:73  1       10    0.01
-8           383:455       165:230     4906     12.5      72:73  1       10    0.01
-..          ...           ...         ...      ..        ...    ...     ...   ...
-4           85:91         69:72       2070     18.6      78:78  3       40    0.98
-4           85:91         ?           1835     17.3      80:80  2       40    0.98
-4           68:85         46:65       1825     18.6      77:77  2       40    0.99
-4           68:85         69:72       1613     18        71:71  3       40    0.99
-4           85:91         46:65       2335     23.7      80:80  2       40    0.99
-4           85:91         46:65       1968     18.8      80:80  3       40    1.0
-4           85:91         46:65       1975     19.4      81:81  3       40    1.0
-4           85:91         46:65       1985     21.5      78:78  2       40    1.0
-4           85:91         46:65       2085     21.7      80:80  2       40    1.0
-4           96:97         46:65       2130     24.6      82:82  2       40    1.0
+
+<p><a href="https://github.com/timm/lean/blob/master/data/weatherLong.csv">weatherLong.csv</a>,</p>
+<pre><code>                        n       mode    frequency       
+1   %outlook    28  sunny   10
+4   wind            28  FALSE   16
+5   !play           28  yes 18
+
+                        n       mu      sd
+2   $temp   28  73.57   6.45
+3   &lt;humid  28  81.64   10.09
 </code></pre>
-<p>Observe that the <em>highest</em> dom scores are assocaited wiht rows with least weight, most acceleration
-and most mpg (and the <em>lowest</em> dom scores are associated with the reverse).</p>
-<p>To compute the dom score for a row, we has how many other rows does this <em>dominate</em>.
-According to Zilter, X dominates Y if when we move from X to Y we loss less than when we move from Y to X.
-For the definition of that domination score:</p>
+
+<p><a href="https://github.com/timm/lean/blob/master/data/auto.csv">auto.csv</a>,</p>
+<pre><code>                        n       mode    frequency       
+1   %cylinders  398 4   204
+7   origin      398 1   249
+
+                        n       mu      sd
+2   $displacement   398 193.43  104.27
+3   $horsepower 392 104.47  38.49
+4   &lt;weight     398 2970.42 846.84
+5   &gt;acceltn    398 15.57   2.76
+6   $model      398 76.01   3.70
+8   &gt;mpg        398 23.84   8.34
+</code></pre>
+
+<p>Before the last data set: some of its numbers are "?" which means "do not know". You'll have to skip over that code.</p>
+<h2 id="sample-code-in-lua">Sample code (in Lua)</h2>
 <ul>
-<li>See <code>dom</code> in <a href="http://menzies.us/lean/dom.html">dom.lua</a> for a function that returns true
+<li>This files reads in data. The first row is translated into a column header and the others
+   into rows of data <a href="http://menzies.us/lean/rows.html">rows.lua</a> for a function that returns true
    if the goals in <code>row1</code> dominate <code>row2</code>.</li>
 <li>See <code>domws</code> in the same file that compares each row to <code>Lean.dom.samples=100</code> others
    to count how often this row dominates 100 others. This becomes the dom score (diided by 100
@@ -401,7 +359,7 @@ the directory </p></div>
         </footer>
         <script>
             var base_url = "../..",
-                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../../js/base.js" defer></script>
         <script src="../../search/main.js" defer></script>
