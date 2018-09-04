@@ -110,7 +110,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../notes/">Notes</a>
+    <a href="../notes.md">Notes</a>
 </li>
                                     
 <li >
@@ -333,24 +333,8 @@
 <h2 id="sample-code-in-lua">Sample code (in Lua)</h2>
 <ul>
 <li>This files reads in data. The first row is translated into a column header and the others
-   into rows of data <a href="http://menzies.us/lean/rows.html">rows.lua</a> for a function that returns true
-   if the goals in <code>row1</code> dominate <code>row2</code>.</li>
-<li>See <code>domws</code> in the same file that compares each row to <code>Lean.dom.samples=100</code> others
-   to count how often this row dominates 100 others. This becomes the dom score (diided by 100
-   to be a number 0..1).</li>
-</ul>
-<p>The directory
-<a href="https://github.com/timm/lean/blob/master/tests/">https://github.com/timm/lean/blob/master/tests/</a>
-contains unit tests for  in <code>sample.lua</code>, <code>num.lua</code>, <code>sym.lua</code>.
-which are
-(respectively)
-a <em>reservoir sampler</em> ;
-a <em>Gaussian sampler</em>; and a
-<em>entropy sampler</em>.</p>
-<p>Port the unit tests to my test engine method <code>O.k</code>. Use those tests to check your Python versions of
-<code>sample.lua</code>, <code>num.lua</code>, <code>sym.lua</code> in
-<a href="https://github.com/timm/lean/blob/master/src/">https://github.com/timm/lean/blob/master/src/</a>.
-the directory </p></div>
+   into rows of data <a href="http://menzies.us/lean/rows.html">rows.lua</a>.</li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">
@@ -359,7 +343,7 @@ the directory </p></div>
         </footer>
         <script>
             var base_url = "../..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
         </script>
         <script src="../../js/base.js" defer></script>
         <script src="../../search/main.js" defer></script>
