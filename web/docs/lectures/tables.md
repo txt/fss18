@@ -406,7 +406,7 @@ This paper: pre-discretize numerics using entropy.
 - Step1: Feature selection: sort columns by their Infogain score. Delete bottom half.
 - Step2: Cluster: return one example pre centroid.
 
-![](https://raw.githubusercontent.com/txt/fss16/master/img/lusters.png)
+![](https://raw.githubusercontent.com/txt/fss16/master/img/clusters.png)
 
 Reduction of 800 rows by 24 attributes to 5 attributes by 22 rows
 
