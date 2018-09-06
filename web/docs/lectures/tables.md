@@ -127,12 +127,12 @@ The case for FSS
 
 Repeated result: throwing out features rarely damages a theory
 
-![](https://github.com/txt/fss16/blob/master/img/fsses.gif)
+![](https://raw.githubusercontent.com/txt/fss16/master/img/fsses.gif)
 
 And, sometimes, feature removal is very useful:
 
 -   E.g. linear regression on
-    [bn.arff](https://github.com/abutcher/toe/blob/master/lisp/data/arff/bn.arff)
+    [bn.arff](https://raw.githubusercontent.com/abutcher/toe/master/lisp/data/arff/bn.arff)
     yielded:
 
         Defects =
@@ -247,8 +247,8 @@ And, sometimes, feature removal is very useful:
 
 ### FSS types:
 
-![](https://github.com/txt/fss16/blob/master/img/filter-img.jpg)
-![](https://github.com/txt/fss16/blob/master/img/wrapper-img.jpg)
+![](https://raw.githubusercontent.com/txt/fss16/master/img/filter-img.jpg)
+![](https://raw.githubusercontent.com/txt/fss16/master/img/wrapper-img.jpg)
 
 -   filters vs wrappers:
 
@@ -346,7 +346,7 @@ This paper: pre-discretize numerics using entropy.
     -   Check that we aren't over exploiting the learner's bias
     -   e.g. J48 and NB
 
-![](https://github.com/txt/fss16/blob/master/img/wrapper1-img.jpg)
+![](https://raw.githubusercontent.com/txt/fss16/master/img/wrapper1-img.jpg)
 
 ### PRINCIPAL COMPONENTS ANALYSIS (PCA)
 
@@ -362,7 +362,7 @@ This paper: pre-discretize numerics using entropy.
 -   Rank them by the variance in their predictions
 -   Report the top ranked vectors
 
-![](https://github.com/txt/fss16/blob/master/img/pca-img.jpg)
+![](https://raw.githubusercontent.com/txt/fss16/master/img/pca-img.jpg)
 
 -   Makes things easier, right? Well...
 
@@ -406,15 +406,15 @@ This paper: pre-discretize numerics using entropy.
 - Step1: Feature selection: sort columns by their Infogain score. Delete bottom half.
 - Step2: Cluster: return one example pre centroid.
 
-![](https://github.com/txt/fss16/blob/master/img/lusters.png)
+![](https://raw.githubusercontent.com/txt/fss16/master/img/lusters.png)
 
 Reduction of 800 rows by 24 attributes to 5 attributes by 22 rows
 
-![](https://github.com/txt/fss16/blob/master/img/fssvasil.png)
+![](https://raw.githubusercontent.com/txt/fss16/master/img/fssvasil.png)
 
 For many data sets:
 
-![](https://github.com/txt/fss16/blob/master/img/reductions.png)
+![](https://raw.githubusercontent.com/txt/fss16/master/img/reductions.png)
 
 Note that for classification by weighted scores from 2 nearest neighbors,
 the reduced data as accurate as the full data.
