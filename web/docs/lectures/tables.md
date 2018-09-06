@@ -13,13 +13,13 @@ columns).
 
 For example, in text mining, where there is one column per word and one row per document, the columns contain many missing values (since not all words appear in all documents) and there may be hundreds of thousands of columns.
 
-While text mining applications can have many columns, Big Data applications can have any number of columns and millions to billions of rows. 
+- While text mining applications can have many columns, Big Data applications can have any number of columns and millions to billions of rows. 
+- For such very large datasets, a complete analysis may be impossible. Hence, these might be sampled probabilistically (e.g., using the naive Bayesian algorithm discussed below).
 
-For such very large datasets, a complete analysis may be impossible. Hence, these might be sampled probabilistically (e.g., using the naive Bayesian algorithm discussed below).
+On the other hand, 
 
-On the other hand, when there are very few rows, data mining may fail since there are too few examples to support summarization. 
-
-For such sparse tables, k- nearest neighbors (kNN) may be best. kNN makes conclusions about new examples by looking at their neighborhood in the space of old examples. Hence, kNN only needs a few (or even only one) similar examples to make conclusions.
+- when there are very few rows, data mining may fail since there are too few examples to support summarization. 
+- For such sparse tables, k- nearest neighbors (kNN) may be best. kNN makes conclusions about new examples by looking at their neighborhood in the space of old examples. Hence, kNN only needs a few (or even only one) similar examples to make conclusions.
 
 If a table has no goal columns, then this is an unsupervised learning problem that might be addressed by (say) finding clusters of similar rows using, say, K- means or expectation maximization. 
 
@@ -68,7 +68,7 @@ However, with some clever sampling of the data, it is possible to scale these tr
 One way to look at a table of data is an example of some function that computes
 columns "_Y_" from input columns "_X_".
 
-## Splits
+### Splits
 
 Another way to look at a table of data is as a source of `Split`s.
 
@@ -91,11 +91,9 @@ Num columns:
             - Split `X` into `Y,Z` of size `n1,n2` and standard deviation `s1,s2`
             -  If `n1/n+s1 + n2/n*s2 < s`, then recurse to return `split(Y)`, `split(Z)`
             -  Else return `X`
-     
 
+### Why Split?
 
-
-# Feature and Instance Selection
 
 Timm's rule: the best thing to do with data is to throw most of it away.
 
@@ -129,7 +127,7 @@ The case for FSS
 
 Repeated result: throwing out features rarely damages a theory
 
-[![](../img/fsses.gif)](../img/fsses.gif)
+![](https://github.com/txt/fss16/blob/master/img/fsses.gif)
 
 And, sometimes, feature removal is very useful:
 
@@ -249,8 +247,8 @@ And, sometimes, feature removal is very useful:
 
 ### FSS types:
 
-![](../img/filter-img.jpg)    
-  ![](../img/wrapper-img.jpg)
+![](https://github.com/txt/fss16/blob/master/img/filter-img.jpg)
+![](https://github.com/txt/fss16/blob/master/img/wrapper-img.jpg)
 
 -   filters vs wrappers:
 
@@ -348,7 +346,7 @@ This paper: pre-discretize numerics using entropy.
     -   Check that we aren't over exploiting the learner's bias
     -   e.g. J48 and NB
 
-![](../img/wrapper1-img.jpg)
+![](https://github.com/txt/fss16/blob/master/img/wrapper1-img.jpg)
 
 ### PRINCIPAL COMPONENTS ANALYSIS (PCA)
 
@@ -364,7 +362,7 @@ This paper: pre-discretize numerics using entropy.
 -   Rank them by the variance in their predictions
 -   Report the top ranked vectors
 
-![](../img/pca-img.jpg)
+![](https://github.com/txt/fss16/blob/master/img/pca-img.jpg)
 
 -   Makes things easier, right? Well...
 
@@ -385,59 +383,6 @@ This paper: pre-discretize numerics using entropy.
                 + 0.241 * totalOp + 0.241 * totalOpnd
                 + 0.236 * branchCount
 
-### PCA vs LDA (linear discrminant analysis)
-
-LDA = PCA + class knowledge
-
-(Note: LDA should not be confused with [LDA (latent Dirichlet
-allocation)](http://portal.acm.org/citation.cfm?id=944937&dl=GUIDE,)
-which currently all the rage in text mining. And that LDA is not covered
-in this subject.)
-
-![](../img/lda-img.jpg)
-
-### Latent Semantic Indexing
-
--   Performing PCA is the equivalent of performing *Singular Value
-    Decomposition* (SVD) on the data.
-
--   Any n \* m matrix X (of terms n in documents m) can be rewritten as:
-
-    -   X = To \* So \* Do'
-    -   So is a diagonal matrix scoring attributes, top to bottom, most
-        interesting to least interesting
-    -   We can shrink X by dumping the duller (lower) rows of So
-
-![](../img/sdi-img.jpg)
-
--   Latent Semantic Indexing is a method for selecting informative
-    subspaces of feature spaces.
--   It was developed for information retrieval to reveal semantic
-    information from document co-occurrences.
--   Terms that did not appear in a document may still associate with
-    a document.
--   LSI derives uncorrelated index factors that might be considered
-    artificial concepts.
-
--   SVD easy to perform in Matlab
-
-    -   Also, there is some [C-code](http://menzies.us/iccle/?svd).
-    -   Also [Java Classes
-        available](http://math.nist.gov/javanumerics/jama/)
-        -   class SingularValueDecomposition
-            -   Constructor: SingularValueDecomposition(Matrix Arg)
-            -   Methods: GetS(); GetU(); GetV(); (U,V correspond to T,D)
--   Be careful about using these tools blindly
-    -   It is no harm to understand what is going on!
--   The [Matrix
-    Cookbook](http://www.imm.dtu.dk/pubdb/views/edoc_download.php/3274/pdf/imm3274.pdf)
-
--   Note: major win for SVD/LSI: scales very well.
-
-    -   Research possibility: text mining for software engineering
-        -   typically very small corpuses
-        -   so might we find better FSS for text mining than SVD/LSI
-
 ### CFS (correlation-based feature selection)
 
 -   Scores high subsets with strong correlation to class and weak
@@ -454,75 +399,6 @@ in this subject.)
     -   CFS selects fewer features
 -   Phew. Hall invented CFS
 
-### Other Methods
-
-Other methods not explored by Hall and Holmes...
-
--   Note: the text mining literature has yet to make such an assessment.
-    Usually, SVD rules. But see [An Approach to Classify Software
-    Maintenance
-    Requests](http://www.rcost.unisannio.it/mdipenta/papers/icsm2002class.pdf),
-    from ICSM 2002, for a nice comparison of nearest neighbor, CART,
-    Bayes classifiers, and some other information retrieval methods).
--   Using random forests for feature selection of the mth variable:
-
-    -   randomly permute all values of the mth variable in the oob data
-    -   Put these altered oob x-values down the tree and
-        get classifications.
-    -   Proceed as though computing a new internal error rate (i.e. run
-        the classifier).
-    -   The amount by which this new error exceeds the original test set
-        error is defined as the importance of the mth variable.
--   Use the Nomogram scores
-
-## Range Selection
-
-From before: use only sharp and relevant ranges.
-
-Using [Nomograms](http://www.saedsayad.com/docs/Nomograms.pdf)
-
-- Martin Možina, Janez Demšar, Michael Kattan, and Blaž Zupan. 2004.
-       Nomograms for visualization of naive Bayesian classifier. In Proceedings of the
-       8th European Conference on Principles and Practice of Knowledge Discovery in Databases (PKDD '04)
-- if there are two classes _best_ and _rest_ with `B` and `R` examples
-- and `x` occurs  with frequency `n1,n2` in `B,R`
-- then the odds of `x` in _best_ and _rest_ are `b=n1/B` and `r=n2/R`
-- then the log of the odds ratio LOR = 0 if `b &le; r` else `log(b/r)`
-- and if we normalize LOR to 0,1 min,max
-- then we can draw some pretty diagrams and do some simple `what if` queries:
-
-[![](../img/nomo1.png)](../img/nomo1.png)
-
-- The reverse function LOR to  probability with a class occuring a probability `p`
-is:
-
-```
-function points2p(lor, p) {
-    E = 2.7182818285
-    return 1 / (1 + E^(-1*log(p/(1 - p)) - lor )) }
-```
-
-Many variables have [low nomogram scores](https://cdn-business.discourse.org/uploads/analyticsvidhya/original/2X/5/51172e8686ab2123e62b50497e863be43bc813cf.png)
-
-Best or rest
-
-- given a numeric class, sort the values then divide them into 90% rest
-  and 10% best.
-- if there are two classes _best_ and _rest_ with `B` and `R` examples
-- and `x` occurs  with frequency `n1,n2` in `B,R`
-- then the odds of `x` in _best_ and _rest_ are `b=n1/B` and `r=n2/R`
-- then we "like" x at strength
-       - `s= b^2/(b+r) if b > r else 0`
-        - the `b^2`  term muliples Bayes odds `b/(b+r)` times a support term
-          that rewards things that occur more often
-- in the usual case, very rew ranges with `b > r`
-
-Generate rules using just the ranges with s>0
-
-- The [TAR2 treatment learner](http://menzies.us/pdf/03tar2.pdf)
-- When compared to [state-of-the-art optimizer](http://menzies.us/pdf/03tar2.pdf), does better. Application: optimizing rocket re-entry tactics.
-        - G. Gay, T. Menzies, M. Davies, and K. Gundy-Burlet. [Automatically finding the control variables for complex system behavior](http://www.greggay.com/pdf/10tar3.pdf) Automated Software Engineering 17(4), December 2010, pp 439-468.
-
 ## Instance Selection
 
 ### Prototype Selection with Clusters
@@ -530,67 +406,17 @@ Generate rules using just the ranges with s>0
 - Step1: Feature selection: sort columns by their Infogain score. Delete bottom half.
 - Step2: Cluster: return one example pre centroid.
 
-![](../img/clusters.png)
+![](https://github.com/txt/fss16/blob/master/img/lusters.png)
 
 Reduction of 800 rows by 24 attributes to 5 attributes by 22 rows
 
-![](../img/fssvasil.png)
+![](https://github.com/txt/fss16/blob/master/img/fssvasil.png)
 
 For many data sets:
 
-![](../img/reductions.png)
+![](https://github.com/txt/fss16/blob/master/img/reductions.png)
 
 Note that for classification by weighted scores from 2 nearest neighbors,
 the reduced data as accurate as the full data.
-
-### Active Learning with Quick
-
-Estimation data sets (a few dozen rows)
-
-- Ekrem Kocaguneli, Tim Menzies, Jacky Keung, David Cok, and Ray Madachy. 2013.
-[Active Learning and Effort Estimation: Finding the Essential Content of Software Effort Estimation Data](../pdf/active.pdf)
-IEEE Trans. Softw. Eng. 39, 8 (August 2013), 1040-1053.
-
-QUICK is an active learning method that assists in reducing the
-complexity of data interpretation by identifying the essential
-content of SEE datasets. QUICK works as follows:
-
-1. Group rows and columns by their similarity;
-2. Discard redundant columns (synonyms) that are too similar;
-3. Sort rows by their outlier score (i.e. ones that are too distant);
-4. Ask expert's opinion about sorted rows 1..x
-5. Run CART on 1..x then check estimates on rows x+1...x+5.
-6. Stop when accuracy no longer improves
-
-Details
-
-- Input data matrix D (`D` may not have
-- Normalized all ranges min..max, 0..1
-- Discard redundant columns (those that repeat information in other columns)
-     - Transpose matrix (columns become rows);
-       `D1 = transpose(D)`
-     - Compute RNN = reverse nearest neighbor score  between "rows"
-       (count `popularity`; i.e. how often row X is someone else's nearest neighbor)
-     - Reject the popular columns (contain repeated information)
-       `D2 = reject(D1)`
-- Discard outlier rows (those taht are too wierd)
-     - Transpose matrix (now columns are columns again);
-       `D3 = transpose(D2)`
-     - Compute row popularity again
-     - sort the rows by their popularity (most popular ones are most informative)
-       `D4 = sort(D3)`
-- Ask in sorted order
-
-Results: #1:  Need data on just a few projects
-
-![](../img/quick1.png)
-
-Results #2: uses very little of the data.
-
-![](../img/quick2.png)
-
-### Prototype Selection
-
-
 
 

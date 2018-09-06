@@ -110,7 +110,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../../proj/ProjectIdeas/">Project Ideas</a>
+    <a href="../../proj/ProjectIdeas.md">Project Ideas</a>
 </li>
                                     
 <li >
@@ -294,10 +294,7 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#different-learners-for-different-data">Different Learners for Different Data</a></li>
             <li><a href="#y-fx">Y = F(X)</a></li>
-            <li><a href="#splits">Splits</a></li>
-        <li class="main "><a href="#feature-and-instance-selection">Feature and Instance Selection</a></li>
             <li><a href="#feature-section">Feature Section</a></li>
-            <li><a href="#range-selection">Range Selection</a></li>
             <li><a href="#instance-selection">Instance Selection</a></li>
     </ul>
 </div></div>
@@ -315,10 +312,15 @@ columns).</li>
 <li>Finally, columns may contain missing values.</li>
 </ul>
 <p>For example, in text mining, where there is one column per word and one row per document, the columns contain many missing values (since not all words appear in all documents) and there may be hundreds of thousands of columns.</p>
-<p>While text mining applications can have many columns, Big Data applications can have any number of columns and millions to billions of rows. </p>
-<p>For such very large datasets, a complete analysis may be impossible. Hence, these might be sampled probabilistically (e.g., using the naive Bayesian algorithm discussed below).</p>
-<p>On the other hand, when there are very few rows, data mining may fail since there are too few examples to support summarization. </p>
-<p>For such sparse tables, k- nearest neighbors (kNN) may be best. kNN makes conclusions about new examples by looking at their neighborhood in the space of old examples. Hence, kNN only needs a few (or even only one) similar examples to make conclusions.</p>
+<ul>
+<li>While text mining applications can have many columns, Big Data applications can have any number of columns and millions to billions of rows. </li>
+<li>For such very large datasets, a complete analysis may be impossible. Hence, these might be sampled probabilistically (e.g., using the naive Bayesian algorithm discussed below).</li>
+</ul>
+<p>On the other hand, </p>
+<ul>
+<li>when there are very few rows, data mining may fail since there are too few examples to support summarization. </li>
+<li>For such sparse tables, k- nearest neighbors (kNN) may be best. kNN makes conclusions about new examples by looking at their neighborhood in the space of old examples. Hence, kNN only needs a few (or even only one) similar examples to make conclusions.</li>
+</ul>
 <p>If a table has no goal columns, then this is an unsupervised learning problem that might be addressed by (say) finding clusters of similar rows using, say, K- means or expectation maximization. </p>
 <p>An alternate approach, taken by the Apriori
 association rule learner, is to assume that every column is a goal and to look for what combinations of any values predict for any combination of any other.</p>
@@ -351,7 +353,7 @@ rainy,    71,   91, TRUE,     no
 <h2 id="y-fx">Y = F(X)</h2>
 <p>One way to look at a table of data is an example of some function that computes
 columns "<em>Y</em>" from input columns "<em>X</em>".</p>
-<h2 id="splits">Splits</h2>
+<h3 id="splits">Splits</h3>
 <p>Another way to look at a table of data is as a source of <code>Split</code>s.</p>
 <ul>
 <li>Columns have ranges</li>
@@ -378,7 +380,7 @@ columns "<em>Y</em>" from input columns "<em>X</em>".</p>
 </ul>
 </li>
 </ul>
-<h1 id="feature-and-instance-selection">Feature and Instance Selection</h1>
+<h3 id="why-split">Why Split?</h3>
 <p>Timm's rule: the best thing to do with data is to throw most of it away.</p>
 <ul>
 <li>Simpler models,</li>
@@ -413,7 +415,7 @@ columns "<em>Y</em>" from input columns "<em>X</em>".</p>
 <h2 id="feature-section">Feature Section</h2>
 <p>The case for FSS</p>
 <p>Repeated result: throwing out features rarely damages a theory</p>
-<p><a href="../img/fsses.gif"><img alt="" src="../img/fsses.gif" /></a></p>
+<p><img alt="" src="https://github.com/txt/fss16/blob/master/img/fsses.gif" /></p>
 <p>And, sometimes, feature removal is very useful:</p>
 <ul>
 <li>
@@ -554,8 +556,8 @@ columns "<em>Y</em>" from input columns "<em>X</em>".</p>
 </li>
 </ul>
 <h3 id="fss-types">FSS types:</h3>
-<p><img alt="" src="../img/filter-img.jpg" />    
-  <img alt="" src="../img/wrapper-img.jpg" /></p>
+<p><img alt="" src="https://github.com/txt/fss16/blob/master/img/filter-img.jpg" />
+<img alt="" src="https://github.com/txt/fss16/blob/master/img/wrapper-img.jpg" /></p>
 <ul>
 <li>
 <p>filters vs wrappers:</p>
@@ -680,7 +682,7 @@ that</p>
 </ul>
 </li>
 </ul>
-<p><img alt="" src="../img/wrapper1-img.jpg" /></p>
+<p><img alt="" src="https://github.com/txt/fss16/blob/master/img/wrapper1-img.jpg" /></p>
 <h3 id="principal-components-analysis-pca">PRINCIPAL COMPONENTS ANALYSIS (PCA)</h3>
 <p>(The traditional way to do FSS.)</p>
 <ul>
@@ -696,7 +698,7 @@ that</p>
 <li>Rank them by the variance in their predictions</li>
 <li>Report the top ranked vectors</li>
 </ul>
-<p><img alt="" src="../img/pca-img.jpg" /></p>
+<p><img alt="" src="https://github.com/txt/fss16/blob/master/img/pca-img.jpg" /></p>
 <ul>
 <li>Makes things easier, right? Well...<pre><code>if   domain1  &lt;= 0.180
 then NoDefects
@@ -714,71 +716,6 @@ domain1 = 0.241 * loc     + 0.236 * v(g)
         + 0.241 * totalOp + 0.241 * totalOpnd
         + 0.236 * branchCount
 </code></pre>
-</li>
-</ul>
-<h3 id="pca-vs-lda-linear-discrminant-analysis">PCA vs LDA (linear discrminant analysis)</h3>
-<p>LDA = PCA + class knowledge</p>
-<p>(Note: LDA should not be confused with <a href="http://portal.acm.org/citation.cfm?id=944937&amp;dl=GUIDE,">LDA (latent Dirichlet
-allocation)</a>
-which currently all the rage in text mining. And that LDA is not covered
-in this subject.)</p>
-<p><img alt="" src="../img/lda-img.jpg" /></p>
-<h3 id="latent-semantic-indexing">Latent Semantic Indexing</h3>
-<ul>
-<li>
-<p>Performing PCA is the equivalent of performing <em>Singular Value
-    Decomposition</em> (SVD) on the data.</p>
-</li>
-<li>
-<p>Any n * m matrix X (of terms n in documents m) can be rewritten as:</p>
-<ul>
-<li>X = To * So * Do'</li>
-<li>So is a diagonal matrix scoring attributes, top to bottom, most
-    interesting to least interesting</li>
-<li>We can shrink X by dumping the duller (lower) rows of So</li>
-</ul>
-</li>
-</ul>
-<p><img alt="" src="../img/sdi-img.jpg" /></p>
-<ul>
-<li>Latent Semantic Indexing is a method for selecting informative
-    subspaces of feature spaces.</li>
-<li>It was developed for information retrieval to reveal semantic
-    information from document co-occurrences.</li>
-<li>Terms that did not appear in a document may still associate with
-    a document.</li>
-<li>
-<p>LSI derives uncorrelated index factors that might be considered
-    artificial concepts.</p>
-</li>
-<li>
-<p>SVD easy to perform in Matlab</p>
-<ul>
-<li>Also, there is some <a href="http://menzies.us/iccle/?svd">C-code</a>.</li>
-<li>Also <a href="http://math.nist.gov/javanumerics/jama/">Java Classes
-    available</a><ul>
-<li>class SingularValueDecomposition<ul>
-<li>Constructor: SingularValueDecomposition(Matrix Arg)</li>
-<li>Methods: GetS(); GetU(); GetV(); (U,V correspond to T,D)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Be careful about using these tools blindly</li>
-<li>It is no harm to understand what is going on!</li>
-<li>The <a href="http://www.imm.dtu.dk/pubdb/views/edoc_download.php/3274/pdf/imm3274.pdf">Matrix
-Cookbook</a></li>
-</ul>
-</li>
-<li>
-<p>Note: major win for SVD/LSI: scales very well.</p>
-<ul>
-<li>Research possibility: text mining for software engineering<ul>
-<li>typically very small corpuses</li>
-<li>so might we find better FSS for text mining than SVD/LSI</li>
-</ul>
-</li>
-</ul>
 </li>
 </ul>
 <h3 id="cfs-correlation-based-feature-selection">CFS (correlation-based feature selection)</h3>
@@ -799,136 +736,19 @@ Cookbook</a></li>
 </li>
 <li>Phew. Hall invented CFS</li>
 </ul>
-<h3 id="other-methods">Other Methods</h3>
-<p>Other methods not explored by Hall and Holmes...</p>
-<ul>
-<li>Note: the text mining literature has yet to make such an assessment.
-    Usually, SVD rules. But see <a href="http://www.rcost.unisannio.it/mdipenta/papers/icsm2002class.pdf">An Approach to Classify Software
-    Maintenance
-    Requests</a>,
-    from ICSM 2002, for a nice comparison of nearest neighbor, CART,
-    Bayes classifiers, and some other information retrieval methods).</li>
-<li>
-<p>Using random forests for feature selection of the mth variable:</p>
-<ul>
-<li>randomly permute all values of the mth variable in the oob data</li>
-<li>Put these altered oob x-values down the tree and
-    get classifications.</li>
-<li>Proceed as though computing a new internal error rate (i.e. run
-    the classifier).</li>
-<li>The amount by which this new error exceeds the original test set
-    error is defined as the importance of the mth variable.</li>
-<li>Use the Nomogram scores</li>
-</ul>
-</li>
-</ul>
-<h2 id="range-selection">Range Selection</h2>
-<p>From before: use only sharp and relevant ranges.</p>
-<p>Using <a href="http://www.saedsayad.com/docs/Nomograms.pdf">Nomograms</a></p>
-<ul>
-<li>Martin Možina, Janez Demšar, Michael Kattan, and Blaž Zupan. 2004.
-       Nomograms for visualization of naive Bayesian classifier. In Proceedings of the
-       8th European Conference on Principles and Practice of Knowledge Discovery in Databases (PKDD '04)</li>
-<li>if there are two classes <em>best</em> and <em>rest</em> with <code>B</code> and <code>R</code> examples</li>
-<li>and <code>x</code> occurs  with frequency <code>n1,n2</code> in <code>B,R</code></li>
-<li>then the odds of <code>x</code> in <em>best</em> and <em>rest</em> are <code>b=n1/B</code> and <code>r=n2/R</code></li>
-<li>then the log of the odds ratio LOR = 0 if <code>b &amp;le; r</code> else <code>log(b/r)</code></li>
-<li>and if we normalize LOR to 0,1 min,max</li>
-<li>then we can draw some pretty diagrams and do some simple <code>what if</code> queries:</li>
-</ul>
-<p><a href="../../img/nomo1.png"><img alt="" src="../../img/nomo1.png" /></a></p>
-<ul>
-<li>The reverse function LOR to  probability with a class occuring a probability <code>p</code>
-is:</li>
-</ul>
-<pre><code>function points2p(lor, p) {
-    E = 2.7182818285
-    return 1 / (1 + E^(-1*log(p/(1 - p)) - lor )) }
-</code></pre>
-
-<p>Many variables have <a href="https://cdn-business.discourse.org/uploads/analyticsvidhya/original/2X/5/51172e8686ab2123e62b50497e863be43bc813cf.png">low nomogram scores</a></p>
-<p>Best or rest</p>
-<ul>
-<li>given a numeric class, sort the values then divide them into 90% rest
-  and 10% best.</li>
-<li>if there are two classes <em>best</em> and <em>rest</em> with <code>B</code> and <code>R</code> examples</li>
-<li>and <code>x</code> occurs  with frequency <code>n1,n2</code> in <code>B,R</code></li>
-<li>then the odds of <code>x</code> in <em>best</em> and <em>rest</em> are <code>b=n1/B</code> and <code>r=n2/R</code></li>
-<li>then we "like" x at strength<ul>
-<li><code>s= b^2/(b+r) if b &gt; r else 0</code><ul>
-<li>the <code>b^2</code>  term muliples Bayes odds <code>b/(b+r)</code> times a support term
-  that rewards things that occur more often</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>in the usual case, very rew ranges with <code>b &gt; r</code></li>
-</ul>
-<p>Generate rules using just the ranges with s&gt;0</p>
-<ul>
-<li>The <a href="http://menzies.us/pdf/03tar2.pdf">TAR2 treatment learner</a></li>
-<li>When compared to <a href="http://menzies.us/pdf/03tar2.pdf">state-of-the-art optimizer</a>, does better. Application: optimizing rocket re-entry tactics.
-        - G. Gay, T. Menzies, M. Davies, and K. Gundy-Burlet. <a href="http://www.greggay.com/pdf/10tar3.pdf">Automatically finding the control variables for complex system behavior</a> Automated Software Engineering 17(4), December 2010, pp 439-468.</li>
-</ul>
 <h2 id="instance-selection">Instance Selection</h2>
 <h3 id="prototype-selection-with-clusters">Prototype Selection with Clusters</h3>
 <ul>
 <li>Step1: Feature selection: sort columns by their Infogain score. Delete bottom half.</li>
 <li>Step2: Cluster: return one example pre centroid.</li>
 </ul>
-<p><img alt="" src="../img/clusters.png" /></p>
+<p><img alt="" src="https://github.com/txt/fss16/blob/master/img/lusters.png" /></p>
 <p>Reduction of 800 rows by 24 attributes to 5 attributes by 22 rows</p>
-<p><img alt="" src="../img/fssvasil.png" /></p>
+<p><img alt="" src="https://github.com/txt/fss16/blob/master/img/fssvasil.png" /></p>
 <p>For many data sets:</p>
-<p><img alt="" src="../img/reductions.png" /></p>
+<p><img alt="" src="https://github.com/txt/fss16/blob/master/img/reductions.png" /></p>
 <p>Note that for classification by weighted scores from 2 nearest neighbors,
-the reduced data as accurate as the full data.</p>
-<h3 id="active-learning-with-quick">Active Learning with Quick</h3>
-<p>Estimation data sets (a few dozen rows)</p>
-<ul>
-<li>Ekrem Kocaguneli, Tim Menzies, Jacky Keung, David Cok, and Ray Madachy. 2013.
-<a href="../pdf/active.pdf">Active Learning and Effort Estimation: Finding the Essential Content of Software Effort Estimation Data</a>
-IEEE Trans. Softw. Eng. 39, 8 (August 2013), 1040-1053.</li>
-</ul>
-<p>QUICK is an active learning method that assists in reducing the
-complexity of data interpretation by identifying the essential
-content of SEE datasets. QUICK works as follows:</p>
-<ol>
-<li>Group rows and columns by their similarity;</li>
-<li>Discard redundant columns (synonyms) that are too similar;</li>
-<li>Sort rows by their outlier score (i.e. ones that are too distant);</li>
-<li>Ask expert's opinion about sorted rows 1..x</li>
-<li>Run CART on 1..x then check estimates on rows x+1...x+5.</li>
-<li>Stop when accuracy no longer improves</li>
-</ol>
-<p>Details</p>
-<ul>
-<li>Input data matrix D (<code>D</code> may not have</li>
-<li>Normalized all ranges min..max, 0..1</li>
-<li>Discard redundant columns (those that repeat information in other columns)<ul>
-<li>Transpose matrix (columns become rows);
-   <code>D1 = transpose(D)</code></li>
-<li>Compute RNN = reverse nearest neighbor score  between "rows"
-   (count <code>popularity</code>; i.e. how often row X is someone else's nearest neighbor)</li>
-<li>Reject the popular columns (contain repeated information)
-   <code>D2 = reject(D1)</code></li>
-</ul>
-</li>
-<li>Discard outlier rows (those taht are too wierd)<ul>
-<li>Transpose matrix (now columns are columns again);
-   <code>D3 = transpose(D2)</code></li>
-<li>Compute row popularity again</li>
-<li>sort the rows by their popularity (most popular ones are most informative)
-   <code>D4 = sort(D3)</code></li>
-</ul>
-</li>
-<li>Ask in sorted order</li>
-</ul>
-<p>Results: #1:  Need data on just a few projects</p>
-<p><img alt="" src="../img/quick1.png" /></p>
-<p>Results #2: uses very little of the data.</p>
-<p><img alt="" src="../img/quick2.png" /></p>
-<h3 id="prototype-selection">Prototype Selection</h3></div>
+the reduced data as accurate as the full data.</p></div>
         </div>
 
         <footer class="col-md-12">
@@ -937,7 +757,7 @@ content of SEE datasets. QUICK works as follows:</p>
         </footer>
         <script>
             var base_url = "../..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
         </script>
         <script src="../../js/base.js" defer></script>
         <script src="../../search/main.js" defer></script>
