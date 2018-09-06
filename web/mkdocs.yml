@@ -12,6 +12,7 @@ nav:
              - Baselines for Adequate AI &#10004; : lectures/baselines.md
              - Simplicity ; : lectures/simple.md 
          - Lectures:
+             - Tables and Ranges &#10004:  lectures/tables.md
              - Decision trees 101 &#10004:  lectures/dt101.md
     - H/W: 
          - Project Ideas: proj/ProjectIdeas.md 
