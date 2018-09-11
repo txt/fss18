@@ -1,5 +1,6 @@
 # Potential Ideas For Class Projects
 
+**NOTE: For full credits, you MUST demonstrate you methods' effectiveness in one or more of the      fifteen categories from this [checklist](https://txt.github.io/fss18/lectures/baselines/#but-what-is-a-good-baseline)**
 
 ## Anomaly Detection
  + If the performance is not what you'd expect, then that is an anomaly.
@@ -49,3 +50,21 @@
  + This currently works on smaller datasets, can you create a scalable
    implementation of this that works on a streaming data?
  + Use ideas from Very Fast Decision Trees: https://homes.cs.washington.edu/~pedrod/papers/kdd00.pdf
+
+## Apply a novel data mining trick to SE data
+ + Here's a great starter [book](https://www.goodreads.com/book/show/25407018-data-science-from-scratch) for data mining in Python. *Do not fret, if you choose to do this, we'll give you a digital copy of this book.*
+ + Pick two *novel* techniques from any two chapters of this book and implement it on any software engineering data.
+ + Remember, for full credits you will have to demonstrate it's effectiveness in one or more of the fifteen categories from this [checklist](https://txt.github.io/fss18/lectures/baselines/#but-what-is-a-good-baseline)
+
+## How to discover the Bellwether?
+ + Look at Rahul Krishna's paper on [Bellwethers](https://arxiv.org/pdf/1703.06218.pdf). See section 5.2 and Figure 3. 
+    - Briefly, given N projects, find the one project that can be used to train a supervised learner. Then, using that *one* dataset, predict for the class variable in other projects.
++ As of now, we find this *one* dataset (aka Bellwether) by running a `for` loop over all available pairs of projects. Unfortunately, this is O(n^2) algorithm. 
++ Can you find a better way to discover this faster? Must be faster than O(n^2).
++ Meet Rahul (TA) for datasets and potential ideas on how this can be done.
+
+## Predict if a commit is a bug-fix.
++ Commit messages are usually descriptive natural language text that describe the changes the developers made.
+    - Example, `Try to fix the problem with Tbuildsys#40 (/bin/sh: configure: command not found)`
++ Can you use any NLP techniques (word2vec, sentiment analysis, etc..) to automatically classify a commit message as a bug-fix or not.
++ Again, talk to Rahul (TA) for datasets and other potential ideas.
