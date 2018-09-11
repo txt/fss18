@@ -295,11 +295,15 @@
             <li><a href="#reasoning-over-instance-based-evolutionary-algorithms">Reasoning over instance-based evolutionary algorithms</a></li>
             <li><a href="#develop-better-evolutionary-algorithms">Develop better evolutionary algorithms</a></li>
             <li><a href="#scalable-planning-with-xtree">Scalable planning with XTREE</a></li>
+            <li><a href="#apply-a-novel-data-minig-trick-to-se-data">Apply a novel data minig trick to SE data</a></li>
+            <li><a href="#how-to-discover-the-bellwether">How to discover the Bellwether?</a></li>
+            <li><a href="#predict-if-a-commit-is-a-bug-fix">Predict if a commit is a bug-fix.</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="potential-ideas-for-class-projects">Potential Ideas For Class Projects</h1>
+<p><strong>NOTE: For full credits, you MUST demonstrate you methods effectiveness in one or more of the      fifteen categories from this <a href="https://txt.github.io/fss18/lectures/baselines/#but-what-is-a-good-baseline">checklist</a></strong></p>
 <h2 id="anomaly-detection">Anomaly Detection</h2>
 <ul>
 <li>If the performance is not what you'd expect, then that is an anomaly.</li>
@@ -358,6 +362,31 @@
 <li>This currently works on smaller datasets, can you create a scalable
    implementation of this that works on a streaming data?</li>
 <li>Use ideas from Very Fast Decision Trees: https://homes.cs.washington.edu/~pedrod/papers/kdd00.pdf</li>
+</ul>
+<h2 id="apply-a-novel-data-minig-trick-to-se-data">Apply a novel data minig trick to SE data</h2>
+<ul>
+<li>Here's a great starter <a href="https://www.goodreads.com/book/show/25407018-data-science-from-scratch">book</a> for data mining in Python. <em>Do not fret, if you choose to do this, we'll give you a digital copy of this book.</em></li>
+<li>Pick two <em>novel</em> techniques from any two chapters of this book and implement it on any software engineering data.</li>
+<li>Remember, for full credits you will have to demonstrate it's effectiveness in one or more of the fifteen categories from this <a href="https://txt.github.io/fss18/lectures/baselines/#but-what-is-a-good-baseline">checklist</a></li>
+</ul>
+<h2 id="how-to-discover-the-bellwether">How to discover the Bellwether?</h2>
+<ul>
+<li>Look at Rahul Krishna's paper on <a href="https://arxiv.org/pdf/1703.06218.pdf">Bellwethers</a>. See section 5.2 and Figure 3. <ul>
+<li>Briefly, given N projects, find the one project that can be used to train a supervised learner. Then, using that <em>one</em> dataset, predict for the class variable in other projects.</li>
+</ul>
+</li>
+<li>As of now, we find this <em>one</em> dataset (aka Bellwether) by running a <code>for</code> loop over all available pairs of projects. Unfortunately, this is O(n^2) algorithm. </li>
+<li>Can you find a better way to discover this faster? Must be faster than O(n^2).</li>
+<li>Meet Rahul (TA) for datasets and potential ideas on how this can be done.</li>
+</ul>
+<h2 id="predict-if-a-commit-is-a-bug-fix">Predict if a commit is a bug-fix.</h2>
+<ul>
+<li>Commit messages are usually descriptive natural language text that describe the changes the developers made.<ul>
+<li>Example, <code>Try to fix the problem with Tbuildsys#40 (/bin/sh: configure: command not found)</code></li>
+</ul>
+</li>
+<li>Can you use any NLP techniques (word2vec, sentiment analysis, etc..) to automatically classify a commit message as a bug-fix or not.</li>
+<li>Again, talk to Rahul (TA) for datasets and other potential ideas.</li>
 </ul></div>
         </div>
 
