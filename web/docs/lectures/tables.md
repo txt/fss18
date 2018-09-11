@@ -245,6 +245,61 @@ And, sometimes, feature removal is very useful:
     -   so, possibly, back select is better when wrapping j48
     -   so, possibly, forward select is as good as it gets for NB
 
+### Supervised vs Unsupervised
+
+- Supervised, use the class variable in column2 to discretize column1.
+     - E.g. split column1 such that the etropy of the column2 symbols are minimized.
+     - see below
+- Unsupervised, just refect on column1.
+     - E.g. find splits that minimize the variance afer the spits.
+
+E.g. here unsupervised discretization running on the `horsepower` column of `auto.csv`. Note these
+numbers run 46 to 230 and this code](http://menzies.us/lean/unsuper.html) decides that this should be divided into:
+
+- less that 65
+- 66 to 69
+- 69 to 72
+- 74 to 82
+- 83 to 86
+- 87 to 89
+- 90 to 91
+- 92 to 97
+- 98 to 105
+- 107 to 116
+- 120 to 140
+- 142 to 160
+- over 165
+
+```
+46.. 230
+|.. 46.. 116
+|.. |.. 46.. 82
+|.. |.. |.. 46.. 65 (..65)
+|.. |.. |.. 66.. 82
+|.. |.. |.. |.. 66.. 72
+|.. |.. |.. |.. |.. 66.. 69 (66..69)
+|.. |.. |.. |.. |.. 69.. 72 (69..72)
+|.. |.. |.. |.. 74.. 82 (74..82)
+|.. |.. 83.. 116
+|.. |.. |.. 83.. 97
+|.. |.. |.. |.. 83.. 91
+|.. |.. |.. |.. |.. 83.. 86 (83..86)
+|.. |.. |.. |.. |.. 87.. 91
+|.. |.. |.. |.. |.. |.. 87.. 89 (87..89)
+|.. |.. |.. |.. |.. |.. 90.. 91 (90..91)
+|.. |.. |.. |.. 92.. 97 (92..97)
+|.. |.. |.. 98.. 116
+|.. |.. |.. |.. 98.. 105 (98..105)
+|.. |.. |.. |.. 107.. 116 (107..116)
+|.. 120.. 230
+|.. |.. 120.. 160
+|.. |.. |.. 120.. 140 (120..140)
+|.. |.. |.. 142.. 160 (142..160)
+|.. |.. 165.. 230 (165..)
+```
+
+![](../img/unsuper.png)
+
 ### FSS types:
 
 ![](https://raw.githubusercontent.com/txt/fss16/master/img/filter-img.jpg)

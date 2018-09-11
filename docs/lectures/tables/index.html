@@ -99,6 +99,10 @@
     <ul class="dropdown-menu">
             
 <li >
+    <a href="../domination/">Domination &#10004</a>
+</li>
+            
+<li >
     <a href="./">Tables and Ranges &#10004</a>
 </li>
             
@@ -559,6 +563,63 @@ columns "<em>Y</em>" from input columns "<em>X</em>".</p>
 </ul>
 </li>
 </ul>
+<h3 id="supervised-vs-unsupervised">Supervised vs Unsupervised</h3>
+<ul>
+<li>Supervised, use the class variable in column2 to discretize column1.<ul>
+<li>E.g. split column1 such that the etropy of the column2 symbols are minimized.</li>
+<li>see below</li>
+</ul>
+</li>
+<li>Unsupervised, just refect on column1.<ul>
+<li>E.g. find splits that minimize the variance afer the spits.</li>
+</ul>
+</li>
+</ul>
+<p>E.g. here unsupervised discretization running on the <code>horsepower</code> column of <code>auto.csv</code>. Note these
+numbers run 46 to 230 and this code](http://menzies.us/lean/unsuper.html) decides that this should be divided into:</p>
+<ul>
+<li>less that 65</li>
+<li>66 to 69</li>
+<li>69 to 72</li>
+<li>74 to 82</li>
+<li>83 to 86</li>
+<li>87 to 89</li>
+<li>90 to 91</li>
+<li>92 to 97</li>
+<li>98 to 105</li>
+<li>107 to 116</li>
+<li>120 to 140</li>
+<li>142 to 160</li>
+<li>over 165</li>
+</ul>
+<pre><code>46.. 230
+|.. 46.. 116
+|.. |.. 46.. 82
+|.. |.. |.. 46.. 65 (..65)
+|.. |.. |.. 66.. 82
+|.. |.. |.. |.. 66.. 72
+|.. |.. |.. |.. |.. 66.. 69 (66..69)
+|.. |.. |.. |.. |.. 69.. 72 (69..72)
+|.. |.. |.. |.. 74.. 82 (74..82)
+|.. |.. 83.. 116
+|.. |.. |.. 83.. 97
+|.. |.. |.. |.. 83.. 91
+|.. |.. |.. |.. |.. 83.. 86 (83..86)
+|.. |.. |.. |.. |.. 87.. 91
+|.. |.. |.. |.. |.. |.. 87.. 89 (87..89)
+|.. |.. |.. |.. |.. |.. 90.. 91 (90..91)
+|.. |.. |.. |.. 92.. 97 (92..97)
+|.. |.. |.. 98.. 116
+|.. |.. |.. |.. 98.. 105 (98..105)
+|.. |.. |.. |.. 107.. 116 (107..116)
+|.. 120.. 230
+|.. |.. 120.. 160
+|.. |.. |.. 120.. 140 (120..140)
+|.. |.. |.. 142.. 160 (142..160)
+|.. |.. 165.. 230 (165..)
+</code></pre>
+
+<p><img alt="" src="../../img/unsuper.png" /></p>
 <h3 id="fss-types">FSS types:</h3>
 <p><img alt="" src="https://raw.githubusercontent.com/txt/fss16/master/img/filter-img.jpg" />
 <img alt="" src="https://raw.githubusercontent.com/txt/fss16/master/img/wrapper-img.jpg" /></p>
@@ -761,7 +822,7 @@ the reduced data as accurate as the full data.</p></div>
         </footer>
         <script>
             var base_url = "../..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
         </script>
         <script src="../../js/base.js" defer></script>
         <script src="../../search/main.js" defer></script>

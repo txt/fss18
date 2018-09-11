@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>W5 - Found.Soft.Sci</title>
+        <title>Domination &#10004 - Found.Soft.Sci</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -50,7 +50,7 @@
                             <li >
                                 <a href="../..">Home</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notes <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -85,11 +85,11 @@
 </li>
             
 <li >
-    <a href="../../lectures/baselines/">Baselines for Adequate AI &#10004;</a>
+    <a href="../baselines/">Baselines for Adequate AI &#10004;</a>
 </li>
             
 <li >
-    <a href="../../lectures/simple/">Simplicity ;</a>
+    <a href="../simple/">Simplicity ;</a>
 </li>
     </ul>
   </li>
@@ -98,16 +98,16 @@
     <a href="#">Lectures</a>
     <ul class="dropdown-menu">
             
-<li >
-    <a href="../../lectures/domination/">Domination &#10004</a>
+<li class="active">
+    <a href="./">Domination &#10004</a>
 </li>
             
 <li >
-    <a href="../../lectures/tables/">Tables and Ranges &#10004</a>
+    <a href="../tables/">Tables and Ranges &#10004</a>
 </li>
             
 <li >
-    <a href="../../lectures/dt101/">Decision trees 101 &#10004</a>
+    <a href="../dt101/">Decision trees 101 &#10004</a>
 </li>
     </ul>
   </li>
@@ -118,19 +118,19 @@
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../ProjectIdeas">Project Ideas</a>
+    <a href="../../proj/ProjectIdeas">Project Ideas</a>
 </li>
                                     
 <li >
-    <a href="../w4/">Four &#10004;</a>
+    <a href="../../proj/w4/">Four &#10004;</a>
 </li>
                                     
 <li >
-    <a href="../w3/">Three &#10004;</a>
+    <a href="../../proj/w3/">Three &#10004;</a>
 </li>
                                     
 <li >
-    <a href="../w1/">One &#10004;</a>
+    <a href="../../proj/w1/">One &#10004;</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -157,7 +157,7 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../../lectures/axe/">Axe</a>
+    <a href="../axe/">Axe</a>
 </li>
     </ul>
   </li>
@@ -167,7 +167,7 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../../lectures/deeplearning/">Deep learning &#10004;</a>
+    <a href="../deeplearning/">Deep learning &#10004;</a>
 </li>
     </ul>
   </li>
@@ -177,11 +177,11 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../../lectures/effectsize.md">Effect size</a>
+    <a href="../effectsize.md">Effect size</a>
 </li>
             
 <li >
-    <a href="../../lectures/explain/">Explanation</a>
+    <a href="../explain/">Explanation</a>
 </li>
     </ul>
   </li>
@@ -191,7 +191,7 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../../lectures/bootstrap.md">Bootstrap</a>
+    <a href="../bootstrap.md">Bootstrap</a>
 </li>
     </ul>
   </li>
@@ -201,11 +201,11 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../../lectures/significance.md">Significance test</a>
+    <a href="../significance.md">Significance test</a>
 </li>
             
 <li >
-    <a href="../../lectures/sk.md">Scott-Knot</a>
+    <a href="../sk.md">Scott-Knot</a>
 </li>
     </ul>
   </li>
@@ -215,11 +215,11 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../../lectures/tables/">Tables</a>
+    <a href="../tables/">Tables</a>
 </li>
             
 <li >
-    <a href="../../lectures/things.md">Things</a>
+    <a href="../things.md">Things</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -282,6 +282,16 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li >
+                                <a rel="next" href="../simple/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../tables/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -290,37 +300,73 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#now-check-your-headers-are-working">Now check your headers are working:</a></li>
-        <li class="main "><a href="#background-dom">Background : Dom</a></li>
+        <li class="main active"><a href="#domination">Domination</a></li>
+            <li><a href="#domination-measures">Domination measures:</a></li>
+            <li><a href="#the-lay-of-the-land">The Lay of the Land</a></li>
+            <li><a href="#holes-poles-saddles-local-minima-flat-brittle">Holes, poles, saddles, local minima, flat, brittle</a></li>
+            <li><a href="#walkting-the-territory">Walkting the Territory</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="now-check-your-headers-are-working">Now check your headers are working:</h2>
+<h1 id="domination">Domination</h1>
+<p>Which house do you want:</p>
+<p><img alt="" src="https://infoscience.epfl.ch/record/153674/files/34_2010_SimBuild%20GAoptimiz.png" /></p>
+<p>Lets do it again.
+Given Fig4 of <a href="http://science.sciencemag.org/content/sci/324/5923/81.full.pdf">this paper</a>
+what options would you reject?</p>
+<p>Congraulations, you've just worked out how to do multi-objective optimization</p>
 <ol>
-<li></li>
-<li>For the file
-   <a href="https://github.com/timm/lean/blob/master/data/autoUnsuper.csv">autoUnsuper.csv</a>:
-   print the file, adding in ",&gt;dom" on line one and ",x" on all other lines where "x"
-   is the domination score (discussed below).</li>
-<li>Print all the the ranges in <br />
-   sorted by the mean dom score of the rows with those ranges.</li>
+<li>Build Popluation[ i=0 ] by making lots of guesses</li>
+<li>Experiment:  (mutate, cross over)</li>
+<li>Select the best results (a.k.a know as find the <em>Pareto frontier</em>)</li>
+<li>Set Population[ i+1 ]  to the frontier.</li>
+<li>Goto step1</li>
 </ol>
-<pre><code>➜  src git:(master) ✗ weather | lua demo | sort -n
-➜  src git:(master) ✗ weatherLong | lua demo | sort -n
-</code></pre>
-
-<h2 id="background-dom">Background : <code>Dom</code></h2>
-<p>Zitler's indictor-based domination score is a handy aggregation
-function for multipe numeric goals. As we define it, it converts
-multiple  numeric goals (that we want to minimize or maximize)
-into one valie 0 to 1 where <code>1'' is comparatively better 
-on most
-goals
-while</code>0'' is comparatively worse.</p>
+<p>"Give me the fruitful error any time, full of seeds, bursting with its own corrections. You can keep your sterile truth for yourself."  <br />
+― Vilfredo Pareto</p>
+<p>"For many events, roughly 80% of the effects come from 20% of the causes." <br />
+― Vilfredo Pareto</p>
+<h2 id="domination-measures">Domination measures:</h2>
+<h3 id="binary-domination">Binary Domination</h3>
+<ul>
+<li>X domiantes Y if better on at least one, and worse on none.</li>
+<li>Returns a boolean.</li>
+<li>Widely used. Often stops distinguishing  things after 3+ goals.</li>
+<li>Insenstive to the size of the domnation</li>
+</ul>
+<p><img alt="" src="http://cms.horus.be/files/99936/MediaArchive/pictures/Pareto_Dominated.png" /></p>
+<h3 id="indicator-domiantion">Indicator Domiantion</h3>
+<p>From <a href="https://pdfs.semanticscholar.org/8ed1/04b1d836930e88cc048e55bc9b985b05542f.pdf">Zitler 2004</a>:</p>
+<ul>
+<li>X dominates Y if moving X to Y <em>loses less</em> than moving Y to X.<ul>
+<li>To make the signal stronger, we <em>shout</em> the difference (raise it to
+   some expendial power).</li>
+<li>To gauge the overall signal, we <em>average</em> across all goals</li>
+<li>To handle goal we want to minimize, maximize, we add a "<em>w</em>"
+  constant (-1,1).</li>
+</ul>
+</li>
+<li>Returns a number.</li>
+<li>
+<p>Better at <a href="https://fada.birzeit.edu/jspui/bitstream/20.500.11889/4528/1/dcb6eddbdac1c26b605ce3dff62e27167848.pdf">distinguishing higher problems with 3+ goals</a>, see Table8.</p>
+</li>
+<li>
+<p>To rank <em>rowX</em>, I</p>
+<ul>
+<li>N=100 times (say), pick <em>rowY</em> at random.<ul>
+<li>Q: Why not comapre to all rows?</li>
+</ul>
+</li>
+<li>If <em>indicatorDomiantes( X,Y )</em> then +1/N to <em>rowX</em></li>
+<li>Then I add a new <code>dom</code> column to the data, wheich we want to maximize.</li>
+<li>see <a href="http://menzies.us/lean/dom.html">dom.html</a></li>
+</ul>
+</li>
+</ul>
 <p>For example, here are some rows
 of <a href="https://github.com/timm/lean/blob/master/data/autoUnsuper.csv">auto.csv</a>:</p>
-<pre><code>  %cylinders   displacement         horsepower   &lt;weight   &gt;acceltn   model   origin   &gt;mpg 
+<pre><code>  %cylinders   displacement         horsepower   &lt;weight   &gt;acceltn   model   origin   &gt;mpg
   8           340:360              150:160      3609      8          70:70   1        10
   6           198:225              83:86        2587      16         70:70   1        20
   8           383:455              165:230      4425      10         70:70   1        10
@@ -332,7 +378,7 @@ of <a href="https://github.com/timm/lean/blob/master/data/autoUnsuper.csv">auto.
   8           340:360              165:230      3693      11.5       70:70   1        20
   ....
 </code></pre>
-<p>From the first row,  we see we want to minimize weight and maximize acceleration and mpg. 
+<p>From the first row,  we see we want to minimize weight and maximize acceleration and mpg.
 From the other rows, we see that some discretizer has gotten to the <em>displacement</em> and <em>horsepower</em>
 values are replaced them with some string describing a range e.g.<em>lo:hi</em> =  <em>340:360</em>.</p>
 <p>Here's the same data, with <code>dom</code> score added. Shown here are the 5 best and worst rows.</p>
@@ -361,9 +407,95 @@ values are replaced them with some string describing a range e.g.<em>lo:hi</em> 
 </code></pre>
 <p>Observe that the <em>highest</em> dom scores are assocaited wiht rows with least weight, most acceleration
 and most mpg (and the <em>lowest</em> dom scores are associated with the reverse).</p>
-<p>To compute the dom score for a row, we has how many other rows does this <em>dominate</em>.
-According to Zilter, X dominates Y if when we move from X to Y we loss less than when we move from Y to X.
-For the definition of that domination score:</p></div>
+<h2 id="the-lay-of-the-land">The Lay of the Land</h2>
+<p>The real story is that underneath surface features of all these problems is a common mathematical structure called, you guessed it, the landscape.</p>
+<p><img alt="fit4" src="https://raw.githubusercontent.com/txt/ase16/master/img/fit4.jpg" /></p>
+<p>To know the landscape is to know how to optimize,
+how to 
+avoid getting  stuck on being over-adapted (hence overspecialized) on some local peak, when as <a href="http://edge.org/response-detail/11843" title="Stewart Brand, Fitness Landscapes, Edge.org">Stewart Brand</a> so aptly puts it...</p>
+<ul>
+<li>"Whole mountain ranges of opportunity could be glimpsed in the distance, but getting to them involved venturing 'downhill' into regions of lower fitness".</li>
+</ul>
+<p>Studying such landscapes made Brand distrust claims
+for "optimality" since what you call "optimum" may
+actually be just a stepping zone to a better place.</p>
+<p>Brand's favorite landscape comes from a 1932
+genetics paper that discusses how different breeding
+strategies respond well (or badly) to environmental
+pressures.  In the following, the x-y axis might be
+"length of hair" and "body weight" and the z-axis
+might "probability of winning a fight".</p>
+<p><img alt="wright" src="https://raw.githubusercontent.com/txt/ase16/master/img/WrightFitness.jpg" /></p>
+<p>Says Brand:</p>
+<ul>
+<li>
+<p>"The first two illustrate how low selection pressure
+or a high rate of mutation (which comes with small
+populations) can broaden the range of a species
+whereas intense selection pressure or a low mutation
+rate can severely limit a species to the very peak
+of local fitness. The third diagram shows what
+happens when the landscape itself shifts, and the
+population has to evolve to shift with it."</p>
+</li>
+<li>
+<p>"The bottom row explores how small populations
+respond to inbreeding by wandering
+ineffectively. The best mode of exploration Wright
+deemed the final diagram, showing how a species can
+divide into an array of races that interact with one
+another. That jostling crowd explores well, and it
+can respond to opportunity."</p>
+</li>
+</ul>
+<h2 id="holes-poles-saddles-local-minima-flat-brittle">Holes, poles, saddles, local minima, flat, brittle</h2>
+<p>So to understand search, understand the landscape.
+If you know the landscape, you can see  where it can trap and where it can help us out. One such trap is the <em>saddle</em>
+which, in the above diagram is the flat space between the mountain (called a <em>pole</em>) and the <em>hole</em> next to it.</p>
+<p><img width=500 src="https://raw.githubusercontent.com/txt/ase16/master/img/holespoles.png"></p>
+<p>Note that if walk along the saddle, you might think you
+are in a stable space of solutions. But be warned, one slip to the left or right and the landscape changes dramatically. In the above
+space you might fall into a hole or a pole.</p>
+<p>Another  trap is the <em>local minima</em> that <em>seems</em> like a good idea but
+if you get sucked into it, you may never find the much better place:</p>
+<p><img alt="local" src="https://raw.githubusercontent.com/txt/ase16/master/img/local.jpg" /></p>
+<p>Another bad landscape is one that is completely flat. Try as you like, you walk along way around this one before finding anything better or worse:</p>
+<p><img alt="flat" src="https://raw.githubusercontent.com/txt/ase16/master/img/flat-landscape.jpg" /></p>
+<p>The opposite of flat is <em>bumpy</em>:</p>
+<p><img alt="bump" src="https://raw.githubusercontent.com/txt/ase16/master/img/brittle.jpg" /></p>
+<p>Bumpy landscapes are common so
+ <a href="http://goo.gl/Obssma" title="M. Harman. The current state and future of search based software engineering. In Future of Software Engineering, ICSE’07. 2007.">Harman</a> comments that understanding the neighborhood of our solutions is an open and pressing issue in search-based software engineering (SBSE):</p>
+<ul>
+<li>"In some software engineering applications, solution robustness may be as im-portant as solution functionality. For example, it may be better to locate an area of the search space that is rich in fit solutions, rather than identifying an even better solution that is surrounded by a set of far less fit solutions."</li>
+<li>"Hitherto, research on SBSE has tended to focus on the production of the fittest possible results. However, many application areas require solutions in a search space that may be subject to change. This makes robustness a natural second order property to which the research community could and should turn its attention."</li>
+</ul>
+<p>Bumpy landscapes mean that, sometimes, to achieve better goals you may have to first
+give up some of your current achievements. In the history of A.I. this is also
+called <em>Sussmann's anomaly</em>- that sometimes the way to "better" is via "worse".
+There are many ways to "jump over" these anomalies.   Sussman (and his supervisor, Marvin Minsky) believed that intelligence requires an exolicit list of exceptions or tricks
+and that any plan for making things better had better be auditted
+by a   "debugging" system. That is a <em>knowledge-full</em> approach that
+requires some analyst to supply descriptions of "when to jump around". 
+Alternate <em>knowledge-less</em> approaches are:</p>
+<ul>
+<li>Stochastic jumps  using, say, <a href="sa">simulated annealing</a>;</li>
+<li>The  <em>retries</em> mechanism discussed below;</li>
+<li><em>Momentum</em> constants added to the mutators of stocahstic search. Such
+  momentum constants resist sudden stops to the search: if a local maximum
+   is reached, the momentum constant would push the inference a little further
+     just to see if anything better lies beyond the current position. For
+      example, in the following landscape, momentum would nudge the ball
+       over that little lip into a better (and lower) world.</li>
+</ul>
+<p><img alt="mom" src="https://raw.githubusercontent.com/txt/ase16/master/img/moment.gif" /></p>
+<p>Which is best: knowledge-full or knowledge-less? Well, that depends on the nature
+of the problem, the intrinsic value of the knowledge, etc etc. But the
+general engineering trade-off is that <em>knowledge-less</em> approaches are faster
+to build and maintain, while the <em>knowledge-full</em>  approaches perform
+comparatively better. FYI- I used to work on <em>knowledge-full</em> approaches but
+I have found my life to be easier since I switched to <em>knowledge-less</em>.</p>
+<h2 id="walkting-the-territory">Walkting the Territory</h2>
+<p>A.k.a. multi-objective domination</p></div>
         </div>
 
         <footer class="col-md-12">
