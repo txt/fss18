@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Potential Ideas For Class Projects - Found.Soft.Sci</title>
+        <title>Three - Found.Soft.Sci</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -118,19 +118,19 @@
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href=".">Project Ideas</a>
+    <a href="../../proj/ProjectIdeas">Project Ideas</a>
 </li>
                                     
 <li >
-    <a href="../w4/">Four &#10004;</a>
+    <a href="../../proj/w4/">Four &#10004;</a>
 </li>
                                     
 <li >
-    <a href="../w3/">Three &#10004;</a>
+    <a href="../../proj/w3/">Three &#10004;</a>
 </li>
                                     
 <li >
-    <a href="../w1/">One &#10004;</a>
+    <a href="../../proj/w1/">One &#10004;</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -138,15 +138,15 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../../review/three">Week 3</a>
+    <a href=".">Week 3</a>
 </li>
             
 <li >
-    <a href="../../review/two">Week 2 &#10004;</a>
+    <a href="../two">Week 2 &#10004;</a>
 </li>
             
 <li >
-    <a href="../../review/one">Week 1 &#10004;</a>
+    <a href="../one">Week 1 &#10004;</a>
 </li>
     </ul>
   </li>
@@ -294,108 +294,11 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#potential-ideas-for-class-projects">Potential Ideas For Class Projects</a></li>
-            <li><a href="#anomaly-detection">Anomaly Detection</a></li>
-            <li><a href="#explanation-vs-performance-of-decision-trees">Explanation vs. Performance of Decision Trees</a></li>
-            <li><a href="#flash-for-tuning-defect-prediction">FLASH for tuning Defect Prediction</a></li>
-            <li><a href="#flash-for-effort-estimation">FLASH for effort estimation?</a></li>
-            <li><a href="#can-you-beat-flash-with-baysian-parameter-optimization">Can you beat FLASH with Baysian Parameter Optimization</a></li>
-            <li><a href="#reasoning-over-instance-based-evolutionary-algorithms">Reasoning over instance-based evolutionary algorithms</a></li>
-            <li><a href="#develop-better-evolutionary-algorithms">Develop better evolutionary algorithms</a></li>
-            <li><a href="#scalable-planning-with-xtree">Scalable planning with XTREE</a></li>
-            <li><a href="#apply-a-novel-data-mining-trick-to-se-data">Apply a novel data mining trick to SE data</a></li>
-            <li><a href="#how-to-discover-the-bellwether">How to discover the Bellwether?</a></li>
-            <li><a href="#predict-if-a-commit-is-a-bug-fix">Predict if a commit is a bug-fix.</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="potential-ideas-for-class-projects">Potential Ideas For Class Projects</h1>
-<p><strong>NOTE: For full credits, you MUST demonstrate you methods' effectiveness in one or more of the      fifteen categories from this <a href="https://txt.github.io/fss18/lectures/baselines/#but-what-is-a-good-baseline">checklist</a></strong></p>
-<h2 id="anomaly-detection">Anomaly Detection</h2>
-<ul>
-<li>If the performance is not what you'd expect, then that is an anomaly.</li>
-<li>How would you detect anomalies in SE data?</li>
-<li>What is the current state-of-the-art?</li>
-<li>How about measures like Heoffding Bounds?</li>
-<li>How about something like kNN on the leaves of a decision tree?</li>
-<li>Other ideas enouraged ... </li>
-</ul>
-<h2 id="explanation-vs-performance-of-decision-trees">Explanation vs. Performance of Decision Trees</h2>
-<ul>
-<li>Decisions Trees can be limited to any depth?</li>
-<li>How does restricting the depth of the tree effect performance (see Holte 1R) for binary classes? For n-ary classes?</li>
-<li>If we had a model in an incomprehensible  format (that of say NB, deep learning, neural net) and we ran the training data through decisions trees, what is the performance vs explanation tradeoff?</li>
-<li>How do we quantify explanations? <ul>
-<li>https://arxiv.org/pdf/1803.05067.pdf</li>
-<li>https://link.springer.com/article/10.1007/s10664-018-9638-1</li>
-</ul>
-</li>
-</ul>
-<h2 id="flash-for-tuning-defect-prediction">FLASH for tuning Defect Prediction</h2>
-<ul>
-<li>Look at Vivek Nair's <a href="https://arxiv.org/pdf/1801.02175.pdf">TSE article on FLASH</a></li>
-<li>Can you apply this to construct better defect predictors?</li>
-<li>Can you tune defect predictors for better precision, false alarm, recall?</li>
-</ul>
-<h2 id="flash-for-effort-estimation">FLASH for effort estimation?</h2>
-<ul>
-<li>Same as above, but this time for effort estimation.</li>
-</ul>
-<h2 id="can-you-beat-flash-with-baysian-parameter-optimization">Can you beat FLASH with Baysian Parameter Optimization</h2>
-<ul>
-<li>What are the tradeoffs with using BPO</li>
-</ul>
-<h2 id="reasoning-over-instance-based-evolutionary-algorithms">Reasoning over instance-based evolutionary algorithms</h2>
-<ul>
-<li>Pick a task to optimize over (tuning defect predictors for example)</li>
-<li>Cache generation zero of an evolutionary algorithm (say DE)</li>
-<li>Run the algorithm </li>
-<li>Cache generation N of the same algorithm</li>
-<li>Run a rule learner over the generations to learn rules about the most
-   informative features.</li>
-<li>Questions </li>
-<li>How good is that learner at selecting for best (last gen) instances?</li>
-<li>How much is that goodness effected by sampling from how much of non-best?</li>
-</ul>
-<h2 id="develop-better-evolutionary-algorithms">Develop better evolutionary algorithms</h2>
-<ul>
-<li>Experiment with mutation strategy</li>
-<li>Parallelize the algorithm</li>
-<li>Other ideas?</li>
-</ul>
-<h2 id="scalable-planning-with-xtree">Scalable planning with XTREE</h2>
-<ul>
-<li>Look at Rahul Krishna's paper on <a href="https://arxiv.org/pdf/1708.05442.pdf">XTREE</a></li>
-<li>This currently works on smaller datasets, can you create a scalable
-   implementation of this that works on a streaming data?</li>
-<li>Use ideas from Very Fast Decision Trees: https://homes.cs.washington.edu/~pedrod/papers/kdd00.pdf</li>
-</ul>
-<h2 id="apply-a-novel-data-mining-trick-to-se-data">Apply a novel data mining trick to SE data</h2>
-<ul>
-<li>Here's a great starter <a href="https://www.goodreads.com/book/show/25407018-data-science-from-scratch">book</a> for data mining in Python. <em>Do not fret, if you choose to do this, we'll give you a digital copy of this book.</em></li>
-<li>Pick two <em>novel</em> techniques from any two chapters of this book and implement it on any software engineering data.</li>
-<li>Remember, for full credits you will have to demonstrate it's effectiveness in one or more of the fifteen categories from this <a href="https://txt.github.io/fss18/lectures/baselines/#but-what-is-a-good-baseline">checklist</a></li>
-</ul>
-<h2 id="how-to-discover-the-bellwether">How to discover the Bellwether?</h2>
-<ul>
-<li>Look at Rahul Krishna's paper on <a href="https://arxiv.org/pdf/1703.06218.pdf">Bellwethers</a>. See section 5.2 and Figure 3. <ul>
-<li>Briefly, given N projects, find the one project that can be used to train a supervised learner. Then, using that <em>one</em> dataset, predict for the class variable in other projects.</li>
-</ul>
-</li>
-<li>As of now, we find this <em>one</em> dataset (aka Bellwether) by running a <code>for</code> loop over all available pairs of projects. Unfortunately, this is O(n^2) algorithm. </li>
-<li>Can you find a better way to discover this faster? Must be faster than O(n^2).</li>
-<li>Meet Rahul (TA) for datasets and potential ideas on how this can be done.</li>
-</ul>
-<h2 id="predict-if-a-commit-is-a-bug-fix">Predict if a commit is a bug-fix.</h2>
-<ul>
-<li>Commit messages are usually descriptive natural language text that describe the changes the developers made.<ul>
-<li>Example, <code>Try to fix the problem with Tbuildsys#40 (/bin/sh: configure: command not found)</code></li>
-</ul>
-</li>
-<li>Can you use any NLP techniques (word2vec, sentiment analysis, etc..) to automatically classify a commit message as a bug-fix or not.</li>
-<li>Again, talk to Rahul (TA) for datasets and other potential ideas.</li>
-</ul></div>
+</div>
         </div>
 
         <footer class="col-md-12">
