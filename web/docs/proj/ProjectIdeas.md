@@ -1,6 +1,6 @@
 # Potential Ideas For Class Projects
 
-**NOTE: For full credits, you MUST demonstrate you methods effectiveness in one or more of the      fifteen categories from this [checklist](https://txt.github.io/fss18/lectures/baselines/#but-what-is-a-good-baseline)**
+**NOTE: For full credits, you MUST demonstrate you methods' effectiveness in one or more of the      fifteen categories from this [checklist](https://txt.github.io/fss18/lectures/baselines/#but-what-is-a-good-baseline)**
 
 ## Anomaly Detection
  + If the performance is not what you'd expect, then that is an anomaly.
