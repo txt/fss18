@@ -3,7 +3,7 @@ build:
 	(cd docs/proj; make)
 	mkdocs build
 	cp -r site/* ../docs
-	- git add -a . 
+	- git add -a ./* 
 	- git add  ../docs/* 
 	- git add ../docs/*/*
 	- git add ../docs/*/*/*
