@@ -53,6 +53,7 @@
 
 ## Apply a novel data mining trick to SE data
  + Here's a great starter [book](https://www.goodreads.com/book/show/25407018-data-science-from-scratch) for data mining in Python. *Do not fret, if you choose to do this, we'll give you a digital copy of this book.*
+ + The code can be found [here](https://github.com/joelgrus/data-science-from-scratch)
  + Pick two *novel* techniques from any two chapters of this book and implement it on any software engineering data.
  + Remember, for full credits you will have to demonstrate it's effectiveness in one or more of the fifteen categories from this [checklist](https://txt.github.io/fss18/lectures/baselines/#but-what-is-a-good-baseline)
 
