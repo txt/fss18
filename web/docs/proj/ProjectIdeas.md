@@ -2,6 +2,15 @@
 
 **NOTE: For full credits, you MUST demonstrate you methods' effectiveness in one or more of the      fifteen categories from this [checklist](https://txt.github.io/fss18/lectures/baselines/#but-what-is-a-good-baseline)**
 
+## Statistcal evaluations
+
++ Review last ten years of highly cited papers in softare analytics
++ List the statistiacal methods they use
++ Apply them all to the same results
++ See if we can do early stopping in hyperparameter optimization (what are the odds that after N 
+statistically significant large changes, that we  will see one more?)
++ Data [95 methods](http://unbox.org/things/var/timm/12/left/src/actualPredicted/)
+
 ## Anomaly Detection
  + If the performance is not what you'd expect, then that is an anomaly.
  + How would you detect anomalies in SE data?
