@@ -10,6 +10,10 @@
 + See if we can do early stopping in hyperparameter optimization (what are the odds that after N 
 statistically significant large changes, that we  will see one more?)
 + Data [95 methods](http://unbox.org/things/var/timm/12/left/src/actualPredicted/)
++ Across all treatments, are ranking stable?
+   + Cluster top-down, bottom-up, best-first, worst-first.
+   + Parametric, non-parametric
+   + effect size test, yes/no
 
 ## Anomaly Detection
  + If the performance is not what you'd expect, then that is an anomaly.
