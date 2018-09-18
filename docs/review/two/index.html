@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Two - Found.Soft.Sci</title>
+        <title>Review 2 - Found.Soft.Sci</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -298,84 +298,78 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#general-questions">General Questions</a></li>
-        <li class="main "><a href="#python-stuff">Python Stuff</a></li>
+        <li class="main active"><a href="#review-2">Review 2</a></li>
+            <li><a href="#general-questions">General Questions</a></li>
+            <li><a href="#python-stuff">Python Stuff</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="general-questions">General Questions</h1>
+<h1 id="review-2">Review 2</h1>
+<h2 id="general-questions">General Questions</h2>
 <ul>
-<li>
-<p>What constitutes a good baseline? (Hint: See lecture notes on baselines)</p>
-<ul>
+<li>What constitutes a good baseline? (Hint: See lecture notes on baselines)<ul>
 <li>Enumerate the categories and provide a one line description.</li>
-<li>
-<p>What is a pareto frontier?</p>
+</ul>
 </li>
-<li>
-<p>True/False -- There exists a pareto frontier for 1-objective problem</p>
-</li>
+<li>What is a pareto frontier?<ul>
+<li>True/False -- There exists a pareto frontier for 1-objective problem</li>
 <li>True/False -- An n-objective optimizer has an n-dimensional pareto frontier</li>
-<li>
-<p>How does Naive Bayes work?</p>
+</ul>
 </li>
-<li>
-<p>What are the merits and demerits</p>
+<li>How does Naive Bayes work?<ul>
+<li>What are the merits and demerits</li>
+</ul>
 </li>
 <li>What family of data mining methods would you use for these cases?</li>
 </ul>
-</li>
-</ul>
-<pre><code>        No. classes |  Symbolic  | Numerics |
-        ------------|------------|----------|--
-        = 1         |            |          |
-        ------------|------------|----------|--
-        &gt; 1         |            |          |
-        ------------|------------|----------|--
-        a range     |            |          |
-        ------------|------------|----------|--
+<pre><code>    No. classes |  Symbolic  | Numerics |
+    ------------|------------|----------|--
+    = 1         |            |          |
+    ------------|------------|----------|--
+    &gt; 1         |            |          |
+    ------------|------------|----------|--
+    a range     |            |          |
+    ------------|------------|----------|--
 </code></pre>
 
 <ul>
 <li>Discuss some strategies to obtain a class value while performing kNN for<ul>
-<li>a symbolic class (True or False)</li>
-<li>a numeric class (where values falls between 0 to 1)</li>
-<li>No class</li>
+<li>A symbolic class (True or False)</li>
+<li>A numeric class (where values falls between 0 to 1)</li>
+<li>No class variable</li>
 </ul>
 </li>
 </ul>
-<pre><code>    @relation weather
+<pre><code>        @relation weather
 
-    @attribute outlook {sunny, overcast, rainy}
-    @attribute temperature real
-    @attribute humidity real
-    @attribute windy {TRUE, FALSE}
-    @attribute play {yes, no}
+        @attribute outlook {sunny, overcast, rainy}
+        @attribute temperature real
+        @attribute humidity real
+        @attribute windy {TRUE, FALSE}
+        @attribute play {yes, no}
 
-    @data
-    sunny,85,85,FALSE,no
-    sunny,80,90,TRUE,no
-    overcast,83,86,FALSE,yes
-    rainy,70,96,FALSE,yes
-    rainy,68,80,FALSE,yes
-    rainy,65,70,TRUE,no
-    overcast,64,65,TRUE,yes
-    sunny,72,95,FALSE,no
-    sunny,69,70,FALSE,yes
-    rainy,75,80,FALSE,yes
-    sunny,75,70,TRUE,yes
-    overcast,72,90,TRUE,yes
-    overcast,81,75,FALSE,yes
-    rainy,71,91,TRUE,no
+        @data
+        sunny,85,85,FALSE,no
+        sunny,80,90,TRUE,no
+        overcast,83,86,FALSE,yes
+        rainy,70,96,FALSE,yes
+        rainy,68,80,FALSE,yes
+        rainy,65,70,TRUE,no
+        overcast,64,65,TRUE,yes
+        sunny,72,95,FALSE,no
+        sunny,69,70,FALSE,yes
+        rainy,75,80,FALSE,yes
+        sunny,75,70,TRUE,yes
+        overcast,72,90,TRUE,yes
+        overcast,81,75,FALSE,yes
+        rainy,71,91,TRUE,no
 
 </code></pre>
 
 <p>Using the above example, answer the following questions:</p>
 <ul>
-<li>
-<p>On variable types:</p>
-<ul>
+<li>On variable types:<ul>
 <li>What is symbolic variables? Please give 2 examples.</li>
 <li>What is numeric variables? Please give 2 examples.</li>
 <li>Name one operation that can be performed on both numeric and symbolic variables.</li>
@@ -384,42 +378,32 @@
 <li>How do you calculate the distance between numeric variables? Please give 1 example.</li>
 <li>What is normalization? Why might it be useful?</li>
 <li>In the above data, normalize temperature=65, humidity=70</li>
-<li>
-<p>On Independent variables:</p>
+</ul>
 </li>
-<li>
-<p>What is independent variable? Given an example</p>
-</li>
+<li>On Independent variables:<ul>
+<li>What is independent variable? Given an example</li>
 <li>What's the difference between decision tree and random forest?</li>
-<li>
-<p>On Impurity</p>
+</ul>
 </li>
-<li>
-<p>What is the connection between variance and standard deviation?</p>
-</li>
+<li>On Impurity:<ul>
+<li>What is the connection between variance and standard deviation?</li>
 <li>What is the same about variance and entropy?</li>
 <li>What is difference between variane and entropy?</li>
 <li>How do we calculate entropy? What is the entropy of <code>play?</code> Show your working.</li>
 <li>How do we calculate standard deviation? What is the standard deviation of <code>temperature</code>? Show your working.</li>
-<li>Note: The Gini Index is used to compute the impurity of a data partition. It is computed as 1 - (∑ (p.i)^2). For example, assume the data partition D consisiting of 4 classes each with equal probability. Then the Gini Index (Gini Impurity) will be: Gini(D) = 1 - (0.25^2 + 0.25^2 + 0.25^2 + 0.25^2)<ul>
+<li>Note: The Gini Index is used to compute the impurity of a data partition. It is computed as 1 - (∑ (p.i)^2). For example, assume the data partition D consisiting of 4 classes each with equal probability. Then the Gini Index (Gini Impurity) will be: Gini(D) = 1 - (0.25^2 + 0.25^2 + 0.25^2 + 0.25^2)</li>
 <li>Is Gini defined for symbolic or number variables?</li>
 </ul>
 </li>
-<li>
-<p>On Dependent variables:</p>
-</li>
-<li>
-<p>Define a dependent variable. Given an example.</p>
-</li>
+<li>On Dependent variables:<ul>
+<li>Define a dependent variable. Given an example.</li>
 <li>What the difference between supervised and unsupervised learning? Please give 2 example tasks for each of them.</li>
 <li>In classification taskes, is the dependent variable numeric or symbolic? What about regressions?</li>
 <li>If there are more than one numeric class variable, what kind of problem do we have?</li>
-<li>
-<p>On Decision Tree learning:</p>
+</ul>
 </li>
-<li>
-<p>Decision tree is often called "iterative dichomization". Why?</p>
-</li>
+<li>On Decision Tree learning:<ul>
+<li>Decision tree is often called "iterative dichomization". Why?</li>
 <li>In the following decision tree, <code>outlook</code> is the top split and <code>temperature</code> never appears in the tree. Why could that be?</li>
 <li>For the golf dataset above, do the following, show all your calculations and explainations:<ul>
 <li>calculate the entropy of the class variables.</li>
@@ -440,50 +424,39 @@
     |   windy = FALSE: yes
 </code></pre>
 
-<h1 id="python-stuff">Python Stuff</h1>
+<h2 id="python-stuff">Python Stuff</h2>
 <ul>
-<li>
-<p>What is the airspeed velocity of an unladen swallow?</p>
-</li>
-<li>
-<p>What does <code>yield</code> do?</p>
-<ul>
+<li>What is the airspeed velocity of an unladen swallow?</li>
+<li>What does <code>yield</code> do?<ul>
 <li>How is it different from a <code>return</code>?</li>
-<li>What is the purpose of a context manager?</li>
 </ul>
 </li>
-<li>
-<p>Given the following code, explain what happens with repect to context manager-</p>
-</li>
+<li>What is the purpose of a context manager?</li>
+<li>Given the following code, explain what happens with respect to context manager-</li>
 </ul>
 <pre><code class="python">
-        with open(f, 'w') as fname:
-            &quot;do some thing&quot;
-            &quot;do some more things&quot;
+    with open(f, 'w') as fname:
+        &quot;do some thing&quot;
+        &quot;do some more things&quot;
 </code></pre>
 
 <ul>
-<li>
-<p>Match the following regex terms to their tasks <code>fill-up-this</code></p>
-</li>
-<li>
-<p>Explain the following regex operation. Specfically, what happens to the string variable <code>a_text_string</code> in the following snippet-</p>
-<pre><code> ```python
-         re.sub(r'([ \n\r\t]|#.* )', "", a_text_string)
-         ```
-</code></pre>
-</li>
-<li>
-<p>Give an example of a ternary operator in python.</p>
-</li>
-<li>
-<p>What does the <code>enumarte</code> operation do in python?</p>
-</li>
-<li>
-<p>Explain what's going on here-</p>
-</li>
+<li>Match the following regex terms to their tasks <code>fill-up-this</code></li>
+<li>Explain the following regex operation. Specfically, what happens to the string variable <code>a_text_string</code> in the following snippet-</li>
 </ul>
-<pre><code class="python">         [a[i] for i, user in enumerate(users) if user==True]
+<pre><code class="python">
+        re.sub(r'([ \n\r\t]|#.* )', &quot;&quot;, a_text_string)
+
+</code></pre>
+
+<ul>
+<li>Give an example of a ternary operator in python.</li>
+<li>What does the <code>enumerate</code> operation do in python?</li>
+<li>Explain what's going on here-</li>
+</ul>
+<pre><code class="python">
+        [a[i] for i, user in enumerate(users) if user==True]
+
 </code></pre></div>
         </div>
 
