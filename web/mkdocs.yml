@@ -12,6 +12,9 @@ nav:
              - Baselines for Adequate AI &#10004; : lectures/baselines.md
              - Simplicity ; : lectures/simple.md 
          - Lectures:
+             - Stats:
+                     - Stats lecture   &#10004:  lectures/stats
+                     - Stats example   &#10004:  http://menzies.us/lean/knn.html
              - Domination &#10004:  lectures/domination
              - Tables and Ranges &#10004:  lectures/tables.md
              - Decision trees 101 &#10004:  lectures/dt101.md
