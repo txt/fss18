@@ -4,7 +4,7 @@
 
 Which house do you want:
 
-![](https://infoscience.epfl.ch/record/153674/files/34_2010_SimBuild%20GAoptimiz.png)
+![](../img/build.png)
 
 Lets do it again.
 Given Fig4 of [this paper](http://science.sciencemag.org/content/sci/324/5923/81.full.pdf)
