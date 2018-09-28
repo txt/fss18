@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Three - Found.Soft.Sci</title>
+        <title>REVIEW 3 - Found.Soft.Sci</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -316,11 +316,91 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#review-3">REVIEW 3</a></li>
+            <li><a href="#domination">Domination</a></li>
+            <li><a href="#evaluation-measures-for-predictors">Evaluation measures for predictors</a></li>
+            <li><a href="#statistics">Statistics</a></li>
+            <li><a href="#k-nn">K-NN</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-</div>
+<h1 id="review-3">REVIEW 3</h1>
+<h2 id="domination">Domination</h2>
+<ul>
+<li>What is a Pareto frontier?</li>
+<li>Give a framework for a general evolutionary algorithm</li>
+<li>List some of the domination methods used in multi-objective optimization</li>
+<li>How does binary domination work?</li>
+<li>How does indicator based domination work?</li>
+<li>In the following example, we are attempting to (a) minimize Objective-1, (b) minimize Objective-2, and (c) Maximize Objective-3. For this case, would binary domination work?<ul>
+<li>If yes, list the non-dominated rows.</li>
+<li>If no, explain why.</li>
+</ul>
+</li>
+</ul>
+<pre><code>    Row ID  Objective-1     Objective-2     Objective-3
+    1       10             15           20
+    2       12             20           22
+    3        8             18           20
+</code></pre>
+
+<ul>
+<li>How is the <code>dom</code> score computed in indicator based domination?<ul>
+<li>True/False: Lower the <code>dom</code> score, the better.</li>
+</ul>
+</li>
+<li>In the following example, we are attempting to (a) minimize Objective-1, (b) minimize Objective-2, and (c) Maximize Objective-3.  <ul>
+<li>Compute the <code>dom</code> score.</li>
+<li>Sort rows based on the <code>dom</code> score</li>
+</ul>
+</li>
+</ul>
+<pre><code>%cylinders   &lt;weight   &gt;acceltn   &gt;mpg
+8            4425      11         11
+8            4955      11.5       10
+8                        4464      11.5       10
+8                        4464      12.5       10
+4            1985      21.5       40
+4            2085      21.7       40
+4            2130      24.6       40
+</code></pre>
+
+<h2 id="evaluation-measures-for-predictors">Evaluation measures for predictors</h2>
+<ol>
+<li>Define (with corresponding formulae) the following measures</li>
+<li>RE, MRE, MMRE, medMRE, PRED(30).</li>
+</ol>
+<h2 id="statistics">Statistics</h2>
+<ol>
+<li>Define and distinguish the following:<ul>
+<li>Effect size and Significance tests</li>
+<li>Parametric, Non-Parametric tests</li>
+</ul>
+</li>
+<li>Cohen's delta is a non-parametric effect size test. Explain.</li>
+<li>Explain this statement in terms of gaussian distribution: "Any significance test reflects on the overlap between distributions"</li>
+<li>For question 3 (above), draw 3 diagrams with pairs of distributions depicting the differences</li>
+<li>Explain how the Scott-Knott test works.</li>
+<li>In the innermost loop of scott-knott test, what kind of hypothesis would you apply?</li>
+<li>What are the similarities between scott-knott tests and unsupervised discretization</li>
+<li>What are the differences between scott-knott tests and unsupervised discretization</li>
+</ol>
+<h2 id="k-nn">K-NN</h2>
+<ol>
+<li>KNN is called a lazy learner (and decision tree learners are not lazy). Why?</li>
+<li>KNN is called an instance-based learner (while decision trees are model-based). Why?</li>
+<li>Explain the following statements</li>
+<li>KNN can be simply extended to steam mining while decision trees, not so much.<ul>
+<li>KNN is faster than decision trees, for training, but very much slower when tested on new data.</li>
+<li>When k=1, the kernel function is irrelevant.</li>
+<li>KNN can be optimized with some stochastic sampling</li>
+<li>Any stochastic sampling method has to be certified with experimentation</li>
+</ul>
+</li>
+<li>What does the kernel function do in KNN?</li>
+<li>What are linear, median, triangular kernels? Explain with a numeric example.</li>
+</ol></div>
         </div>
 
         <footer class="col-md-12">
