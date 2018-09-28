@@ -1,4 +1,10 @@
-# REVIEW 3
+# REVIEWS 3 and 4
+
+The questions that follow are based on the lecture topics listed below
+
+1. Week 3: [Domination](https://txt.github.io/fss18/lectures/domination/)
+2. Week 4:  [Statistics](https://txt.github.io/fss18/lectures/stats/)
+
 
 ## Domination
 
@@ -11,10 +17,10 @@
 	+ If yes, list the non-dominated rows.
 	+ If no, explain why.
 ```
-	Row ID	Objective-1 	Objective-2 	Objective-3
-	1       10             15           20
-	2       12             20           22
-	3        8             18           20
+		Row ID	Objective-1 	Objective-2 	Objective-3
+		1       10             15           20
+		2       12             20           22
+		3        8             18           20
 ```
 - How is the `dom` score computed in indicator based domination?
 	+ True/False: Lower the `dom` score, the better.
@@ -22,14 +28,14 @@
 	+ Compute the `dom` score.
 	+ Sort rows based on the `dom` score
 ```
-%cylinders   <weight   >acceltn   >mpg
-8            4425      11         11
-8            4955      11.5       10
-8						 4464      11.5       10
-8						 4464      12.5       10
-4            1985      21.5       40
-4            2085      21.7       40
-4            2130      24.6       40
+		%cylinders   <weight   >acceltn   >mpg
+		8            4425      11         11
+		8            4955      11.5       10
+		8            4464      11.5       10
+		8	         4464      12.5       10
+		4            1985      21.5       40
+		4            2085      21.7       40
+		4            2130      24.6       40
 ```
 
 ## Evaluation measures for predictors
