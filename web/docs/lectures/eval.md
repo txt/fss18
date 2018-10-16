@@ -18,6 +18,8 @@ Note that somethimes `dog`s are correctly predicted and sometimes
 tjhey ain't (line one).
 
 XXX surpised. precesioon not precise. acuract not acdurage.
+abcd
+numeric lcasses
 
 Discrete  detectors can be assessed according to the following measures:
 
