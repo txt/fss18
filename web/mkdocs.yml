@@ -1,7 +1,7 @@
 site_name: Found.Soft.Sci
 nav:
     - Home: index.md
-    - Notes: 
+    - Notes:
          - Admin:
               - Syllabus &#10004;: syllabus.md
               - Submit site &#10004;: http://tiny.cc/fss18give
@@ -10,7 +10,7 @@ nav:
              - Inspiration &#10004; : inspiration.md
              - SE+AI,  then and now &#10004;: history.md
              - Baselines for Adequate AI &#10004; : lectures/baselines.md
-             - Simplicity ; : lectures/simple.md 
+             - Simplicity ; : lectures/simple.md
          - Lectures:
              - Eval &#10004: lectures/eval
              - Stats:
@@ -19,30 +19,31 @@ nav:
              - Domination &#10004:  lectures/domination
              - Tables and Ranges &#10004:  lectures/tables.md
              - Decision trees 101 &#10004:  lectures/dt101.md
-    - H/W: 
-         - Project Ideas: proj/ProjectIdeas 
-         - Seven, Eight &#10004;: proj/w78.md 
-         - Six &#10004;: proj/w6.md 
-         - Five &#10004;: proj/w5.md 
-         - Four &#10004;: proj/w4.md 
-         - Three &#10004;: proj/w3.md 
-         - One &#10004;: proj/w1.md 
-         - Review: 
-            - Week 3 : review/three
+    - H/W:
+         - Project Ideas: proj/ProjectIdeas
+         - Seven, Eight &#10004;: proj/w78.md
+         - Six &#10004;: proj/w6.md
+         - Five &#10004;: proj/w5.md
+         - Four &#10004;: proj/w4.md
+         - Three &#10004;: proj/w3.md
+         - One &#10004;: proj/w1.md
+         - Review:
+            - Week 5 &#10004: review/five
+            - Week 3, 4 &#10004: review/three
             - Week 2 &#10004; : review/two
             - Week 1 &#10004; : review/one
-    - A-Z: 
-         - A: 
+    - A-Z:
+         - A:
               - Axe: lectures/axe.md
-         - D: 
+         - D:
               - Deep learning &#10004;: lectures/deeplearning.md
-         - E: 
+         - E:
               - Effect size: lectures/effectsize.md
               - Explanation: lectures/explain.md
-         - B: 
+         - B:
               - Bootstrap: lectures/bootstrap.md
          - S:
-              - Significance test: lectures/significance.md 
+              - Significance test: lectures/significance.md
               - Scott-Knot: lectures/sk.md
          - T:
               - Tables : lectures/tables.md
@@ -60,4 +61,3 @@ nav:
     - (c) 2018: license.md
 extra_css:
     - css/extra.css
-
