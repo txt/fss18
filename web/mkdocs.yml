@@ -12,6 +12,7 @@ nav:
              - Baselines for Adequate AI &#10004; : lectures/baselines.md
              - Simplicity ; : lectures/simple.md 
          - Lectures:
+             - Eval &#10004: lectures/eval
              - Stats:
                      - Stats lecture   &#10004:  lectures/stats
                      - Stats example   &#10004:  http://menzies.us/lean/knn.html
