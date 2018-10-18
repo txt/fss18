@@ -98,6 +98,10 @@
     <a href="#">Lectures</a>
     <ul class="dropdown-menu">
             
+<li >
+    <a href=".">Eval &#10004</a>
+</li>
+            
   <li class="dropdown-submenu">
     <a href="#">Stats</a>
     <ul class="dropdown-menu">
@@ -321,89 +325,199 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#evaluation">Evaluation</a></li>
-            <li><a href="#re-run-on-multiple-samples">Re-run on Multiple Samples</a></li>
-            <li><a href="#btw-beyond-evaluation">BTW, Beyond "Evaluation"</a></li>
+            <li><a href="#numeric-goals">Numeric Goals</a></li>
+            <li><a href="#discrete-goals">Discrete goals</a></li>
+            <li><a href="#special-measures-for-se">Special Measures for SE</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="evaluation">Evaluation</h1>
-<p>XXX must show SA</p>
-<p>trueth isnt what we thought. t tif a example</p>
-<p>depends of goals</p>
-<p>onwhat we are willing to comprosmise</p>
-<h2 id="re-run-on-multiple-samples">Re-run on Multiple Samples</h2>
-<h3 id="eg-cross-val">e.g. cross-val</h3>
-<p>Divide into "<em>x</em> bins</p>
+<p>Sometimes you can achieve on one goal and fail on another.
+So </p>
 <ul>
-<li>Test on one bin, train on the others</li>
-<li>Runs the risk of using future data
-  to train for testing on the past</li>
+<li>not everything wins on every goal</li>
+<li>the goals we set determines the conclusions we condone.</li>
 </ul>
-<p>Using combined with some stochastic re-orderings</p>
+<p>Which means that the <em>next</em> lecture after this has to be about
+dancing over multiple goals. Enter multi-objective optimization.</p>
+<p>But before that...</p>
+<h2 id="numeric-goals">Numeric Goals</h2>
 <ul>
-<li>So "<em>M</em>" times, randomly rarrange order of data</li>
-<li>Then do an "<em>N</em>"-way cross val for each order</li>
-<li>Avoids "order effects" where the results are  some quirky result based on the order of data colelction/generation.</li>
+<li>residual = RE = predicted - actual</li>
+<li>magnitude of RE = MRE= abs(predicted - actual)</li>
+<li>PRED(N) = how may estimates are less than N<ul>
+<li>e.g. PRED(30) is standard (how many estimates within 30% of actual)</li>
 </ul>
-<p>M=N=10 is common</p>
-<ul>
-<li>but I've never seen the point for more than M=N=5.</li>
-</ul>
-<h3 id="eg-round-robin">e.g. round robin</h3>
-<ul>
-<li>Given N projects</li>
-<li>Train on N-1, test on the nth.</li>
-<li>e.g <a href="https://arxiv.org/pdf/1702.07735.pdf">Github issue close time, Table4</a></li>
-</ul>
-<h3 id="eg-incremental-validation">e.g. incremental validation.</h3>
-<ul>
-<li>Divide into "<em>x</em>" buckets, </li>
-<li>Train on buckets 1..i, test on i+1</li>
-</ul>
-<p>http://www.cs.le.ac.uk/people/llm11/publications/MinkuYaoICSE14.pdf</p>
-<h3 id="eg-moving-validation">e.g. moving validation.</h3>
-<ul>
-<li>Divide into "<em>x</em>"
-        buckets, </li>
-<li>learn on buckets i..i+n, test
-    on i+n+1. eg. Krishna's K-test.</li>
-</ul>
-<h3 id="eg-rrs-repeated-random-streaming">e.g. RRS (repeated random streaming)</h3>
-<ul>
-<li>e.g. repeatedly stream over the data, </li>
-<li>each time using n% of the data selected at random</li>
-<li>Q: What "n"? </li>
-<li>A: Engineering judgement </li>
-</ul>
-<h2 id="btw-beyond-evaluation">BTW, Beyond "Evaluation"</h2>
-<p>Evaluation can be so tedious and time-consuming that many researchers have asked
-if all that inference can be applied to improving the model:</p>
-<ul>
-<li>
-<p>So "evaluation" becomes "improvement" or "monitor and repair"</p>
 </li>
-<li>
-<p>Cross val to ensembles to bagging to boosting</p>
-</li>
-<li>
-<p>Round robin
-to transfer learning </p>
-</li>
-<li>
-<p>Anomaly detection
-to repair </p>
+<li>medianRE = median of lots of RE</li>
+<li>meanRE = mean of lots of RE (not recommended)</li>
+</ul>
+<p>Some argue that these numbers need to be baselined as a ratio against "do
+the dumbest thing you can":</p>
+<ul>
+<li>let <code>y</code> = mean of the training set</li>
+<li>let <code>x</code> = your numeric estimate from the more</li>
+<li><em>Standardised accuracy</em> = (1- x/y) * 100<ul>
+<li>Larger values are better</li>
+</ul>
 </li>
 </ul>
-<h3 id="incremental-learning">Incremental learning</h3>
-<p>SAWTOOTH: Dumb as all hell</p>
-<p>Active learning</p>
+<p><img alt="" src="../../img/sa.png" /></p>
+<h2 id="discrete-goals">Discrete goals</h2>
+<p>(For code to implment the following, see <a href="http://menzies.us/lean/abcd.lua">abcd.lua</a>.</p>
+<p>Consdier the output stream,</p>
+<pre><code>%are you a dog?
+ predicted truth
+ --------- -----
+ yes       no
+ yes       yes
+ no        no
+ yes       yes
+ no        no
+ ...       ...
+</code></pre>
+
+<p>Note that somethimes <code>dog</code>s are correctly predicted and sometimes
+they ain't (line one).</p>
+<p>How do we convert these pairs into evaluation measures?</p>
+<p>Discrete detectors can be assessed according to the following measures:</p>
+<pre><code>+-------------+------------+
+|           truth          |
+|     no            yes    |
++-------------+------------+
+|      a      |      b     | classifer predicts = no
++-------------+------------+
+|      c      |      d     | classifier predicts = yes
++-------------+------------+
+</code></pre>
+
 <ul>
-<li>uncertainty sampling</li>
-<li>certainty sampling</li>
+<li>accuracy                   = acc          = (a+d)/(a+b+c+d</li>
+<li>probability of detection   = pd  = recall = d/(b+d)</li>
+<li>probability of false alarm = pf           = c/(a+c)</li>
+<li>precision                  = prec         = d/(c+d)</li>
+<li>distance2heaven            = d2h          = sqrt( (1-pd)^2 + pf^2 )</li>
+<li>pos/neg                    =              = (b+d) / (a+c)</li>
 </ul>
-<p>Bayesian Parameter optimization (widely used)</p>
-<p>FLASH</p></div>
+<p>(We'll use pos/neg later on, see below.)</p>
+<pre><code> no,  yes,   &lt;-- classified as
+ 120,  20,   no   
+  20,  20,   yes
+</code></pre>
+
+<p>For more that two classes, need to build one table per class of
+e.g. (a,nota), (b,notb), (c,notc) then report seperately for each.</p>
+<pre><code> a,   b,    c,  &lt;-- classifieed as
+50,  10,    5,  a
+ 5,  80,   10,  b
+20,  30,  100,  c
+</code></pre>
+
+<h3 id="ideally">Ideally...</h3>
+<p>Ideally, detectors have high PDs, low PFs, and low
+ effort. This ideal state rarely happens:</p>
+<ul>
+<li>PD and effort are linked. The more modules that trigger
+ the detector, the higher the PD. However, effort also gets
+ increases</li>
+<li>High PD or low PF comes at the cost of high PF or low PD
+(respectively). </li>
+</ul>
+<p>These links can be seen in a standard
+receiver operator curve (ROC).  Suppose, for example, 
+LOC&lt;x
+is used as the detector (i.e. we assume large modules have
+more errors). LOC&lt;x represents a family of detectors:</p>
+<ul>
+<li>At
+x=0, EVERY module is predicted to have errors. This detector
+has a high PD but also a high false alarm rate. </li>
+<li>At x=0, NO
+module is predicted to have errors. This detector has a low
+false alarm rate but won't detect anything at all. At 0&lt;x&lt;1,
+a set of detectors are generated as shown below:</li>
+</ul>
+<pre><code>        pd
+      1 |           x  x  x     KEY:
+        |        x     .         &quot;.&quot;  denotes the line PD=PF
+        |     x      .           &quot;x&quot;  denotes the roc curve 
+        |   x      .                  for a set of detectors
+        |  x     .
+        | x    . 
+        | x  .
+        |x .
+        |x
+        x------------------ pf    
+       0                   1
+</code></pre>
+
+<p>Note that:</p>
+<ul>
+<li>The only way to make no mistakes (PF=0) is to do nothing (PD=0)</li>
+<li>The only way to catch more detects is to make more
+mistakes (increasing PD means increasing PF).</li>
+<li>Our detector bends towards the "sweet spot" of
+<PD=1,PF=0> but does not reach it.</li>
+<li>The line pf=pd on the above graph represents the "no information"
+line. If pf=pd then the detector is pretty useless. The better
+the detector, the more it rises above PF=PD towards the "sweet spot".</li>
+</ul>
+<p>For more on the connection of pd,pf,precision, etc, see
+<a href="http://menzies.us/pdf/07precision.pdf">Problems with Precision</a>
+where it is derived that</p>
+<pre><code>pf = pos / neg * (1-prec)/prec * recall
+</code></pre>
+
+<p><img alt="" src="../../img/versus.png" /></p>
+<h2 id="special-measures-for-se">Special Measures for SE</h2>
+<p>Softare engineering, we might have some other measures.</p>
+<h3 id="ifa">IFA</h3>
+<p>In 2011,
+<a href="https://www.cc.gatech.edu/home/orso/papers/parnin.orso.ISSTA11.pdf">Parnin and Orso</a>
+noted that developers are not using debugging tools since they
+grow impatient when they generate false alarms. </p>
+<p>So one measure of success of a defect predictor is to minimize
+<code>IFA</code> (see section V of <a href="https://xin-xia.github.io/publication/icsme173.pdf">Supervised vs Unsupervised
+Models: A Holistic Look at Effort-Aware Just-in-Time Defect
+Prediction</a>);
+i.e.  number of initial false alarms encountered before we find the
+first defect.</p>
+<h3 id="popt20">Popt(20)</h3>
+<p>Another measure of success is "how little do you need to read to find
+most bugs". The usual rule is you want find 20% of the code to find
+80% of the defects.</p>
+<p>For exaple, if we know how many locs of code are seen in the methods
+in the above cells <code>a,b,c,d</code>, then we can define how many lines of
+code we need to read to find the bugs (and our goal is read <em>less</em>
+and find <em>more</em> bugs):</p>
+<ul>
+<li>build a defect predictor</li>
+<li>find the code where the prediction = yes, no</li>
+<li>Build <code>S(m)</code> as follows: <ul>
+<li><code>tmp1</code> = sort the yes <em>ascending</em> on lines of code</li>
+<li><code>S(m)</code> = sort the no <em>ascending</em> on lines of code, append to <code>tmp1</code></li>
+</ul>
+</li>
+<li>Build <code>S(worst)</code> as follows:<ul>
+<li><code>tmp2</code> = sort the yes <em>descending</em> on lines of code</li>
+<li><code>S(worst)</code> = sort the no <em>descedning</em> on lines of code, append to <code>tmp2</code></li>
+</ul>
+</li>
+<li>Build <code>S(optimial)</code> as follows:<ul>
+<li>Sort all code <em>descending</em> on number of defects</li>
+</ul>
+</li>
+<li>Walk the curves left to right, recording what defects we find</li>
+<li><code>Popt = 1 - ( S(optimal) - S(m) ) / (S(optional) - S(worst) )</code></li>
+<li>Usually, we report the recall when Popt = 20%</li>
+</ul>
+<p><img alt="" src="../../img/auc2.png" /></p>
+<h3 id="and-many-more-besides">And Many More Besides</h3>
+<p>Different business contexts need different goals.</p>
+<p>So what we need are goal-aware learners.</p>
+<p>End data mining.</p>
+<p>Begin multi-objective optimization.</p></div>
         </div>
 
         <footer class="col-md-12">
