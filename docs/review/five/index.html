@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Seven, Eight &#10004; - Found.Soft.Sci</title>
+        <title>REVIEW 5 - Found.Soft.Sci</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -131,36 +131,36 @@
   </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">H/W <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../ProjectIdeas">Project Ideas</a>
-</li>
-                                    
-<li class="active">
-    <a href="./">Seven, Eight &#10004;</a>
+    <a href="../../proj/ProjectIdeas">Project Ideas</a>
 </li>
                                     
 <li >
-    <a href="../w6/">Six &#10004;</a>
+    <a href="../../proj/w78/">Seven, Eight &#10004;</a>
 </li>
                                     
 <li >
-    <a href="../w5/">Five &#10004;</a>
+    <a href="../../proj/w6/">Six &#10004;</a>
 </li>
                                     
 <li >
-    <a href="../w4/">Four &#10004;</a>
+    <a href="../../proj/w5/">Five &#10004;</a>
 </li>
                                     
 <li >
-    <a href="../w3/">Three &#10004;</a>
+    <a href="../../proj/w4/">Four &#10004;</a>
 </li>
                                     
 <li >
-    <a href="../w1/">One &#10004;</a>
+    <a href="../../proj/w3/">Three &#10004;</a>
+</li>
+                                    
+<li >
+    <a href="../../proj/w1/">One &#10004;</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -168,15 +168,15 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../../review/three">Week 3</a>
+    <a href="../three">Week 3</a>
 </li>
             
 <li >
-    <a href="../../review/two">Week 2 &#10004;</a>
+    <a href="../two">Week 2 &#10004;</a>
 </li>
             
 <li >
-    <a href="../../review/one">Week 1 &#10004;</a>
+    <a href="../one">Week 1 &#10004;</a>
 </li>
     </ul>
   </li>
@@ -316,16 +316,6 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li >
-                                <a rel="next" href="../../lectures/dt101/">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li >
-                                <a rel="prev" href="../w6/">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                     </ul>
                 </div>
             </div>
@@ -334,91 +324,98 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#homework78-fft">Homework78 : FFT</a></li>
-            <li><a href="#what-to-hand-in">What to hand in</a></li>
-            <li><a href="#task7-fft-part1-due-this-week">Task7:  FFT, part1 (due this week).</a></li>
-            <li><a href="#task8-fft-part2-due-this-week">Task8:  FFT, part2 (due this week).</a></li>
+        <li class="main active"><a href="#review-5">REVIEW 5</a></li>
+            <li><a href="#scikit-learn">Scikit Learn</a></li>
+            <li><a href="#text-classification">Text Classification</a></li>
+            <li><a href="#multiprocessing">Multiprocessing</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="homework78-fft">Homework78 : FFT</h1>
-<p>Now you build a learner. An FFT tree which, as you recall contains
-nodes tiwh two kids:</p>
+<h1 id="review-5">REVIEW 5</h1>
+<p>The questions that follow are based on</p>
+<ol>
+<li>Tools: Scikit-Learn</li>
+<li>Tools: NLTK</li>
+</ol>
+<h2 id="scikit-learn">Scikit Learn</h2>
 <ul>
-<li>One is an exit node and has the form `if x &gt; 7 then y'. <ul>
-<li>Note that the "arity" of the exit test is one.</li>
-<li>That is, we test for <code>x&gt;7</code> and not <code>x&gt;7 AND y&lt;3</code>.</li>
+<li>Why is it a good idea to shuffle your training data?</li>
+<li>When could shuffling be a bad idea? Give 2 examples.</li>
+<li>What is a Binary classifier? How is it different from an <code>n-ary</code> classifier?</li>
+<li>What is a confusion matrix</li>
+<li>Write a snippet to obtain the confusion matrix from Scikit learn</li>
+<li>In the above confusion matrix that you obtained from scikit-learn, what do each of the cells represent. In other words, fill the following matrix:</li>
 </ul>
-</li>
-<li>The other is <code>other</code>. Any data that fails the exit test goes into <code>other</code>
-  (and FFT trees extended by recursing on that data).</li>
-<li>FFT's are  built to a maximum depth of, say, <code>d=4</code>.</li>
-<li>FTT's run over discrete and continuous attributes<ul>
-<li>For discrete attributes, the exit test will be <code>x=value</code></li>
-<li>For contuous attributes, the exit test will be <code>x&lt;=10</code> or <code>x&gt;10</code>.<ul>
-<li>And just to keep it simple, we'll only try to break numerics at median values</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>The core algorithm is very simple:</p>
-<ul>
-<li>Divide all independent colums into <code>cuts</code>.</li>
-<li>Sort all <code>cuts</code> by the average score of the dependent variable seen in each <code>cut</code>.</li>
-<li>Split the data into (a) that which falls into the best <code>cut</code> and (b) <code>other</code>.</li>
-<li>Print out the best <code>cut</code> as an exit rule</li>
-<li>Recurse on <code>other</code>.</li>
-</ul>
-<p>Here's what I get whet I take
-<a href="https://raw.githubusercontent.com/timm/lean/master/data/auto.csv">auto</a> and run it through
-<code>dom</code> and then <code>`fft</code>. The numbers at the end of each line is the mean value of the depedent
-value in each <code>cut</code>. Note that the best cut we see gets us to examples with an average
-<code>dom</code> score of 74.</p>
-<pre><code>if      origin  is  3   ==&gt; 74
-else    %cylinders  is  4   ==&gt; 70
-else    %cylinders  is  5   ==&gt; 65
-else    %cylinders  is  6   ==&gt; 39
+<pre><code>--|-------------|-------------------|------------------|--
+  |             |        ?=?        |        ?=?       |
+--|-------------|-------------------|------------------|--
+  |     ?=?     |         ?         |         ?        |
+--|-------------|-------------------|------------------|--
+  |     ?=?     |         ?         |         ?        |
+--|-------------|-------------------|------------------|--
 </code></pre>
 
-<p>Here's another run using the same data but this time I discretize the numerics using
-<a href="https://menzies.us/lean/unsuper.lua">unsuper</a>. Now we get much better ressults
-(note our best gets us to 92). So the lesson here is that median cuts (done above)
-can be much worse that unsupervised discretized cuts (done below).</p>
-<pre><code>if      horsepower  is  ..65    ==&gt; 92
-else    horsepower  is  66..69  ==&gt; 86
-else    displacement    is  97.5..101   ==&gt; 82
-else    displacement    is  85..91  ==&gt; 79
-</code></pre>
-
-<h2 id="what-to-hand-in">What to hand in</h2>
-<p>The usual drill. A new sub-directory. Python source coe. and Example out <code>.txt</code> file.</p>
-<h2 id="task7-fft-part1-due-this-week">Task7:  FFT, part1 (due this week).</h2>
-<p>In task1, do not worry about unsupervised descritization or building the tree. That
-is next week.</p>
-<p>Using the code at 
-<a href="https://menzies.us/lean/fft.html">fft</a>, generate the cuts and sort them by their
-mean goal score. Print out what you would use for the first cut of the first part
-of the FFT tree.</p>
 <ul>
-<li>
-<p>For 
-<a href="https://raw.githubusercontent.com/timm/lean/master/data/weatherLong.csv">weatherLong</a>, the
-best cut I find is <code>outlook=overcast</code> which has a mean dom score of 53</p>
-</li>
-<li>
-<p>For 
-<a href="https://raw.githubusercontent.com/timm/lean/master/data/auto.csv">auto</a>, the
-best cut I find (without
-<a href="https://menzies.us/lean/unsuper.lua">unsuper</a>.s <code>origin=3</code> with an average dom score of 74.</p>
-</li>
+<li>With the above confusion matrix, write a snippet to compute:<ul>
+<li>Precision</li>
+<li>Recall</li>
+<li>False Alarm</li>
+<li>F1 score</li>
 </ul>
-<p>Don't worry if you do not exactly 
-my best cuts. Near enough will do.</p>
-<h2 id="task8-fft-part2-due-this-week">Task8:  FFT, part2 (due this week).</h2>
-<p>Add in unsupervised descritization. And build the FFT trees recursively (where at each
-level, find the new best cuts).</p></div>
+</li>
+<li>What is a k-fold cross validation?</li>
+<li>What is stratification? Why is used?</li>
+<li>When would k-fold cross-validation be misleading?</li>
+<li>How would one convert a linear regression into a binary classifier?</li>
+<li>What is a decision hyperplane?</li>
+<li>Say you have an n-dimensional data, how many dimensions would the decision hyperplane comprise of?</li>
+<li>What is the key intuition in SVM?</li>
+<li>What does an SVM aim to achieve when training?</li>
+<li>SVM seem to work very well for which domain? (Ans: Text Classification)</li>
+<li>What are hyper-parameters?</li>
+<li>What is the difference between CART and Random Forest?</li>
+<li>How does Random Forests work?</li>
+<li>What is a <code>mode</code> of an array?</li>
+</ul>
+<h2 id="text-classification">Text Classification</h2>
+<ul>
+<li>Draw a general pipeline for a simple text classification task.</li>
+<li>Define in a sentence or two, what each of the blocks above aim to achieve.</li>
+<li>Define the following terms:<ul>
+<li>Tokenization</li>
+<li>Lemmatization</li>
+<li>Stopword removal</li>
+<li>Part-of-speech tagging.</li>
+</ul>
+</li>
+<li>Given a sentence below, convert it into tokens using: Tokenization, Lemmatization, and Stopword removal.<ul>
+<li>"This is a sentence about cats"</li>
+</ul>
+</li>
+<li>What is vectorization?</li>
+<li>Give the mathematical formulation of the following:<ul>
+<li>Term Frequency</li>
+<li>Document Frequency</li>
+</ul>
+</li>
+<li>What is intuition underlying TFIDF vectorization?</li>
+<li>Generate a TFIDF vectorization of the following two sentences:<ol>
+<li>"Something about a cat."</li>
+<li>"Something about a dog."</li>
+</ol>
+</li>
+<li>How does sk-learn store sparse matrices? (Ans: CSR Format)</li>
+<li>What is the CSR (compressed sparse row) format?</li>
+</ul>
+<h2 id="multiprocessing">Multiprocessing</h2>
+<ul>
+<li>What is Global Interpreter Lock (GIL)?</li>
+<li>What is chunking?</li>
+<li>Distinguish between synchronous and asynchronous processes.</li>
+<li>How would you count the number of processors in your system with python's Multiprocessing?</li>
+<li>Write a snippet to print "Hello, World! {processor id}" on each of the systems processors.</li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">
