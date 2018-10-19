@@ -23,6 +23,7 @@ Conisder the following example1:
 ```
 
 For example1:
+
 - calculate accraucy and recall and precision and distance to heaven for the "yes" class.
 - explain: "accurate models aren't" (for imbalanced data).
 
@@ -32,7 +33,7 @@ Consider the following example2:
 
 
 ```
-apples,   beans,    carrots,  <-- classifieed as
+apples,   beans,    carrots,  <-- classified as
 50,       10,          5,    apples
  5,       80,         10,    beans
 20,       30,        100,    carrots
@@ -40,7 +41,7 @@ apples,   beans,    carrots,  <-- classifieed as
 
 For example2:
 
-- Calculate precision(apples) and  false alarms (carrors)
+- Calculate precision(apples) and  false alarms (carrots)
 
 ------
 
@@ -48,7 +49,7 @@ Consider the following example3
 
 
 ```
-apples,   beans,    carrots,  <-- classifieed as
+apples,   beans,    carrots,  <-- classified as
 50,        0,          0,    apples
  0,       80,          0,    beans
  0,        0,        100,    carrots
